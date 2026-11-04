@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Restaurant Menu – BUNORA Gourmet Burgers &amp; Fresh Sandwiches</title>
+  <meta name="description" content="Explore BUNORA's complete menu: Gourmet smashed Wagyu burgers, artisan deli sandwiches, truffle parmesan fries, thick craft milkshakes, and molten desserts.">
+  <meta name="keywords" content="BUNORA menu, burger menu, sandwich menu, craft shakes, truffle fries, restaurant food list">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('bunora_theme') || 'light';
+      var savedDir = localStorage.getItem('bunora_direction') || 'ltr';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ==================== TOPBAR ==================== -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-content">
+        <div class="topbar-info">
+          <span class="topbar-info-item"><i class="fa-solid fa-location-dot"></i> 742 Evergreen Terrace, Downtown Food District</span>
+          <span class="topbar-info-item"><i class="fa-solid fa-fire"></i> Dine-In • Curbside Pickup • Contactless Hot Delivery</span>
+        </div>
+        <div class="topbar-actions">
+          <button class="theme-toggle-btn" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+          <button class="rtl-toggle-btn" title="Toggle RTL"><span style="font-weight:800; font-size:0.8rem;">RTL</span></button>
+          <a href="combo-offers.html" class="topbar-pill-btn"><i class="fa-solid fa-tags"></i> Combo Deals</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/images/logo-dark.svg" alt="BUNORA Logo" class="logo-dark">
+          <img src="assets/images/logo-light.svg" alt="BUNORA Logo" class="logo-light">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvas">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">Home 1 – Modern Burger</a></li>
+                <li><a class="dropdown-item" href="index-2.html">Home 2 – Artisan Deli</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="#" data-bs-toggle="dropdown">Menu <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item active" href="menu.html">All Menu Items</a></li>
+                <li><a class="dropdown-item" href="product-details.html">Product Details View</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                <li><a class="dropdown-item" href="service-details.html">Service Details View</a></li>
+                <li><a class="dropdown-item" href="combo-offers.html">Combo Offers</a></li>
+                <li><a class="dropdown-item" href="pricing.html">Catering Pricing</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blog <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="blog.html">Blog Grid</a></li>
+                <li><a class="dropdown-item" href="blog-list.html">Blog List</a></li>
+                <li><a class="dropdown-item" href="blog-details.html">Blog Details</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          </ul>
+          <div class="navbar-actions">
+            <a href="contact.html" class="btn btn-accent btn-sm"><i class="fa-solid fa-calendar-check"></i> Book Table</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE OFFCANVAS ==================== -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileOffcanvas">
+    <div class="offcanvas-header">
+      <a href="index.html">
+        <img src="assets/images/logo-dark.svg" alt="BUNORA Logo" class="logo-dark" style="height: 38px;">
+        <img src="assets/images/logo-light.svg" alt="BUNORA Logo" class="logo-light" style="height: 38px;">
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="d-flex gap-2 mb-4">
+        <button class="theme-toggle-btn flex-fill"><i class="fa-solid fa-moon"></i> Theme</button>
+        <button class="rtl-toggle-btn flex-fill"><span style="font-weight:800;">RTL</span> Switch</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="index.html">Home 1 – Modern Burger</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="index-2.html">Home 2 – Artisan Deli</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="about.html">About Brand</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link active" href="menu.html">Full Menu</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="product-details.html">Product Details</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="combo-offers.html">Combo Offers</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="services.html">Services &amp; Catering</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="blog.html">Food Stories</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ==================== INNER HERO ==================== -->
+  <section class="inner-hero">
+    <div class="container">
+      <h1 class="inner-hero-title">Interactive Food Menu</h1>
+      <ul class="breadcrumb-custom">
+        <li><a href="index.html"><i class="fa-solid fa-house me-1"></i> Home</a></li>
+        <li><i class="fa-solid fa-chevron-right"></i></li>
+        <li class="active">Menu</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== MENU SECTION WITH LIVE FILTERING ==================== -->
+  <section class="section-padding">
+    <div class="container">
+      <!-- Filter Bar & Search Box -->
+      <div class="menu-controls-wrap d-flex flex-wrap justify-content-between align-items-center">
+        <!-- Category Nav Buttons -->
+        <ul class="menu-filter-nav">
+          <li><button class="menu-filter-btn active" data-category="all"><i class="fa-solid fa-border-all"></i> All Items</button></li>
+          <li><button class="menu-filter-btn" data-category="burgers"><i class="fa-solid fa-burger"></i> Signature Burgers</button></li>
+          <li><button class="menu-filter-btn" data-category="sandwiches"><i class="fa-solid fa-bread-slice"></i> Gourmet Sandwiches</button></li>
+          <li><button class="menu-filter-btn" data-category="sides"><i class="fa-solid fa-bowl-food"></i> Sides &amp; Snacks</button></li>
+          <li><button class="menu-filter-btn" data-category="drinks"><i class="fa-solid fa-mug-hot"></i> Shakes &amp; Drinks</button></li>
+          <li><button class="menu-filter-btn" data-category="desserts"><i class="fa-solid fa-cookie-bite"></i> Desserts</button></li>
+        </ul>
+
+        <!-- Search Input -->
+        <div class="menu-search-box">
+          <i class="fa-solid fa-magnifying-glass menu-search-icon"></i>
+          <input type="text" id="menuSearchInput" class="menu-search-input" placeholder="Search burgers, sourdough, shakes...">
+        </div>
+      </div>
+
+      <!-- Menu Items Grid -->
+      <div class="row g-4" id="menuItemsGrid">
+        <!-- ================= BURGERS ================= -->
+        <!-- Burger 1 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="burgers">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/burgers/burger-1.jpg" alt="The BUNORA Wagyu Royale" loading="lazy">
+              <div class="food-card-badge"><span class="badge-custom badge-bestseller">Bestseller</span></div>
+              <div class="food-card-diet"><span class="diet-icon text-accent"><i class="fa-solid fa-crown"></i></span></div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.95 <span>(840)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">The BUNORA Wagyu Royale</a></h3>
+              <p class="food-card-desc">Double Wagyu smash patties, 24-month Wisconsin cheddar, caramelized shallots, crisp iceberg, house secret glaze on toasted brioche.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$14.90 <span class="food-price-original">$17.50</span></div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Burger 2 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="burgers">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/burgers/burger-2.jpg" alt="Smoky BBQ Bacon Stacker" loading="lazy">
+              <div class="food-card-badge"><span class="badge-custom badge-new">Popular</span></div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.88 <span>(620)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">Smoky BBQ Bacon Stacker</a></h3>
+              <p class="food-card-desc">Applewood-smoked thick bacon, double angus patty, beer-battered onion ring, smoked gouda, chipotle barbecue relish.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$15.50</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Burger 3 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="burgers">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/burgers/burger-3.jpg" alt="Spicy Diablo Jalapeno Melt" loading="lazy">
+              <div class="food-card-badge"><span class="badge-custom badge-spicy"><i class="fa-solid fa-pepper-hot"></i> Fiery</span></div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.90 <span>(495)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">Spicy Diablo Jalapeno Melt</a></h3>
+              <p class="food-card-desc">Pepper jack cheese, fire-charred jalapenos, pickled habanero crunch, smoked sriracha aioli, and angus beef patty.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$13.90</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Burger 4 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="burgers">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/burgers/burger-4.jpg" alt="Truffle Swiss Mushroom Melt" loading="lazy">
+              <div class="food-card-badge"><span class="badge-custom badge-bestseller">Gourmet</span></div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.92 <span>(710)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">Truffle Swiss Mushroom Melt</a></h3>
+              <p class="food-card-desc">Garlic sauteed cremini and shiitake mushrooms, melted Emmental Swiss, black winter truffle aioli, baby arugula.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$16.20</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Burger 5 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="burgers">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/burgers/burger-5.jpg" alt="Crispy Buttermilk Chicken Crunch" loading="lazy">
+              <div class="food-card-badge"><span class="badge-custom badge-new">Crispy</span></div>
+              <div class="food-card-diet"><span class="diet-icon text-success"><i class="fa-solid fa-check"></i></span></div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.87 <span>(530)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">Crispy Buttermilk Chicken</a></h3>
+              <p class="food-card-desc">24-hour buttermilk brined tender chicken breast, triple-crusted, tangy honey mustard slaw, dill pickles, golden bun.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$13.50</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Burger 6 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="burgers">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/burgers/burger-6.jpg" alt="The Green Goddess Plant Burger" loading="lazy">
+              <div class="food-card-badge"><span class="badge-custom badge-vegan"><i class="fa-solid fa-leaf"></i> Vegan</span></div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.80 <span>(310)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">Green Goddess Plant Burger</a></h3>
+              <p class="food-card-desc">Chargrilled pea-protein &amp; beetroot patty, smashed avocado, vegan smoked provolone, pickled red onions, micro-basil.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$14.20</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= SANDWICHES ================= -->
+        <!-- Sandwich 1 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="sandwiches">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/sandwiches/sandwich-1.jpg" alt="New York Pastrami on Rye" loading="lazy">
+              <div class="food-card-badge"><span class="badge-custom badge-bestseller">Deli Legend</span></div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.96 <span>(920)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">New York Pastrami on Rye</a></h3>
+              <p class="food-card-desc">Half-pound of warm house-smoked pastrami brisket, melted Emmental Swiss, sour kraut, and whole-grain Dijon on seeded caraway rye.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$15.90</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sandwich 2 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="sandwiches">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/sandwiches/sandwich-2.jpg" alt="Truffle Chicken & Avocado Club" loading="lazy">
+              <div class="food-card-badge"><span class="badge-custom badge-new">Popular</span></div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.90 <span>(640)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">Truffle Chicken &amp; Avocado Club</a></h3>
+              <p class="food-card-desc">Herb-roasted free-range chicken breast, Hass avocado, crisp maple pancetta, vine tomato, and black truffle garlic aioli on crusty sourdough.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$14.50</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sandwich 3 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="sandwiches">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/sandwiches/sandwich-3.jpg" alt="Rustic Caprese Focaccia Melt" loading="lazy">
+              <div class="food-card-badge"><span class="badge-custom badge-vegan" style="background:#F0FDF4; color:#166534;"><i class="fa-solid fa-seedling"></i> Veggie</span></div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.88 <span>(410)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">Rustic Caprese Focaccia Melt</a></h3>
+              <p class="food-card-desc">Fresh Campanian bufala mozzarella, heirloom beefsteak tomatoes, house pine nut basil pesto, and 12-year balsamic glaze on rosemary focaccia.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$13.80</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sandwich 4 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="sandwiches">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/sandwiches/sandwich-4.jpg" alt="Slow-Smoked Pulled Pork Baguette" loading="lazy">
+              <div class="food-card-badge"><span class="badge-custom badge-new">Smoky</span></div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.85 <span>(380)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">Slow Pulled Pork Baguette</a></h3>
+              <p class="food-card-desc">14-hour hickory-smoked Berkshire pork, crisp green apple slaw, melted smoked gouda, and Carolina gold mustard sauce on crusty baguette.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$14.20</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sandwich 5 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="sandwiches">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/sandwiches/sandwich-5.jpg" alt="Philly Ribeye Cheesesteak" loading="lazy">
+              <div class="food-card-badge"><span class="badge-custom badge-bestseller">Hot Melt</span></div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.93 <span>(780)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">Philly Ribeye Cheesesteak</a></h3>
+              <p class="food-card-desc">Thinly shaved USDA Prime ribeye, sweet caramelized onions, roasted sweet bell peppers, and bubbling aged provolone fondue on toasted hoagie.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$16.50</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sandwich 6 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="sandwiches">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/sandwiches/sandwich-6.jpg" alt="Smoked Salmon & Dill Cream Cheese" loading="lazy">
+              <div class="food-card-badge"><span class="badge-custom badge-new">Seafood</span></div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.89 <span>(315)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">Smoked Salmon &amp; Dill Sourdough</a></h3>
+              <p class="food-card-desc">Cured Scottish salmon, lemon-whipped cream cheese, nonpareil capers, thinly shaved cucumber, and pickled shallots on toasted sourdough.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$15.20</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= SIDES & SNACKS ================= -->
+        <!-- Side 1 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="sides">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/sides/side-1.jpg" alt="Parmesan Truffle Herb Fries" loading="lazy">
+              <div class="food-card-badge"><span class="badge-custom badge-bestseller">Signature Side</span></div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.97 <span>(1100)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">Parmesan Truffle Herb Fries</a></h3>
+              <p class="food-card-desc">Double-blanched Russet potato fries tossed in Italian black truffle oil, freshly grated 24-month Parmigiano-Reggiano, and rosemary sea salt.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$6.80</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side 2 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="sides">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/sides/side-2.jpg" alt="Beer-Battered Golden Onion Rings" loading="lazy">
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.84 <span>(410)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">Beer-Battered Onion Rings</a></h3>
+              <p class="food-card-desc">Thick-cut jumbo sweet onions soaked in craft IPA batter, flash fried to an ultra-crisp golden crunch. Served with smoked paprika remoulade.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$5.90</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side 3 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="sides">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/sides/side-3.jpg" alt="Loaded Fiesta Queso Nachos" loading="lazy">
+              <div class="food-card-badge"><span class="badge-custom badge-new">Loaded</span></div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.91 <span>(530)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">Loaded Fiesta Queso Nachos</a></h3>
+              <p class="food-card-desc">Crispy stoneground corn tortillas smothered in warm aged cheddar queso, smoky black beans, pico de gallo, pickled jalapenos, and guacamole.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$9.50</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side 4 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="sides">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/sides/side-4.jpg" alt="Golden Mozzarella Sticks" loading="lazy">
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.82 <span>(390)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">Golden Mozzarella Sticks</a></h3>
+              <p class="food-card-desc">Herbed breadcrumb coated whole milk mozzarella batons with irresistible cheese pull. Paired with San Marzano marinara dip.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$6.50</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side 5 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="sides">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/sides/side-5.jpg" alt="Sweet Potato Fries with Chipotle Dip" loading="lazy">
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.86 <span>(460)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">Sweet Potato Fries</a></h3>
+              <p class="food-card-desc">Lightly spiced crispy sweet potato batons dusted with sea salt and smoked cinnamon sugar. Served with house honey chipotle mayo.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$6.20</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side 6 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="sides">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/sides/side-6.jpg" alt="Honey Sriracha Glazed Wings" loading="lazy">
+              <div class="food-card-badge"><span class="badge-custom badge-spicy">Hot Wings</span></div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.94 <span>(820)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">Honey Sriracha Glazed Wings</a></h3>
+              <p class="food-card-desc">Crispy jumbo chicken wings tossed in sticky wildflower honey and fermented sriracha reduction, topped with toasted sesame and scallions.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$8.90</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= DRINKS & SHAKES ================= -->
+        <!-- Drink 1 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="drinks">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/drinks/drink-1.jpg" alt="Salted Caramel Pretzel Thickshake" loading="lazy">
+              <div class="food-card-badge"><span class="badge-custom badge-bestseller">Crave Shake</span></div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.96 <span>(950)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">Salted Caramel Pretzel Shake</a></h3>
+              <p class="food-card-desc">Hand-spun vanilla bean gelato, Maldon salted butter caramel swirl, crushed butter pretzels, whipped vanilla chantilly cream.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$6.90</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drink 2 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="drinks">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/drinks/drink-2.jpg" alt="Strawberry Shortcake Shake" loading="lazy">
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.88 <span>(430)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">Strawberry Shortcake Shake</a></h3>
+              <p class="food-card-desc">Fresh macerated organic strawberries, creamy sweet cream custard, buttery graham cracker crumb crust, and white chocolate drizzle.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$6.90</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drink 3 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="drinks">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/drinks/drink-3.jpg" alt="Single-Origin Nitro Cold Brew" loading="lazy">
+              <div class="food-card-badge"><span class="badge-custom badge-new">Nitro Tap</span></div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.90 <span>(510)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">Nitro Cold Brew Coffee</a></h3>
+              <p class="food-card-desc">20-hour steeped Ethiopian Yirgacheffe beans infused with pure nitrogen for a velvety stout-like foam and naturally chocolatey finish.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$4.80</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drink 4 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="drinks">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/drinks/drink-4.jpg" alt="Sparkling Passionfruit Mint Lemonade" loading="lazy">
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.85 <span>(340)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">Passionfruit Mint Lemonade</a></h3>
+              <p class="food-card-desc">Freshly squeezed Meyer lemons, tropical passionfruit pulp, crushed garden spearmint, and lightly effervescent sparkling water.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$4.50</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= DESSERTS ================= -->
+        <!-- Dessert 1 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="desserts">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/desserts/dessert-1.jpg" alt="Molten Belgian Chocolate Lava Cake" loading="lazy">
+              <div class="food-card-badge"><span class="badge-custom badge-bestseller">Warm Bake</span></div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.98 <span>(880)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">Molten Dark Chocolate Lava</a></h3>
+              <p class="food-card-desc">72% Valrhona dark chocolate cake with a molten flowing ganache center, topped with Tahitian vanilla bean gelato and cocoa dust.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$7.80</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dessert 2 -->
+        <div class="col-md-6 col-lg-4 menu-filterable-item" data-category="desserts">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/desserts/dessert-2.jpg" alt="Warm Cinnamon Sugar Churros" loading="lazy">
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating"><i class="fa-solid fa-star"></i> 4.87 <span>(540)</span></div>
+              <h3 class="food-card-title"><a href="product-details.html">Artisan Cinnamon Churros</a></h3>
+              <p class="food-card-desc">Hand-piped golden churros dusted in Saigon cinnamon and cane sugar. Accompanied by dulce de leche and Mexican dark chocolate dips.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$6.50</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Empty State (Shown if search returns zero items) -->
+      <div id="menuEmptyState" class="text-center py-5" style="display: none;">
+        <i class="fa-solid fa-magnifying-glass fs-1 text-muted mb-3 d-block"></i>
+        <h4 class="fw-bold">No Menu Items Found</h4>
+        <p class="text-muted">We couldn't find anything matching your search term. Try searching for "burger", "pastrami", "truffle", or "shake".</p>
+        <button class="btn btn-accent btn-sm" onclick="document.getElementById('menuSearchInput').value=''; document.querySelector('.menu-filter-btn[data-category=all]').click();">
+          Reset Filter
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 footer-brand">
+          <a href="index.html"><img src="assets/images/logo-light.svg" alt="BUNORA Logo" style="height: 44px;"></a>
+          <p>Gourmet burgers and artisan deli sandwiches crafted with passion, integrity, and heritage ingredients.</p>
+          <div class="footer-social-links">
+            <a href="#" class="footer-social-btn"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="footer-social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-widget-title">Quick Links</h5>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1 (Burgers)</a></li>
+            <li><a href="index-2.html">Home 2 (Sandwiches)</a></li>
+            <li><a href="about.html">About Brand</a></li>
+            <li><a href="menu.html">Full Menu</a></li>
+            <li><a href="combo-offers.html">Combo Deals</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-widget-title">Explore</h5>
+          <ul class="footer-links-list">
+            <li><a href="product-details.html">Product Details</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Catering Pricing</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-widget-title">Visit Us</h5>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <h6>Downtown Restaurant</h6>
+              <p>742 Evergreen Terrace, Downtown Food District, NY 10001</p>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <h6>Hotline</h6>
+              <p>+1 (555) 839-2041</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+        <p class="mb-0">&copy; <span class="current-year"></span> BUNORA – Gourmet Burgers &amp; Fresh Sandwiches.</p>
+        <div class="d-flex gap-3">
+          <a href="404.html" class="text-secondary small">Privacy Policy</a>
+          <a href="404.html" class="text-secondary small">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Controls -->
+  <div class="floating-widget-wrap">
+    <button class="floating-btn theme-toggle-btn" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+    <button class="floating-btn rtl-toggle-btn" title="Toggle RTL"><span style="font-weight:900; font-size:0.75rem;">RTL</span></button>
+    <button id="backToTopBtn" class="floating-btn" title="Scroll to Top"><i class="fa-solid fa-arrow-up"></i></button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/filters.js"></script>
+</body>
+</html>

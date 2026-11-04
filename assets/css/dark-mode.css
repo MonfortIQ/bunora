@@ -1,0 +1,305 @@
+/* ==========================================================================
+   BUNORA – Gourmet Burgers & Fresh Sandwiches
+   Dark Mode Stylesheet (dark-mode.css)
+   ========================================================================== */
+
+[data-theme="dark"] {
+  /* Surfaces & Backgrounds */
+  --bg-body: #111113;
+  --bg-surface: #18181B;
+  --bg-card: #1F1F23;
+  --bg-secondary: #27272A;
+  --bg-cream-dark: #1F1F23;
+
+  /* Typography Colors */
+  --text-primary: #F4F4F5;
+  --text-secondary: #D4D4D8;
+  --text-muted: #A1A1AA;
+
+  /* Borders & Dividers */
+  --border-color: #2E2E33;
+  --border-subtle: #242428;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.7);
+}
+
+/* Logo adaptation */
+[data-theme="dark"] .logo-dark {
+  display: none !important;
+}
+[data-theme="dark"] .logo-light {
+  display: block !important;
+}
+
+:root:not([data-theme="dark"]) .logo-dark {
+  display: block !important;
+}
+:root:not([data-theme="dark"]) .logo-light {
+  display: none !important;
+}
+
+/* Header & Navbar */
+[data-theme="dark"] .site-header {
+  background-color: rgba(18, 18, 20, 0.94);
+  border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .site-header.scrolled {
+  background-color: rgba(24, 24, 27, 0.98);
+}
+
+[data-theme="dark"] .nav-link {
+  color: #F4F4F5 !important;
+}
+
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active {
+  color: var(--brand-highlight) !important;
+}
+
+[data-theme="dark"] .navbar .dropdown-menu {
+  background-color: #1F1F23;
+  border-color: #333338;
+}
+
+[data-theme="dark"] .navbar .dropdown-item {
+  color: #E4E4E7;
+}
+
+[data-theme="dark"] .navbar .dropdown-item:hover,
+[data-theme="dark"] .navbar .dropdown-item.active {
+  background-color: #27272A;
+  color: var(--brand-highlight);
+}
+
+/* Offcanvas Mobile Menu */
+[data-theme="dark"] .offcanvas {
+  background-color: #18181B;
+}
+
+[data-theme="dark"] .mobile-nav-link {
+  color: #F4F4F5;
+}
+
+[data-theme="dark"] .mobile-submenu-link {
+  color: #A1A1AA;
+}
+
+[data-theme="dark"] .mobile-submenu-link:hover {
+  color: var(--brand-highlight);
+}
+
+/* Buttons */
+[data-theme="dark"] .btn-outline-charcoal {
+  border-color: #E4E4E7;
+  color: #E4E4E7 !important;
+}
+
+[data-theme="dark"] .btn-outline-charcoal:hover {
+  background-color: #FFFFFF;
+  color: #171717 !important;
+}
+
+[data-theme="dark"] .food-card-btn {
+  background: #27272A;
+  border-color: #3F3F46;
+  color: #F4F4F5;
+}
+
+[data-theme="dark"] .food-card-btn:hover {
+  background: var(--brand-accent);
+  color: #FFFFFF;
+  border-color: var(--brand-accent);
+}
+
+/* Cards & Components */
+[data-theme="dark"] .food-card,
+[data-theme="dark"] .feature-box,
+[data-theme="dark"] .service-card,
+[data-theme="dark"] .combo-card,
+[data-theme="dark"] .blog-card,
+[data-theme="dark"] .blog-list-card,
+[data-theme="dark"] .sidebar-widget,
+[data-theme="dark"] .contact-info-card,
+[data-theme="dark"] .contact-form-wrap,
+[data-theme="dark"] .pricing-card,
+[data-theme="dark"] .testimonial-card,
+[data-theme="dark"] .countdown-box {
+  background-color: #1F1F23;
+  border-color: #2E2E33;
+}
+
+[data-theme="dark"] .food-card-title a,
+[data-theme="dark"] .blog-title a,
+[data-theme="dark"] .service-title a {
+  color: #F4F4F5;
+}
+
+[data-theme="dark"] .food-card-title a:hover,
+[data-theme="dark"] .blog-title a:hover,
+[data-theme="dark"] .service-title a:hover {
+  color: var(--brand-highlight);
+}
+
+[data-theme="dark"] .food-card-thumb {
+  background-color: #18181B;
+}
+
+[data-theme="dark"] .diet-icon {
+  background: rgba(31, 31, 35, 0.9);
+  color: #F4F4F5;
+}
+
+/* Home 2 Sandwich Overrides in Dark Mode */
+[data-theme="dark"] .hero-sandwich-section {
+  background: radial-gradient(circle at 65% 50%, #2A1D13 0%, #151518 70%);
+}
+
+[data-theme="dark"] .hero-sandwich-tag {
+  background: #242428;
+  border-color: #3F3F46;
+  color: var(--brand-highlight);
+}
+
+[data-theme="dark"] .hero-sandwich-title {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .hero-sandwich-title .highlight-text {
+  color: var(--brand-highlight);
+}
+
+[data-theme="dark"] .hero-sandwich-lead {
+  color: #D4D4D8;
+}
+
+[data-theme="dark"] .hero-sandwich-pill {
+  background: #242428;
+  border-color: #38383E;
+  color: #E4E4E7;
+}
+
+[data-theme="dark"] .hero-sandwich-main-img,
+[data-theme="dark"] .hero-sandwich-inset {
+  border-color: #2E2E33;
+  background-color: #1F1F23;
+}
+
+[data-theme="dark"] .hero-sandwich-inset p {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .ingredient-card {
+  background-color: #1F1F23;
+  border-color: #2E2E33;
+}
+
+[data-theme="dark"] .editorial-quote-box {
+  background: #242428;
+  border-left-color: var(--brand-highlight);
+}
+
+[data-theme="dark"] .editorial-quote-box h4 {
+  color: #F4F4F5;
+}
+
+/* Inputs & Forms */
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] .menu-search-input {
+  background-color: #18181B;
+  border-color: #3F3F46;
+  color: #F4F4F5;
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus,
+[data-theme="dark"] .menu-search-input:focus {
+  background-color: #1F1F23;
+  border-color: var(--brand-highlight);
+}
+
+[data-theme="dark"] .form-label {
+  color: #F4F4F5;
+}
+
+/* Menu Filters */
+[data-theme="dark"] .menu-controls-wrap {
+  background: #18181B;
+  border-color: #2E2E33;
+}
+
+[data-theme="dark"] .menu-filter-btn {
+  background: #242428;
+  border-color: #3F3F46;
+  color: #D4D4D8;
+}
+
+[data-theme="dark"] .menu-filter-btn:hover {
+  background: #3F3F46;
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .menu-filter-btn.active {
+  background: var(--brand-accent);
+  color: #FFFFFF;
+  border-color: var(--brand-accent);
+}
+
+/* Accordion */
+[data-theme="dark"] .accordion-custom .accordion-item {
+  background-color: #1F1F23;
+  border-color: #2E2E33;
+}
+
+[data-theme="dark"] .accordion-custom .accordion-button {
+  background-color: #1F1F23;
+  color: #F4F4F5;
+}
+
+[data-theme="dark"] .accordion-custom .accordion-button:not(.collapsed) {
+  background-color: #27272A;
+  color: var(--brand-highlight);
+}
+
+[data-theme="dark"] .accordion-custom .accordion-body {
+  color: #D4D4D8;
+}
+
+/* Nutrition Box & Combo Includes */
+[data-theme="dark"] .nutrition-box,
+[data-theme="dark"] .combo-includes {
+  background: #18181B;
+  border-color: #2E2E33;
+}
+
+[data-theme="dark"] .combo-includes li {
+  color: #D4D4D8;
+}
+
+[data-theme="dark"] .pricing-price {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .pricing-features-list li {
+  color: #D4D4D8;
+  border-bottom-color: #2E2E33;
+}
+
+/* Floating toggles */
+[data-theme="dark"] .theme-toggle-btn,
+[data-theme="dark"] .rtl-toggle-btn {
+  background: #242428;
+  border-color: #3F3F46;
+  color: #F4F4F5;
+}
+
+[data-theme="dark"] .theme-toggle-btn:hover,
+[data-theme="dark"] .rtl-toggle-btn:hover {
+  background: var(--brand-accent);
+  border-color: var(--brand-accent);
+  color: #FFFFFF;
+}

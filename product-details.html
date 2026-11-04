@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The BUNORA Wagyu Royale – Menu Item Details | BUNORA</title>
+  <meta name="description" content="Savor the BUNORA Wagyu Royale: Double smash prime Wagyu patties, 24-month Wisconsin cheddar, caramelized shallots, house secret glaze on toasted brioche.">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('bunora_theme') || 'light';
+      var savedDir = localStorage.getItem('bunora_direction') || 'ltr';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-content">
+        <div class="topbar-info">
+          <span class="topbar-info-item"><i class="fa-solid fa-location-dot"></i> 742 Evergreen Terrace, Downtown Food District</span>
+          <span class="topbar-info-item"><i class="fa-solid fa-clock"></i> Kitchen Hours: 11:00 AM - 11:30 PM</span>
+        </div>
+        <div class="topbar-actions">
+          <button class="theme-toggle-btn" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+          <button class="rtl-toggle-btn" title="Toggle RTL"><span style="font-weight:800; font-size:0.8rem;">RTL</span></button>
+          <a href="menu.html" class="topbar-pill-btn"><i class="fa-solid fa-arrow-left"></i> Back to Menu</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/images/logo-dark.svg" alt="BUNORA Logo" class="logo-dark">
+          <img src="assets/images/logo-light.svg" alt="BUNORA Logo" class="logo-light">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvas">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">Home 1 – Modern Burger</a></li>
+                <li><a class="dropdown-item" href="index-2.html">Home 2 – Artisan Deli</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="#" data-bs-toggle="dropdown">Menu <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="menu.html">All Menu Items</a></li>
+                <li><a class="dropdown-item active" href="product-details.html">Product Details View</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                <li><a class="dropdown-item" href="service-details.html">Service Details</a></li>
+                <li><a class="dropdown-item" href="combo-offers.html">Combo Deals</a></li>
+                <li><a class="dropdown-item" href="pricing.html">Catering Pricing</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blog <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="blog.html">Blog Grid</a></li>
+                <li><a class="dropdown-item" href="blog-details.html">Blog Article Details</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          </ul>
+          <div class="navbar-actions">
+            <a href="menu.html" class="btn btn-accent btn-sm"><i class="fa-solid fa-bag-shopping"></i> Order Online</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileOffcanvas">
+    <div class="offcanvas-header">
+      <a href="index.html"><img src="assets/images/logo-dark.svg" alt="BUNORA Logo" class="logo-dark" style="height: 38px;"></a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="index.html">Home 1 – Modern Burger</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="index-2.html">Home 2 – Artisan Deli</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="about.html">About Brand</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="menu.html">Full Menu</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link active" href="product-details.html">Product Details</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="combo-offers.html">Combo Offers</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Breadcrumb Hero -->
+  <section class="inner-hero py-4">
+    <div class="container">
+      <ul class="breadcrumb-custom">
+        <li><a href="index.html">Home</a></li>
+        <li><i class="fa-solid fa-chevron-right"></i></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><i class="fa-solid fa-chevron-right"></i></li>
+        <li class="active">The BUNORA Wagyu Royale</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Product Detail Showcase -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Col 1: Interactive Gallery -->
+        <div class="col-lg-6">
+          <div class="product-detail-gallery">
+            <div class="product-detail-main-img">
+              <img id="mainProductImage" src="assets/images/burgers/burger-1.jpg" alt="The BUNORA Wagyu Royale Main Photo">
+            </div>
+            <!-- Thumbnails Switcher -->
+            <div class="product-detail-thumbs">
+              <div class="product-thumb-item active" data-img="assets/images/burgers/burger-1.jpg">
+                <img src="assets/images/burgers/burger-1.jpg" alt="Thumb 1">
+              </div>
+              <div class="product-thumb-item" data-img="assets/images/burgers/burger-7.jpg">
+                <img src="assets/images/burgers/burger-7.jpg" alt="Thumb 2">
+              </div>
+              <div class="product-thumb-item" data-img="assets/images/home-1/special-burger.jpg">
+                <img src="assets/images/home-1/special-burger.jpg" alt="Thumb 3">
+              </div>
+              <div class="product-thumb-item" data-img="assets/images/home-1/hero-burger.jpg">
+                <img src="assets/images/home-1/hero-burger.jpg" alt="Thumb 4">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: Product Specs & Ordering -->
+        <div class="col-lg-6">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <span class="badge-custom badge-bestseller"><i class="fa-solid fa-crown"></i> Chef's Crown Item</span>
+            <span class="badge-custom badge-new">100% Wagyu</span>
+          </div>
+          <h1 class="fw-bold mb-2">The BUNORA Wagyu Royale</h1>
+          
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="text-highlight fw-bold">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span class="text-primary ms-1">4.95 (840 Verified Reviews)</span>
+            </div>
+          </div>
+
+          <!-- Base Price Container -->
+          <div class="d-flex align-items-baseline gap-3 mb-4">
+            <span id="productBasePrice" data-price="14.90" class="food-price fs-2">$14.90</span>
+            <span class="food-price-original fs-5">$17.50</span>
+            <span class="badge-custom badge-discount">Save 15%</span>
+          </div>
+
+          <p class="lead text-secondary mb-4">
+            Our signature masterpiece. Two 3.5oz grass-fed Wagyu beef patties smashed ultra-crisp at 450°F on cast iron, blanketed in double molten 24-month aged Wisconsin cheddar, slow-caramelized sweet vidalia onions, crisp shredded iceberg lettuce, and our house-recipe truffle secret sauce on a warm, butter-toasted Japanese brioche bun.
+          </p>
+
+          <!-- Nutrition Grid -->
+          <div class="mb-4">
+            <h6 class="fw-bold text-uppercase text-muted small mb-2"><i class="fa-solid fa-chart-pie me-1"></i> Nutritional Profile (Per Serving)</h6>
+            <div class="nutrition-grid">
+              <div class="nutrition-box">
+                <span class="nutrition-value">780</span>
+                <span class="nutrition-label">Calories</span>
+              </div>
+              <div class="nutrition-box">
+                <span class="nutrition-value">46g</span>
+                <span class="nutrition-label">Protein</span>
+              </div>
+              <div class="nutrition-box">
+                <span class="nutrition-value">42g</span>
+                <span class="nutrition-label">Carbs</span>
+              </div>
+              <div class="nutrition-box">
+                <span class="nutrition-value">38g</span>
+                <span class="nutrition-label">Healthy Fats</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dietary & Allergen Labels -->
+          <div class="mb-4 p-3 bg-cream-soft rounded-3 border">
+            <div class="d-flex flex-wrap gap-2 align-items-center">
+              <span class="fw-bold small me-2"><i class="fa-solid fa-circle-info text-accent"></i> Allergens:</span>
+              <span class="badge bg-secondary text-dark border">Gluten (Brioche)</span>
+              <span class="badge bg-secondary text-dark border">Dairy (Aged Cheddar &amp; Butter)</span>
+              <span class="badge bg-secondary text-dark border">Eggs (House Sauce)</span>
+              <span class="badge bg-secondary text-dark border">Sesame Seeds</span>
+              <span class="badge bg-success-subtle text-success border">100% Halal Beef</span>
+            </div>
+          </div>
+
+          <!-- Customization Addons with dynamic JS calculation -->
+          <div class="mb-4">
+            <h6 class="fw-bold text-uppercase text-muted small mb-3"><i class="fa-solid fa-plus-circle me-1"></i> Customize Your Burger</h6>
+            
+            <label class="product-addon-item">
+              <span class="d-flex align-items-center gap-2">
+                <input type="checkbox" class="addon-checkbox form-check-input" data-price="2.50">
+                <span class="fw-bold">Thick Applewood Smoked Bacon</span>
+              </span>
+              <span class="text-accent fw-bold">+$2.50</span>
+            </label>
+
+            <label class="product-addon-item">
+              <span class="d-flex align-items-center gap-2">
+                <input type="checkbox" class="addon-checkbox form-check-input" data-price="2.00">
+                <span class="fw-bold">Extra Melted Aged Cheddar Layer</span>
+              </span>
+              <span class="text-accent fw-bold">+$2.00</span>
+            </label>
+
+            <label class="product-addon-item">
+              <span class="d-flex align-items-center gap-2">
+                <input type="checkbox" class="addon-checkbox form-check-input" data-price="1.50">
+                <span class="fw-bold">Extra Black Truffle Garlic Aioli</span>
+              </span>
+              <span class="text-accent fw-bold">+$1.50</span>
+            </label>
+
+            <label class="product-addon-item">
+              <span class="d-flex align-items-center gap-2">
+                <input type="checkbox" class="addon-checkbox form-check-input" data-price="1.00">
+                <span class="fw-bold">Fire-Charred Pickled Jalapenos</span>
+              </span>
+              <span class="text-accent fw-bold">+$1.00</span>
+            </label>
+          </div>
+
+          <!-- Quantity Stepper & Order Button -->
+          <div class="d-flex flex-wrap align-items-center gap-3 pt-3 border-top">
+            <div class="qty-control">
+              <button type="button" class="qty-btn" id="qtyMinus" aria-label="Decrease quantity">−</button>
+              <input type="number" id="productQty" class="qty-input" value="1" min="1" max="99" readonly>
+              <button type="button" class="qty-btn" id="qtyPlus" aria-label="Increase quantity">+</button>
+            </div>
+
+            <button type="button" class="btn btn-accent btn-lg flex-fill" id="addToOrderBtn">
+              <i class="fa-solid fa-bag-shopping"></i> Add to Order • <span id="productTotalPrice">$14.90</span>
+            </button>
+          </div>
+
+          <!-- Toast Alert Feedback -->
+          <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1090;">
+            <div id="orderToast" class="toast align-items-center text-bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="d-flex">
+                <div class="toast-body">
+                  <i class="fa-solid fa-check-circle text-success me-2"></i> The BUNORA Wagyu Royale added to your order!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== UPGRADE TO COMBO RECOMMENDATION ==================== -->
+  <section class="section-padding bg-cream-soft">
+    <div class="container">
+      <div class="p-4 p-lg-5 bg-card rounded-4 border shadow-sm">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-3 text-center">
+            <img src="assets/images/combos/combo-1.jpg" alt="Combo Upgrade" class="rounded-3 w-100 shadow-sm" style="max-height: 180px; object-fit: cover;">
+          </div>
+          <div class="col-lg-6">
+            <span class="badge-custom badge-bestseller mb-2"><i class="fa-solid fa-gift"></i> Recommended Upgrade</span>
+            <h3 class="fw-bold mb-2">Upgrade to The BUNORA Mega Feast</h3>
+            <p class="text-secondary mb-0">Get this Wagyu Royale along with our Parmesan Truffle Herb Fries, a Salted Caramel Shake, and 4 Honey Sriracha Wings at 25% savings!</p>
+          </div>
+          <div class="col-lg-3 text-lg-end">
+            <div class="food-price fs-3 mb-2">$24.90 <span class="food-price-original fs-6">$32.40</span></div>
+            <a href="combo-offers.html" class="btn btn-accent"><i class="fa-solid fa-tags"></i> View Combo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RELATED MENU ITEMS ==================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end section-title-wrap">
+        <div>
+          <span class="section-tagline"><i class="fa-solid fa-thumbs-up"></i> Perfect Pairings</span>
+          <h2 class="section-title mb-0">You Might Also Crave</h2>
+        </div>
+        <a href="menu.html" class="btn btn-outline-charcoal">Back to Menu</a>
+      </div>
+
+      <div class="row g-4">
+        <!-- Related 1: Truffle Fries -->
+        <div class="col-md-4">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/sides/side-1.jpg" alt="Parmesan Truffle Herb Fries" loading="lazy">
+              <div class="food-card-badge"><span class="badge-custom badge-bestseller">Top Side</span></div>
+            </div>
+            <div class="food-card-content">
+              <h4 class="food-card-title"><a href="product-details.html">Parmesan Truffle Herb Fries</a></h4>
+              <p class="food-card-desc">Russet fries tossed in black truffle oil, aged Parmigiano, and rosemary sea salt.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$6.80</div>
+                <a href="product-details.html" class="food-card-btn">Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related 2: Salted Caramel Shake -->
+        <div class="col-md-4">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/drinks/drink-1.jpg" alt="Salted Caramel Pretzel Shake" loading="lazy">
+              <div class="food-card-badge"><span class="badge-custom badge-new">Shake</span></div>
+            </div>
+            <div class="food-card-content">
+              <h4 class="food-card-title"><a href="product-details.html">Salted Caramel Pretzel Shake</a></h4>
+              <p class="food-card-desc">Vanilla bean gelato, salted caramel swirl, butter pretzels, and chantilly cream.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$6.90</div>
+                <a href="product-details.html" class="food-card-btn">Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related 3: Smoky BBQ Bacon Burger -->
+        <div class="col-md-4">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/burgers/burger-2.jpg" alt="Smoky BBQ Bacon Stacker" loading="lazy">
+              <div class="food-card-badge"><span class="badge-custom badge-bestseller">Burger</span></div>
+            </div>
+            <div class="food-card-content">
+              <h4 class="food-card-title"><a href="product-details.html">Smoky BBQ Bacon Stacker</a></h4>
+              <p class="food-card-desc">Applewood bacon, double Angus patty, onion rings, and smoked chipotle relish.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$15.50</div>
+                <a href="product-details.html" class="food-card-btn">Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 footer-brand">
+          <a href="index.html"><img src="assets/images/logo-light.svg" alt="BUNORA Logo" style="height: 44px;"></a>
+          <p>Gourmet burgers and artisan deli sandwiches crafted with passion, integrity, and heritage ingredients.</p>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-widget-title">Quick Links</h5>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1 (Burgers)</a></li>
+            <li><a href="index-2.html">Home 2 (Sandwiches)</a></li>
+            <li><a href="menu.html">Full Menu</a></li>
+            <li><a href="combo-offers.html">Combo Offers</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-widget-title">Explore</h5>
+          <ul class="footer-links-list">
+            <li><a href="about.html">About Brand</a></li>
+            <li><a href="services.html">All Services</a></li>
+            <li><a href="blog.html">Food Stories</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-widget-title">Location</h5>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <h6>Downtown Restaurant</h6>
+              <p>742 Evergreen Terrace, Downtown Food District, NY 10001</p>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <h6>Order Hotline</h6>
+              <p>+1 (555) 839-2041</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+        <p class="mb-0">&copy; <span class="current-year"></span> BUNORA. All Rights Reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="404.html" class="text-secondary small">Privacy Policy</a>
+          <a href="404.html" class="text-secondary small">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Controls -->
+  <div class="floating-widget-wrap">
+    <button class="floating-btn theme-toggle-btn" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+    <button class="floating-btn rtl-toggle-btn" title="Toggle RTL"><span style="font-weight:900; font-size:0.75rem;">RTL</span></button>
+    <button id="backToTopBtn" class="floating-btn" title="Scroll to Top"><i class="fa-solid fa-arrow-up"></i></button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/menu.js"></script>
+</body>
+</html>

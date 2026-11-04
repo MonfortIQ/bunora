@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catering &amp; Group Order Pricing Packages – BUNORA</title>
+  <meta name="description" content="Transparent sample pricing for BUNORA group meal packages, party slider buffets, and corporate executive catering. Fully customizable with tableware and chafing setups.">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('bunora_theme') || 'light';
+      var savedDir = localStorage.getItem('bunora_direction') || 'ltr';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-content">
+        <div class="topbar-info">
+          <span class="topbar-info-item"><i class="fa-solid fa-calculator"></i> Flexible Group &amp; Corporate Catering Packages</span>
+        </div>
+        <div class="topbar-actions">
+          <button class="theme-toggle-btn" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+          <button class="rtl-toggle-btn" title="Toggle RTL"><span style="font-weight:800; font-size:0.8rem;">RTL</span></button>
+          <a href="contact.html" class="topbar-pill-btn"><i class="fa-solid fa-calendar-check"></i> Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/images/logo-dark.svg" alt="BUNORA Logo" class="logo-dark">
+          <img src="assets/images/logo-light.svg" alt="BUNORA Logo" class="logo-light">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvas">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">Home 1 – Modern Burger</a></li>
+                <li><a class="dropdown-item" href="index-2.html">Home 2 – Artisan Deli</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Menu <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="menu.html">All Menu Items</a></li>
+                <li><a class="dropdown-item" href="product-details.html">Product Details View</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="#" data-bs-toggle="dropdown">Services <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                <li><a class="dropdown-item" href="service-details.html">Service Details View</a></li>
+                <li><a class="dropdown-item" href="combo-offers.html">Combo Offers</a></li>
+                <li><a class="dropdown-item active" href="pricing.html">Catering Pricing</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blog <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="blog.html">Blog Grid</a></li>
+                <li><a class="dropdown-item" href="blog-details.html">Blog Article Details</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          </ul>
+          <div class="navbar-actions">
+            <a href="menu.html" class="btn btn-accent btn-sm"><i class="fa-solid fa-bag-shopping"></i> Order Online</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileOffcanvas">
+    <div class="offcanvas-header">
+      <a href="index.html"><img src="assets/images/logo-dark.svg" alt="BUNORA Logo" class="logo-dark" style="height: 38px;"></a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="index.html">Home 1 – Modern Burger</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="index-2.html">Home 2 – Artisan Deli</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="about.html">About Brand</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="menu.html">Full Menu</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="services.html">Services &amp; Catering</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link active" href="pricing.html">Catering Pricing</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Inner Hero -->
+  <section class="inner-hero">
+    <div class="container">
+      <h1 class="inner-hero-title">Catering &amp; Group Packages</h1>
+      <ul class="breadcrumb-custom">
+        <li><a href="index.html">Home</a></li>
+        <li><i class="fa-solid fa-chevron-right"></i></li>
+        <li class="active">Pricing</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Pricing Packages Grid -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-tagline"><i class="fa-solid fa-utensils"></i> Transparent Value</span>
+        <h2 class="section-title">Flexible Packages for Any Group Size</h2>
+        <p class="section-subtitle">Whether ordering office lunch boxes or planning a 150-guest wedding or corporate mixer, discover our transparent, customizable sample tier options.</p>
+        <div class="alert alert-light border d-inline-block small text-muted py-2 px-3 mt-2">
+          <i class="fa-solid fa-circle-info text-accent me-1"></i> Sample marketplace pricing. All tiers are fully customizable to your specific menu selections and guest count.
+        </div>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Tier 1: Express Lunch -->
+        <div class="col-lg-3 col-md-6">
+          <div class="pricing-card">
+            <h4 class="pricing-plan-name">Express Office</h4>
+            <p class="pricing-plan-desc">Ideal for small team lunches, sprints, and casual boardroom meetings.</p>
+            <div class="pricing-price">$14.50 <small>/ person</small></div>
+            <span class="text-muted small fw-bold">Min. 10 Guests</span>
+
+            <ul class="pricing-features-list">
+              <li><i class="fa-solid fa-check"></i> 1 Full Gourmet Sandwich / Person</li>
+              <li><i class="fa-solid fa-check"></i> Individual Crispy Russet Fries</li>
+              <li><i class="fa-solid fa-check"></i> Choice of Canned Craft Drink</li>
+              <li><i class="fa-solid fa-check"></i> Eco Kraft Named Boxes</li>
+              <li><i class="fa-solid fa-xmark"></i> <span class="text-muted">Chafing Warmers</span></li>
+              <li><i class="fa-solid fa-xmark"></i> <span class="text-muted">Dedicated Service Staff</span></li>
+            </ul>
+
+            <a href="contact.html" class="btn btn-outline-charcoal w-100">Select Package</a>
+          </div>
+        </div>
+
+        <!-- Tier 2: Party Slider Buffet (POPULAR) -->
+        <div class="col-lg-3 col-md-6">
+          <div class="pricing-card popular">
+            <span class="pricing-badge-popular"><i class="fa-solid fa-star"></i> Most Popular</span>
+            <h4 class="pricing-plan-name text-accent">Party Slider Buffet</h4>
+            <p class="pricing-plan-desc">Our crowd-pleaser for birthdays, celebrations, and game night gatherings.</p>
+            <div class="pricing-price text-accent">$18.90 <small>/ person</small></div>
+            <span class="text-muted small fw-bold">Min. 15 Guests</span>
+
+            <ul class="pricing-features-list">
+              <li><i class="fa-solid fa-check"></i> 3 Gourmet Mini Sliders / Person</li>
+              <li><i class="fa-solid fa-check"></i> Truffle Herb Fries &amp; Onion Rings</li>
+              <li><i class="fa-solid fa-check"></i> 3 House Craft Dipping Sauces</li>
+              <li><i class="fa-solid fa-check"></i> Chafing Warmers &amp; Heat Cans</li>
+              <li><i class="fa-solid fa-check"></i> Compostable Bamboo Tableware</li>
+              <li><i class="fa-solid fa-xmark"></i> <span class="text-muted">Dedicated Service Staff</span></li>
+            </ul>
+
+            <a href="contact.html" class="btn btn-accent w-100">Select Package</a>
+          </div>
+        </div>
+
+        <!-- Tier 3: Corporate Executive -->
+        <div class="col-lg-3 col-md-6">
+          <div class="pricing-card">
+            <h4 class="pricing-plan-name">Corporate Elite</h4>
+            <p class="pricing-plan-desc">Premium spread for client dinners, quarterly all-hands, and tech conferences.</p>
+            <div class="pricing-price">$24.00 <small>/ person</small></div>
+            <span class="text-muted small fw-bold">Min. 20 Guests</span>
+
+            <ul class="pricing-features-list">
+              <li><i class="fa-solid fa-check"></i> Smashed Wagyu + Pastrami Options</li>
+              <li><i class="fa-solid fa-check"></i> Organic Heirloom Farm Salad</li>
+              <li><i class="fa-solid fa-check"></i> Truffle Fries &amp; Queso Nachos</li>
+              <li><i class="fa-solid fa-check"></i> Single-Origin Nitro Cold Brews</li>
+              <li><i class="fa-solid fa-check"></i> Full Chafing Setup &amp; Tableware</li>
+              <li><i class="fa-solid fa-check"></i> Priority Time Slot Guarantee</li>
+            </ul>
+
+            <a href="contact.html" class="btn btn-outline-charcoal w-100">Select Package</a>
+          </div>
+        </div>
+
+        <!-- Tier 4: VIP Private Buyout -->
+        <div class="col-lg-3 col-md-6">
+          <div class="pricing-card">
+            <h4 class="pricing-plan-name">VIP Private Event</h4>
+            <p class="pricing-plan-desc">Full restaurant buyout or private mezzanine with dedicated on-site chefs.</p>
+            <div class="pricing-price">$38.00 <small>/ person</small></div>
+            <span class="text-muted small fw-bold">Min. 30 Guests</span>
+
+            <ul class="pricing-features-list">
+              <li><i class="fa-solid fa-check"></i> Live On-Site Smash Burger Plancha</li>
+              <li><i class="fa-solid fa-check"></i> Unlimited Fries, Wings &amp; Sides Bar</li>
+              <li><i class="fa-solid fa-check"></i> Craft Taproom Beer &amp; Wine Pairings</li>
+              <li><i class="fa-solid fa-check"></i> Warm Molten Lava Desserts &amp; Churros</li>
+              <li><i class="fa-solid fa-check"></i> Dedicated Chef &amp; Service Staff</li>
+              <li><i class="fa-solid fa-check"></i> Custom Printed Menu Signage</li>
+            </ul>
+
+            <a href="contact.html" class="btn btn-charcoal w-100">Select Package</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Package Comparison Matrix Table -->
+  <section class="section-padding bg-cream-soft">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-tagline"><i class="fa-solid fa-table-list"></i> Side-by-Side</span>
+        <h2 class="section-title">Detailed Package Comparison</h2>
+        <p class="section-subtitle">Review every feature, inclusion, and upgrade available across our catering tiers.</p>
+      </div>
+
+      <div class="table-responsive bg-card rounded-4 border shadow-sm p-4">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th scope="col" style="width: 32%;">Package Features</th>
+              <th scope="col" class="text-center">Express Office</th>
+              <th scope="col" class="text-center text-accent fw-bold">Party Slider</th>
+              <th scope="col" class="text-center">Corporate Elite</th>
+              <th scope="col" class="text-center">VIP Event</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="fw-bold">Price Per Guest</td>
+              <td class="text-center">$14.50</td>
+              <td class="text-center text-accent fw-bold">$18.90</td>
+              <td class="text-center">$24.00</td>
+              <td class="text-center">$38.00</td>
+            </tr>
+            <tr>
+              <td class="fw-bold">Minimum Order Size</td>
+              <td class="text-center">10 Guests</td>
+              <td class="text-center">15 Guests</td>
+              <td class="text-center">20 Guests</td>
+              <td class="text-center">30 Guests</td>
+            </tr>
+            <tr>
+              <td class="fw-bold">Wagyu Beef Smash Sliders</td>
+              <td class="text-center"><i class="fa-solid fa-xmark text-muted"></i></td>
+              <td class="text-center text-green"><i class="fa-solid fa-check"></i></td>
+              <td class="text-center text-green"><i class="fa-solid fa-check"></i></td>
+              <td class="text-center text-green"><i class="fa-solid fa-check"></i></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">Parmesan Truffle Fries</td>
+              <td class="text-center"><i class="fa-solid fa-xmark text-muted"></i></td>
+              <td class="text-center text-green"><i class="fa-solid fa-check"></i></td>
+              <td class="text-center text-green"><i class="fa-solid fa-check"></i></td>
+              <td class="text-center text-green"><i class="fa-solid fa-check"></i></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">Chafing Warmers &amp; Heat Cans</td>
+              <td class="text-center"><i class="fa-solid fa-xmark text-muted"></i></td>
+              <td class="text-center text-green"><i class="fa-solid fa-check"></i></td>
+              <td class="text-center text-green"><i class="fa-solid fa-check"></i></td>
+              <td class="text-center text-green"><i class="fa-solid fa-check"></i></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">Nitro Cold Brew &amp; Shakes</td>
+              <td class="text-center"><i class="fa-solid fa-xmark text-muted"></i></td>
+              <td class="text-center"><i class="fa-solid fa-xmark text-muted"></i></td>
+              <td class="text-center text-green"><i class="fa-solid fa-check"></i></td>
+              <td class="text-center text-green"><i class="fa-solid fa-check"></i></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">On-Site Culinary Chef &amp; Service Staff</td>
+              <td class="text-center"><i class="fa-solid fa-xmark text-muted"></i></td>
+              <td class="text-center"><i class="fa-solid fa-xmark text-muted"></i></td>
+              <td class="text-center"><i class="fa-solid fa-xmark text-muted"></i></td>
+              <td class="text-center text-green"><i class="fa-solid fa-check"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing FAQ -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-tagline"><i class="fa-solid fa-circle-question"></i> Common Questions</span>
+        <h2 class="section-title">Catering &amp; Order Questions</h2>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion accordion-custom" id="pricingFAQ">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#pfaq1">
+                  Can we customize items between different packages?
+                </button>
+              </h2>
+              <div id="pfaq1" class="accordion-collapse collapse show" data-bs-parent="#pricingFAQ">
+                <div class="accordion-body">
+                  Yes! All of our packages are completely customizable. You can swap fries for loaded nachos, request additional vegan burgers, or upgrade to craft milkshakes.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pfaq2">
+                  What is your cancellation and deposit policy?
+                </button>
+              </h2>
+              <div id="pfaq2" class="accordion-collapse collapse" data-bs-parent="#pricingFAQ">
+                <div class="accordion-body">
+                  We require a 20% deposit upon booking confirmation. Cancellations made at least 48 hours in advance receive a 100% full refund with no penalty fees.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pfaq3">
+                  Do you provide tax-exempt and corporate invoicing?
+                </button>
+              </h2>
+              <div id="pfaq3" class="accordion-collapse collapse" data-bs-parent="#pricingFAQ">
+                <div class="accordion-body">
+                  Yes, for registered businesses and educational institutions, we support Net-30 monthly corporate invoicing and accept tax-exempt documentation.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 footer-brand">
+          <a href="index.html"><img src="assets/images/logo-light.svg" alt="BUNORA Logo" style="height: 44px;"></a>
+          <p>Gourmet burgers and artisan deli sandwiches crafted with passion, integrity, and heritage ingredients.</p>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-widget-title">Quick Links</h5>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1 (Burgers)</a></li>
+            <li><a href="index-2.html">Home 2 (Sandwiches)</a></li>
+            <li><a href="menu.html">Full Menu</a></li>
+            <li><a href="combo-offers.html">Combo Offers</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-widget-title">Services</h5>
+          <ul class="footer-links-list">
+            <li><a href="services.html">All Services</a></li>
+            <li><a href="service-details.html">Service Details</a></li>
+            <li><a href="pricing.html">Catering Pricing</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-widget-title">Direct Booking</h5>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <h6>Call Our Events Team</h6>
+              <p>+1 (555) 839-2041 / events@bunorarestaurant.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+        <p class="mb-0">&copy; <span class="current-year"></span> BUNORA. All Rights Reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="404.html" class="text-secondary small">Privacy Policy</a>
+          <a href="404.html" class="text-secondary small">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Controls -->
+  <div class="floating-widget-wrap">
+    <button class="floating-btn theme-toggle-btn" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+    <button class="floating-btn rtl-toggle-btn" title="Toggle RTL"><span style="font-weight:900; font-size:0.75rem;">RTL</span></button>
+    <button id="backToTopBtn" class="floating-btn" title="Scroll to Top"><i class="fa-solid fa-arrow-up"></i></button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

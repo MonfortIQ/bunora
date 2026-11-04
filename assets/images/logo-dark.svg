@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 56" width="240" height="56" fill="none">
+  <!-- Brand Icon -->
+  <g transform="translate(6, 4)">
+    <!-- Top Bun -->
+    <path d="M4 22C4 12.059 12.059 4 22 4C31.941 4 40 12.059 40 22C40 23.1 39.1 24 38 24H6C4.9 24 4 23.1 4 22Z" fill="#E74732"/>
+    <!-- Sesame Seeds on Bun -->
+    <ellipse cx="16" cy="12" rx="1.5" ry="2.2" transform="rotate(-25 16 12)" fill="#F6B83F"/>
+    <ellipse cx="23" cy="9" rx="1.5" ry="2.2" fill="#F6B83F"/>
+    <ellipse cx="29" cy="13" rx="1.5" ry="2.2" transform="rotate(25 29 13)" fill="#F6B83F"/>
+    <!-- Melted Cheese Layer -->
+    <path d="M3 27H41L37 32H33L30 35L27 32H18L15 35L12 32H7L3 27Z" fill="#F6B83F"/>
+    <!-- Grilled Patty -->
+    <rect x="5" y="33" width="34" height="6" rx="3" fill="#171717"/>
+    <!-- Fresh Greens/Lettuce wave -->
+    <path d="M4 30C6 31 8 30 11 31C14 32 16 30 19 31C22 32 24 30 27 31C30 32 32 30 35 31C38 32 40 31 41 30" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Bottom Bun -->
+    <path d="M6 40H38C39.1 40 40 40.9 40 42C40 45.314 37.314 48 34 48H10C6.686 48 4 45.314 4 42C4 40.9 4.9 40 6 40Z" fill="#E74732"/>
+  </g>
+  <!-- Text BUNORA -->
+  <text x="58" y="34" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="900" letter-spacing="1.5" fill="#171717">BUN<tspan fill="#E74732">ORA</tspan></text>
+  <text x="59" y="47" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="700" letter-spacing="2.8" fill="#737373">GOURMET BURGERS &amp; DELI</text>
+</svg>

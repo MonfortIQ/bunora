@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About BUNORA – Our Story, Culinary Philosophy &amp; Chefs</title>
+  <meta name="description" content="Discover the story of BUNORA. From a passionate food truck to a celebrated urban dining destination dedicated to flame-grilled Wagyu and artisanal sourdough.">
+  <meta name="keywords" content="about BUNORA, restaurant story, head chef, culinary team, organic burgers, artisan bakery">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('bunora_theme') || 'light';
+      var savedDir = localStorage.getItem('bunora_direction') || 'ltr';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ==================== TOPBAR ==================== -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-content">
+        <div class="topbar-info">
+          <span class="topbar-info-item"><i class="fa-solid fa-location-dot"></i> 742 Evergreen Terrace, Downtown Food District</span>
+          <span class="topbar-info-item"><i class="fa-regular fa-clock"></i> Mon - Sun: 11:00 AM - 11:30 PM</span>
+        </div>
+        <div class="topbar-actions">
+          <button class="theme-toggle-btn" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+          <button class="rtl-toggle-btn" title="Toggle RTL"><span style="font-weight:800; font-size:0.8rem;">RTL</span></button>
+          <a href="contact.html" class="topbar-pill-btn"><i class="fa-solid fa-phone"></i> Reservations</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/images/logo-dark.svg" alt="BUNORA Logo" class="logo-dark">
+          <img src="assets/images/logo-light.svg" alt="BUNORA Logo" class="logo-light">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvas">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">Home 1 – Modern Burger</a></li>
+                <li><a class="dropdown-item" href="index-2.html">Home 2 – Artisan Deli</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Menu <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="menu.html">All Menu Items</a></li>
+                <li><a class="dropdown-item" href="menu.html#burgers">Signature Burgers</a></li>
+                <li><a class="dropdown-item" href="menu.html#sandwiches">Gourmet Sandwiches</a></li>
+                <li><a class="dropdown-item" href="product-details.html">Product Details View</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                <li><a class="dropdown-item" href="service-details.html">Service Details View</a></li>
+                <li><a class="dropdown-item" href="combo-offers.html">Combo Offers</a></li>
+                <li><a class="dropdown-item" href="pricing.html">Catering Pricing</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blog <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="blog.html">Blog Grid</a></li>
+                <li><a class="dropdown-item" href="blog-list.html">Blog List</a></li>
+                <li><a class="dropdown-item" href="blog-details.html">Blog Article Details</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          </ul>
+          <div class="navbar-actions">
+            <a href="menu.html" class="btn btn-accent btn-sm"><i class="fa-solid fa-bag-shopping"></i> Order Online</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE OFFCANVAS ==================== -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileOffcanvas">
+    <div class="offcanvas-header">
+      <a href="index.html">
+        <img src="assets/images/logo-dark.svg" alt="BUNORA Logo" class="logo-dark" style="height: 38px;">
+        <img src="assets/images/logo-light.svg" alt="BUNORA Logo" class="logo-light" style="height: 38px;">
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="d-flex gap-2 mb-4">
+        <button class="theme-toggle-btn flex-fill"><i class="fa-solid fa-moon"></i> Theme</button>
+        <button class="rtl-toggle-btn flex-fill"><span style="font-weight:800;">RTL</span> Switch</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="index.html">Home 1 – Modern Burger</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="index-2.html">Home 2 – Artisan Deli</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link active" href="about.html">About Brand</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="menu.html">Full Menu</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="product-details.html">Product Details</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="services.html">Services &amp; Catering</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="blog.html">Food Stories</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="mt-4 pt-3 border-top">
+        <a href="menu.html" class="btn btn-accent w-100"><i class="fa-solid fa-fire"></i> Order Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== INNER HERO BANNER ==================== -->
+  <section class="inner-hero">
+    <div class="container">
+      <h1 class="inner-hero-title">Our Story &amp; Craft</h1>
+      <ul class="breadcrumb-custom">
+        <li><a href="index.html"><i class="fa-solid fa-house me-1"></i> Home</a></li>
+        <li><i class="fa-solid fa-chevron-right"></i></li>
+        <li class="active">About Us</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== BRAND STORY SECTION ==================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="section-tagline"><i class="fa-solid fa-fire"></i> Born From Pure Passion</span>
+          <h2 class="section-title">From a 1978 Food Truck to Culinary Distinction</h2>
+          <p class="lead text-secondary">
+            In 2018, chefs Marcus Vance and Elena Rossi set out with a simple rebellious question: Why does casual dining have to settle for industrialized, frozen compromise?
+          </p>
+          <p class="text-secondary">
+            Equipped with a vintage refurbished truck and a screaming-hot 450-degree plancha, they began serving smashed grass-fed Wagyu burgers and 48-hour fermented sourdough sandwiches to late-night music lovers and chefs ending their shifts.
+          </p>
+          <p class="text-secondary">
+            Word spread like wildfire. Lines wrapped around four city blocks. Today, BUNORA has grown into an iconic urban dining destination, yet our core conviction remains untouched: <em>every ingredient matters, every sear must be flawless, and no guest leaves hungry.</em>
+          </p>
+          <div class="d-flex gap-4 pt-3 border-top">
+            <div>
+              <h3 class="fw-bold text-accent mb-0">8+ Years</h3>
+              <span class="text-muted small">Of Culinary Obsession</span>
+            </div>
+            <div>
+              <h3 class="fw-bold text-highlight mb-0">2.5M+</h3>
+              <span class="text-muted small">Burgers &amp; Sandwiches Crafted</span>
+            </div>
+            <div>
+              <h3 class="fw-bold text-primary mb-0">14</h3>
+              <span class="text-muted small">Culinary Industry Awards</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <img src="assets/images/about/about-hero.jpg" alt="BUNORA Restaurant Kitchen Craft" class="rounded-4 shadow-lg w-100" style="max-height: 520px; object-fit: cover;" loading="lazy">
+            <div class="p-3 bg-charcoal text-white rounded-3 shadow position-absolute bottom-0 start-0 m-4 border border-secondary" style="max-width: 280px;">
+              <h6 class="text-highlight fw-bold mb-1"><i class="fa-solid fa-medal"></i> Quality Manifesto</h6>
+              <p class="small text-light mb-0">Never frozen. Never microwaved. Sourced locally with absolute transparency.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MISSION & VISION ==================== -->
+  <section class="section-padding bg-cream-soft">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Mission -->
+        <div class="col-md-6">
+          <div class="p-4 p-lg-5 bg-card rounded-4 border h-100 shadow-sm">
+            <div class="feature-icon-wrap m-0 mb-4">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <h3 class="fw-bold mb-3">Our Mission</h3>
+            <p class="text-secondary">
+              To democratize fine-dining culinary techniques through bold, accessible, crave-inducing burgers and sandwiches. We celebrate real local agriculture, empower passionate kitchen artisans, and foster joyful community gatherings around the dinner table.
+            </p>
+            <ul class="service-features-list mb-0">
+              <li><i class="fa-solid fa-circle-check"></i> Sustainable, regenerative livestock farming partnerships</li>
+              <li><i class="fa-solid fa-circle-check"></i> Zero artificial food coloring, corn syrups, or fillers</li>
+              <li><i class="fa-solid fa-circle-check"></i> Living wage and culinary apprenticeships for our staff</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Vision -->
+        <div class="col-md-6">
+          <div class="p-4 p-lg-5 bg-card rounded-4 border h-100 shadow-sm">
+            <div class="feature-icon-wrap m-0 mb-4" style="background: rgba(246, 184, 63, 0.15); color: #B45309;">
+              <i class="fa-solid fa-compass"></i>
+            </div>
+            <h3 class="fw-bold mb-3">Our Vision</h3>
+            <p class="text-secondary">
+              To become the global benchmark for conscious, modern hospitality. We envision a world where urban comfort food is celebrated as a high craft, supporting circular zero-waste kitchen ecosystems and inspiring wholesome eating.
+            </p>
+            <ul class="service-features-list mb-0">
+              <li><i class="fa-solid fa-circle-check"></i> 100% biodegradable and compostable takeaway materials</li>
+              <li><i class="fa-solid fa-circle-check"></i> Expanded neighborhood bakeries milling flour on-site</li>
+              <li><i class="fa-solid fa-circle-check"></i> Annual community meal initiatives feeding urban families</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CULINARY PHILOSOPHY & INGREDIENT STANDARDS ==================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-tagline"><i class="fa-solid fa-carrot"></i> Uncompromising Standards</span>
+        <h2 class="section-title">The Four Pillars of Our Kitchen</h2>
+        <p class="section-subtitle">We believe extraordinary food is the inevitable result of extraordinary ingredients, meticulous timing, and deep culinary respect.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Pillar 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-box">
+            <div class="feature-icon-wrap"><i class="fa-solid fa-cow"></i></div>
+            <h4 class="feature-title">100% Grass-Fed Angus</h4>
+            <p class="feature-desc">Our beef is sourced from family-run pastures. Humane pasture-raised cattle, hormone-free, with incredible natural marbling.</p>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-box">
+            <div class="feature-icon-wrap"><i class="fa-solid fa-wheat-awn"></i></div>
+            <h4 class="feature-title">Wild Yeast Sourdough</h4>
+            <p class="feature-desc">Our master sourdough mother dough has been maintained since 2017. 48-hour cold fermentation yields unmatched crust and airy crumb.</p>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-box">
+            <div class="feature-icon-wrap"><i class="fa-solid fa-cheese"></i></div>
+            <h4 class="feature-title">Artisan Cave Cheeses</h4>
+            <p class="feature-desc">We never use processed cheese slices. Only 24-month aged Wisconsin cheddar, cave-aged Swiss Gruyère, and Italian bufala.</p>
+          </div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-box">
+            <div class="feature-icon-wrap"><i class="fa-solid fa-jar"></i></div>
+            <h4 class="feature-title">Scratch Emulsions</h4>
+            <p class="feature-desc">Our 12 house sauces, pickles, hot chutneys, and glazes are prepared daily in small batches by our sous chefs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MEET OUR CHEFS & TEAM ==================== -->
+  <section class="section-padding bg-cream-soft">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-tagline"><i class="fa-solid fa-user-group"></i> Culinary Leadership</span>
+        <h2 class="section-title">The Masters Behind the Grill &amp; Hearth</h2>
+        <p class="section-subtitle">Meet the visionary chefs and bakers who bring heart, precision, and tireless creativity to BUNORA every day.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Chef 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="food-card text-center p-4">
+            <img src="assets/images/about/about-chef.jpg" alt="Head Chef Marcus Vance" class="rounded-circle mx-auto mb-3 shadow" style="width: 160px; height: 160px; object-fit: cover; border: 4px solid var(--brand-accent);" loading="lazy">
+            <h4 class="fw-bold mb-1">Marcus Vance</h4>
+            <span class="text-accent fw-bold small text-uppercase mb-3 d-block">Co-Founder &amp; Executive Chef</span>
+            <p class="text-secondary small mb-3">Former Michelin 2-star sous chef with 18 years across Lyon, Chicago, and New York. Obsessed with the science of high-heat Maillard crusting.</p>
+            <div class="d-flex justify-content-center gap-2">
+              <a href="#" class="btn btn-sm btn-icon btn-charcoal"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="btn btn-sm btn-icon btn-charcoal"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chef 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="food-card text-center p-4">
+            <img src="assets/images/about/about-sous-chef.jpg" alt="Master Baker Elena Rossi" class="rounded-circle mx-auto mb-3 shadow" style="width: 160px; height: 160px; object-fit: cover; border: 4px solid var(--brand-highlight);" loading="lazy">
+            <h4 class="fw-bold mb-1">Elena Rossi</h4>
+            <span class="text-highlight fw-bold small text-uppercase mb-3 d-block">Co-Founder &amp; Master Baker</span>
+            <p class="text-secondary small mb-3">Trained in Florence and San Francisco, Elena champions wild-yeast sourdough fermentation and traditional Italian focaccias.</p>
+            <div class="d-flex justify-content-center gap-2">
+              <a href="#" class="btn btn-sm btn-icon btn-charcoal"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="btn btn-sm btn-icon btn-charcoal"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chef 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="food-card text-center p-4">
+            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=400&q=80" alt="Chef Tariq Al-Mansoor" class="rounded-circle mx-auto mb-3 shadow" style="width: 160px; height: 160px; object-fit: cover; border: 4px solid var(--brand-green);" loading="lazy">
+            <h4 class="fw-bold mb-1">Tariq Al-Mansoor</h4>
+            <span class="text-success fw-bold small text-uppercase mb-3 d-block">Head of Pastrami &amp; Smokehouse</span>
+            <p class="text-secondary small mb-3">Master of low-and-slow hardwood pit barbecue. Oversees our 14-day brining programs and artisanal cured deli cuts.</p>
+            <div class="d-flex justify-content-center gap-2">
+              <a href="#" class="btn btn-sm btn-icon btn-charcoal"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="btn btn-sm btn-icon btn-charcoal"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RESTAURANT EXPERIENCE ==================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <img src="assets/images/about/about-interior.jpg" alt="BUNORA Dining Experience" class="rounded-4 shadow-lg w-100" style="max-height: 480px; object-fit: cover;" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <span class="section-tagline"><i class="fa-solid fa-mug-hot"></i> Warm Urban Vibe</span>
+          <h2 class="section-title">An Urban Gathering Space Designed for Connection</h2>
+          <p class="lead text-secondary">
+            BUNORA's dining room pairs industrial steel, reclaimed barn oak, and warm mid-century ambient lighting with comfortable leather booths and community sharing tables.
+          </p>
+          <p class="text-secondary">
+            Watch our open grill line in action from the counter stools, grab a craft beer on draft, or enjoy our lush, heated outdoor patio on breezy summer nights.
+          </p>
+          <div class="d-flex gap-3 pt-3">
+            <a href="contact.html" class="btn btn-accent btn-lg"><i class="fa-solid fa-calendar-check"></i> Book a Table</a>
+            <a href="services.html" class="btn btn-outline-charcoal btn-lg">Explore Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA SECTION ==================== -->
+  <section class="section-padding-sm bg-cream-soft">
+    <div class="container">
+      <div class="newsletter-banner text-center py-5">
+        <h2 class="fw-bold mb-3">Taste the Passion Today</h2>
+        <p class="lead text-light mb-4 mx-auto" style="max-width: 650px;">
+          Whether you're looking for an unforgettable solo lunch or catering a 200-guest celebration, BUNORA delivers excellence without compromise.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="menu.html" class="btn btn-accent btn-lg"><i class="fa-solid fa-utensils"></i> Explore Full Menu</a>
+          <a href="contact.html" class="btn btn-outline-white btn-lg"><i class="fa-solid fa-location-dot"></i> Find Our Location</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 footer-brand">
+          <a href="index.html"><img src="assets/images/logo-light.svg" alt="BUNORA Logo" style="height: 44px;"></a>
+          <p>Gourmet burgers and artisan deli sandwiches crafted with passion, integrity, and heritage ingredients.</p>
+          <div class="footer-social-links">
+            <a href="#" class="footer-social-btn"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="footer-social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="footer-social-btn"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-widget-title">Quick Links</h5>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1 (Burgers)</a></li>
+            <li><a href="index-2.html">Home 2 (Sandwiches)</a></li>
+            <li><a href="about.html">About Brand</a></li>
+            <li><a href="menu.html">Full Menu</a></li>
+            <li><a href="combo-offers.html">Combo Offers</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-widget-title">Pages</h5>
+          <ul class="footer-links-list">
+            <li><a href="services.html">All Services</a></li>
+            <li><a href="blog.html">Food Stories</a></li>
+            <li><a href="pricing.html">Catering Pricing</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-widget-title">Flagship Location</h5>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <h6>Downtown Restaurant</h6>
+              <p>742 Evergreen Terrace, Downtown Food District, NY 10001</p>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <h6>Direct Line</h6>
+              <p>+1 (555) 839-2041 / hello@bunorarestaurant.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+        <p class="mb-0">&copy; <span class="current-year"></span> BUNORA – Gourmet Burgers &amp; Fresh Sandwiches.</p>
+        <div class="d-flex gap-3">
+          <a href="404.html" class="text-secondary small">Privacy Policy</a>
+          <a href="404.html" class="text-secondary small">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Controls -->
+  <div class="floating-widget-wrap">
+    <button class="floating-btn theme-toggle-btn" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+    <button class="floating-btn rtl-toggle-btn" title="Toggle RTL"><span style="font-weight:900; font-size:0.75rem;">RTL</span></button>
+    <button id="backToTopBtn" class="floating-btn" title="Scroll to Top"><i class="fa-solid fa-arrow-up"></i></button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/validation.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+/* ==========================================================================
+   BUNORA – Gourmet Burgers & Fresh Sandwiches
+   Right-To-Left (RTL) Stylesheet (rtl.css)
+   ========================================================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Base resets in RTL */
+[dir="rtl"] ul,
+[dir="rtl"] ol {
+  padding-left: 0;
+  padding-right: 1.25rem;
+}
+
+/* Directional Text & Helpers */
+[dir="rtl"] .text-start { text-align: right !important; }
+[dir="rtl"] .text-end { text-align: left !important; }
+
+/* Arrows & Icon Flipping */
+[dir="rtl"] .fa-arrow-right,
+[dir="rtl"] .fa-chevron-right,
+[dir="rtl"] .fa-angle-right {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .fa-arrow-left,
+[dir="rtl"] .fa-chevron-left,
+[dir="rtl"] .fa-angle-left {
+  transform: scaleX(-1);
+}
+
+/* Topbar */
+[dir="rtl"] .topbar-info {
+  flex-direction: row-reverse;
+}
+
+/* Navbar */
+[dir="rtl"] .navbar .dropdown-menu {
+  right: 0 !important;
+  left: auto !important;
+  text-align: right;
+}
+
+[dir="rtl"] .navbar .dropdown-item:hover,
+[dir="rtl"] .navbar .dropdown-item.active {
+  padding-inline-start: 1rem;
+  padding-inline-end: 1.25rem;
+}
+
+[dir="rtl"] .navbar-nav {
+  padding-right: 0;
+}
+
+/* Mobile Offcanvas */
+[dir="rtl"] .offcanvas-start {
+  right: 0;
+  left: auto;
+  transform: translateX(100%);
+}
+
+[dir="rtl"] .offcanvas-start.show {
+  transform: none;
+}
+
+[dir="rtl"] .mobile-submenu {
+  padding: 0 1rem 0.75rem 0;
+}
+
+/* Hero Section Homepage 1 */
+[dir="rtl"] .hero-burger-img-wrap {
+  transform: perspective(1000px) rotateY(4deg);
+}
+
+[dir="rtl"] .hero-burger-img-wrap:hover {
+  transform: perspective(1000px) rotateY(0deg) scale(1.02);
+}
+
+[dir="rtl"] .hero-floating-seal {
+  left: auto;
+  right: -20px;
+}
+
+[dir="rtl"] .hero-floating-card {
+  left: auto;
+  right: -25px;
+}
+
+/* Hero Section Homepage 2 */
+[dir="rtl"] .hero-sandwich-inset {
+  right: auto;
+  left: -25px;
+}
+
+/* Food Cards */
+[dir="rtl"] .food-card-badge {
+  left: auto;
+  right: 14px;
+}
+
+[dir="rtl"] .food-card-diet {
+  right: auto;
+  left: 14px;
+}
+
+/* Combo Cards */
+[dir="rtl"] .combo-badge-top {
+  left: auto;
+  right: 16px;
+}
+
+/* Blog Cards */
+[dir="rtl"] .blog-category-tag {
+  left: auto;
+  right: 12px;
+}
+
+/* Sidebar Widgets */
+[dir="rtl"] .widget-title::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .footer-widget-title::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .widget-category-link:hover {
+  padding-inline-start: 0;
+  padding-inline-end: 0.5rem;
+}
+
+[dir="rtl"] .footer-links-list a:hover {
+  padding-inline-start: 0;
+  padding-inline-end: 0.4rem;
+}
+
+/* Floating Actions & Back to top */
+[dir="rtl"] .floating-widget-wrap {
+  right: auto;
+  left: 25px;
+}
+
+/* Menu Search */
+[dir="rtl"] .menu-search-input {
+  padding: 0.65rem 2.6rem 0.65rem 1rem;
+}
+
+[dir="rtl"] .menu-search-icon {
+  left: auto;
+  right: 1rem;
+}
+
+/* Service Detail Badge */
+[dir="rtl"] .service-icon-badge {
+  right: auto;
+  left: 20px;
+}
+
+/* Editorial quote box */
+[dir="rtl"] .editorial-quote-box {
+  border-left: none;
+  border-right: 5px solid var(--brand-highlight);
+}

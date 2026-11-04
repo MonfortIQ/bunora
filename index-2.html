@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUNORA Deli – Artisan Gourmet Sandwiches &amp; Fresh Layers</title>
+  <meta name="description" content="Discover BUNORA Deli: Hand-crafted artisan sandwiches, 48-hour fermented sourdough, heritage cured pastrami, fresh bufala mozzarella, and daily organic deli creations.">
+  <meta name="keywords" content="artisan sandwiches, sourdough deli, gourmet sandwich, pastrami on rye, BUNORA Deli, fresh bakery">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Immediate Theme & RTL Init Script -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('bunora_theme') || 'light';
+      var savedDir = localStorage.getItem('bunora_direction') || 'ltr';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ==================== TOP ANNOUNCEMENT BAR ==================== -->
+  <div class="topbar" style="background-color: #27221A; border-bottom: 1px solid rgba(246, 184, 63, 0.15);">
+    <div class="container">
+      <div class="topbar-content">
+        <div class="topbar-info">
+          <span class="topbar-info-item"><i class="fa-solid fa-wheat-awn"></i> In-House Sourdough Baked Fresh at 7:00 AM &amp; 1:00 PM Daily</span>
+          <span class="topbar-info-item"><i class="fa-solid fa-clock"></i> Deli Hours: 8:00 AM - 9:00 PM</span>
+        </div>
+        <div class="topbar-actions">
+          <button class="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button class="rtl-toggle-btn" title="Toggle Direction" aria-label="Toggle Direction">
+            <span style="font-weight:800; font-size:0.8rem;">RTL</span>
+          </button>
+          <a href="menu.html#sandwiches" class="topbar-pill-btn" style="background: rgba(246, 184, 63, 0.2); border-color: var(--brand-highlight); color: var(--brand-highlight);"><i class="fa-solid fa-bread-slice"></i> Deli Pickup</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN STICKY NAVIGATION ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <!-- Brand Logo -->
+        <a class="navbar-brand" href="index-2.html">
+          <img src="assets/images/logo-dark.svg" alt="BUNORA Logo" class="logo-dark">
+          <img src="assets/images/logo-light.svg" alt="BUNORA Logo" class="logo-light">
+        </a>
+
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvas" aria-controls="mobileOffcanvas" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+
+        <!-- Desktop Nav Items -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <!-- Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home <i class="fa-solid fa-chevron-down nav-chevron"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">Home 1 – Modern Burger <span class="badge-custom badge-bestseller ms-2">Bold</span></a></li>
+                <li><a class="dropdown-item active" href="index-2.html">Home 2 – Artisan Deli <span class="badge-custom badge-new ms-2">Fresh</span></a></li>
+              </ul>
+            </li>
+
+            <!-- About Us -->
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+
+            <!-- Menu Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Menu <i class="fa-solid fa-chevron-down nav-chevron"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="menu.html"><i class="fa-solid fa-utensils me-2 text-accent"></i> All Menu Items</a></li>
+                <li><a class="dropdown-item" href="menu.html#sandwiches"><i class="fa-solid fa-bread-slice me-2 text-highlight"></i> Gourmet Sandwiches</a></li>
+                <li><a class="dropdown-item" href="menu.html#burgers"><i class="fa-solid fa-burger me-2 text-accent"></i> Signature Burgers</a></li>
+                <li><a class="dropdown-item" href="menu.html#sides"><i class="fa-solid fa-bowl-food me-2 text-accent"></i> Sides &amp; Crispy Fries</a></li>
+                <li><a class="dropdown-item" href="menu.html#drinks"><i class="fa-solid fa-mug-hot me-2 text-highlight"></i> Nitro Brews &amp; Shakes</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="product-details.html"><i class="fa-solid fa-eye me-2 text-highlight"></i> Product Details View</a></li>
+              </ul>
+            </li>
+
+            <!-- Services Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Services <i class="fa-solid fa-chevron-down nav-chevron"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                <li><a class="dropdown-item" href="service-details.html">Service Details View</a></li>
+                <li><a class="dropdown-item" href="combo-offers.html">Deli Combo Boxes</a></li>
+                <li><a class="dropdown-item" href="pricing.html">Corporate Platters</a></li>
+              </ul>
+            </li>
+
+            <!-- Blog Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Blog <i class="fa-solid fa-chevron-down nav-chevron"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="blog.html">Food Stories Grid</a></li>
+                <li><a class="dropdown-item" href="blog-list.html">Deli Journal &amp; Sidebar</a></li>
+                <li><a class="dropdown-item" href="blog-details.html">Article Details</a></li>
+              </ul>
+            </li>
+
+            <!-- Contact -->
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+
+          <!-- Nav Right CTA -->
+          <div class="navbar-actions">
+            <a href="menu.html#sandwiches" class="btn btn-highlight btn-sm">
+              <i class="fa-solid fa-basket-shopping"></i> Order Sandwiches
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE OFFCANVAS ==================== -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileOffcanvas" aria-labelledby="mobileOffcanvasLabel">
+    <div class="offcanvas-header">
+      <a href="index-2.html">
+        <img src="assets/images/logo-dark.svg" alt="BUNORA Logo" class="logo-dark" style="height: 38px;">
+        <img src="assets/images/logo-light.svg" alt="BUNORA Logo" class="logo-light" style="height: 38px;">
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="d-flex gap-2 mb-4">
+        <button class="theme-toggle-btn flex-fill" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i> Theme
+        </button>
+        <button class="rtl-toggle-btn flex-fill" title="Toggle RTL">
+          <span style="font-weight:800;">RTL</span> Switch
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="index.html">Home 1 – Modern Burger</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="index-2.html">Home 2 – Artisan Deli</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="about.html">About Brand</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="menu.html">Full Menu</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="product-details.html">Product Details</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="combo-offers.html">Combo Offers</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="services.html">Services &amp; Catering</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="blog.html">Food Stories</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="pricing.html">Catering Pricing</a></li>
+        <li class="mobile-nav-item"><a class="mobile-nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="mt-4 pt-3 border-top">
+        <a href="menu.html#sandwiches" class="btn btn-highlight w-100 mb-3">
+          <i class="fa-solid fa-bread-slice"></i> Order Sandwich Deli
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HOMEPAGE 2 HERO SECTION ==================== -->
+  <!-- Unique editorial food magazine layout with cream/warm yellow atmosphere -->
+  <section class="hero-sandwich-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Hero Text Content -->
+        <div class="col-lg-6">
+          <div class="hero-sandwich-tag">
+            <i class="fa-solid fa-wheat-awn text-highlight"></i> 100% In-House Bakery &amp; Deli
+          </div>
+          <h1 class="hero-sandwich-title">
+            Fresh Layers. <br>
+            <span class="highlight-text">Unforgettable Flavours.</span>
+          </h1>
+          <p class="hero-sandwich-lead">
+            Elevating everyday sandwich craft into an art form. Wild fermented sourdough with a crispy crackle, slow-cured Montreal pastrami, farm burrata, and vibrantly fresh organic herbs.
+          </p>
+
+          <!-- Highlight Ingredients Pills -->
+          <div class="hero-sandwich-pills">
+            <span class="hero-sandwich-pill"><i class="fa-solid fa-circle-check text-green"></i> 48-Hr Cold Ferment</span>
+            <span class="hero-sandwich-pill"><i class="fa-solid fa-circle-check text-green"></i> Heritage Smoked Meats</span>
+            <span class="hero-sandwich-pill"><i class="fa-solid fa-circle-check text-green"></i> Small-Batch Burrata</span>
+            <span class="hero-sandwich-pill"><i class="fa-solid fa-circle-check text-green"></i> House Herb Pestos</span>
+          </div>
+
+          <div class="d-flex flex-wrap gap-3 align-items-center">
+            <a href="menu.html#sandwiches" class="btn btn-accent btn-lg">
+              <i class="fa-solid fa-utensils"></i> Explore Sandwiches
+            </a>
+            <a href="combo-offers.html" class="btn btn-outline-charcoal btn-lg">
+              <i class="fa-solid fa-box"></i> Deli Lunch Boxes
+            </a>
+          </div>
+        </div>
+
+        <!-- Asymmetrical Hero Visual -->
+        <div class="col-lg-6">
+          <div class="hero-sandwich-visual">
+            <div class="hero-sandwich-main-img">
+              <img src="assets/images/home-2/hero-sandwich.jpg" alt="Artisan Toasted Sourdough Gourmet Sandwich" width="620" height="480">
+            </div>
+            <!-- Inset Deli Produce Badge -->
+            <div class="hero-sandwich-inset">
+              <img src="assets/images/home-2/fresh-produce.jpg" alt="Fresh Farm Produce" loading="lazy">
+              <p>Direct From Local Farms</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FRESH INGREDIENTS SPOTLIGHT ==================== -->
+  <section class="section-padding bg-cream-soft">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-tagline section-tagline-yellow"><i class="fa-solid fa-leaf"></i> Pure Origin Ingredients</span>
+        <h2 class="section-title">The Foundation of Great Bread &amp; Layers</h2>
+        <p class="section-subtitle">A sandwich is only as extraordinary as its simplest layer. Here is what makes our morning loaves and deli cuts stand alone.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Ingredient 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="ingredient-card">
+            <img src="assets/images/home-2/bakery-sourdough.jpg" alt="Artisan Sourdough" class="ingredient-img" loading="lazy">
+            <div class="ingredient-info">
+              <h5>Wild Sourdough</h5>
+              <p>Heritage stoneground flour, natural starter &amp; 48hr fermentation.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ingredient 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="ingredient-card">
+            <img src="assets/images/sandwiches/sandwich-1.jpg" alt="Cured Pastrami" class="ingredient-img" loading="lazy">
+            <div class="ingredient-info">
+              <h5>14-Day Pastrami</h5>
+              <p>Dry-brined with cracked coriander, smoked over applewood.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ingredient 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="ingredient-card">
+            <img src="assets/images/home-2/fresh-produce.jpg" alt="Heirloom Greens" class="ingredient-img" loading="lazy">
+            <div class="ingredient-info">
+              <h5>Heirloom Greens</h5>
+              <p>Organic wild arugula, sun-drenched vine tomatoes, fresh basil.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ingredient 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="ingredient-card">
+            <img src="assets/images/sandwiches/sandwich-3.jpg" alt="Artisan Cheeses" class="ingredient-img" loading="lazy">
+            <div class="ingredient-info">
+              <h5>Artisan Cheeses</h5>
+              <p>Fresh Italian bufala, aged sharp provolone, and alpine gruyère.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ARTISAN SANDWICH COLLECTION ==================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end section-title-wrap">
+        <div>
+          <span class="section-tagline section-tagline-yellow"><i class="fa-solid fa-crown"></i> Chef's Signature Line</span>
+          <h2 class="section-title mb-0">The Handcrafted Sandwich Collection</h2>
+        </div>
+        <div class="mt-3 mt-md-0">
+          <a href="menu.html#sandwiches" class="btn btn-outline-charcoal">
+            Explore All 8 Sandwiches <i class="fa-solid fa-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Sandwich 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/sandwiches/sandwich-1.jpg" alt="New York Pastrami on Rye" loading="lazy">
+              <div class="food-card-badge">
+                <span class="badge-custom badge-bestseller"><i class="fa-solid fa-award"></i> Deli Legend</span>
+              </div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating">
+                <i class="fa-solid fa-star"></i> 4.96 <span>(920 reviews)</span>
+              </div>
+              <h3 class="food-card-title"><a href="product-details.html">New York Pastrami on Rye</a></h3>
+              <p class="food-card-desc">Half-pound of warm house-smoked pastrami brisket, melted Emmental Swiss, sour kraut, and whole-grain Dijon on seeded caraway rye.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$15.90</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sandwich 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/sandwiches/sandwich-2.jpg" alt="Truffle Chicken & Avocado Club" loading="lazy">
+              <div class="food-card-badge">
+                <span class="badge-custom badge-new">Popular</span>
+              </div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating">
+                <i class="fa-solid fa-star"></i> 4.90 <span>(640 reviews)</span>
+              </div>
+              <h3 class="food-card-title"><a href="product-details.html">Truffle Chicken &amp; Avocado Club</a></h3>
+              <p class="food-card-desc">Herb-roasted free-range chicken breast, Hass avocado, crisp maple pancetta, vine tomato, and black truffle garlic aioli on crusty sourdough.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$14.50</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sandwich 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/sandwiches/sandwich-3.jpg" alt="Rustic Caprese Focaccia Melt" loading="lazy">
+              <div class="food-card-badge">
+                <span class="badge-custom badge-vegan" style="background:#F0FDF4; color:#166534;"><i class="fa-solid fa-seedling"></i> Vegetarian</span>
+              </div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating">
+                <i class="fa-solid fa-star"></i> 4.88 <span>(410 reviews)</span>
+              </div>
+              <h3 class="food-card-title"><a href="product-details.html">Rustic Caprese Focaccia Melt</a></h3>
+              <p class="food-card-desc">Fresh Campanian bufala mozzarella, heirloom beefsteak tomatoes, house-pounded pine nut basil pesto, and 12-year balsamic glaze on sea salt rosemary focaccia.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$13.80</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sandwich 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/sandwiches/sandwich-4.jpg" alt="Slow-Smoked Pulled Pork Baguette" loading="lazy">
+              <div class="food-card-badge">
+                <span class="badge-custom badge-new">Smoky</span>
+              </div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating">
+                <i class="fa-solid fa-star"></i> 4.85 <span>(380 reviews)</span>
+              </div>
+              <h3 class="food-card-title"><a href="product-details.html">Slow Pulled Pork Baguette</a></h3>
+              <p class="food-card-desc">14-hour hickory-smoked Berkshire pork, crisp green apple slaw, melted smoked gouda, and Carolina gold mustard sauce on a crackly French baguette.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$14.20</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sandwich 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/sandwiches/sandwich-5.jpg" alt="Philly Ribeye Cheesesteak" loading="lazy">
+              <div class="food-card-badge">
+                <span class="badge-custom badge-bestseller"><i class="fa-solid fa-fire"></i> Hot Melt</span>
+              </div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating">
+                <i class="fa-solid fa-star"></i> 4.93 <span>(780 reviews)</span>
+              </div>
+              <h3 class="food-card-title"><a href="product-details.html">Philly Ribeye Cheesesteak</a></h3>
+              <p class="food-card-desc">Thinly shaved USDA Prime ribeye, sweet caramelized vidalia onions, fire-roasted sweet bell peppers, and bubbling aged provolone fondue on toasted hoagie.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$16.50</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sandwich 6 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/sandwiches/sandwich-6.jpg" alt="Smoked Salmon & Dill Cream Cheese" loading="lazy">
+              <div class="food-card-badge">
+                <span class="badge-custom badge-new">Seafood</span>
+              </div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating">
+                <i class="fa-solid fa-star"></i> 4.89 <span>(315 reviews)</span>
+              </div>
+              <h3 class="food-card-title"><a href="product-details.html">Smoked Salmon &amp; Dill Sourdough</a></h3>
+              <p class="food-card-desc">Cured Scottish salmon, lemon-whipped cream cheese, nonpareil capers, thinly shaved cucumber, and pickled shallots on toasted multiseed sourdough.</p>
+              <div class="food-card-footer">
+                <div class="food-price">$15.20</div>
+                <a href="product-details.html" class="food-card-btn"><i class="fa-solid fa-eye"></i> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== OUR STORY: BAKERY & DELI ROOTS ==================== -->
+  <section class="section-padding bg-cream-soft">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 order-lg-2">
+          <div class="position-relative">
+            <img src="assets/images/home-2/deli-counter.jpg" alt="BUNORA Fresh Deli Counter and Atmosphere" class="rounded-4 shadow-lg w-100" style="max-height: 480px; object-fit: cover;" loading="lazy">
+            <div class="editorial-quote-box position-relative mt-4">
+              <h4>"Bread is alive. Treat it with patience, and it will reward you with flavor you can never rush."</h4>
+              <span>— Baker &amp; Co-Founder Elena Rossi</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <span class="section-tagline section-tagline-yellow"><i class="fa-solid fa-heart"></i> The Artisan Philosophy</span>
+          <h2 class="section-title">Rooted in European Deli Traditions</h2>
+          <p class="lead text-secondary">
+            BUNORA began not as a chain, but as a neighborhood corner bakery where the morning sun hit racks of cooling sourdough and copper pots of simmering pastrami brine.
+          </p>
+          <p class="text-secondary">
+            We mill a portion of our flour in-house to capture the nutty vitality of fresh grain. When you order a sandwich, our chefs slice the pastrami and prosciutto right off the slab in front of you. No pre-cut deli meat, no artificial dough conditioners — just honest culinary passion.
+          </p>
+          <div class="row g-3 my-4">
+            <div class="col-sm-6">
+              <div class="p-3 bg-surface rounded-3 border">
+                <h3 class="text-accent fw-bold mb-1">48 Hours</h3>
+                <p class="small text-secondary mb-0">Slow cold fermentation for optimal digestibility and complex flavor.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="p-3 bg-surface rounded-3 border">
+                <h3 class="text-highlight fw-bold mb-1">100% Sliced Fresh</h3>
+                <p class="small text-secondary mb-0">Every deli cut shaved right upon order for maximum juiciness.</p>
+              </div>
+            </div>
+          </div>
+          <a href="about.html" class="btn btn-accent btn-lg">Explore Our Story <i class="fa-solid fa-arrow-right ms-1"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CHEF'S SANDWICH SPECIAL ==================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="chef-special-box" style="background: radial-gradient(circle at 70% 50%, #3B2A18 0%, #171717 75%); border-color: rgba(246, 184, 63, 0.25);">
+        <div class="row g-0 align-items-center">
+          <div class="col-lg-6">
+            <div class="chef-special-content">
+              <span class="badge-custom badge-new mb-3" style="background: var(--brand-highlight); color: #171717;"><i class="fa-solid fa-star"></i> Baker's Special Selection</span>
+              <h2 style="color: #FFFFFF; font-weight: 900;" class="mb-3">The Truffled Gruyère &amp; Sourdough Melt</h2>
+              <p class="lead mb-4" style="color: #F3EBD8;">
+                Thick slices of golden pain au levain toasted in brown butter, packed with 36-month reserve Swiss Gruyère, sharp white cheddar, black truffle paste, and caramelized port-wine shallots. Served with house-made smoked tomato dip.
+              </p>
+              <div class="d-flex align-items-baseline gap-3 mb-4">
+                <span style="font-size: 2.5rem; font-family: var(--font-heading); font-weight: 900; color: var(--brand-highlight);">$15.50</span>
+                <span class="badge-custom badge-bestseller">Includes Warm Dip</span>
+              </div>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="product-details.html" class="btn btn-highlight btn-lg">
+                  <i class="fa-solid fa-bread-slice"></i> Taste The Melt
+                </a>
+                <a href="menu.html" class="btn btn-outline-white btn-lg">
+                  View Full Menu
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <img src="assets/images/home-2/sandwich-special.jpg" alt="Truffled Gruyere Sourdough Melt" class="chef-special-img" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DELI LUNCH COMBOS ==================== -->
+  <section class="section-padding bg-cream-soft">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end section-title-wrap">
+        <div>
+          <span class="section-tagline section-tagline-yellow"><i class="fa-solid fa-box-open"></i> Deli Specials</span>
+          <h2 class="section-title mb-0">Artisan Sandwich Combo Boxes</h2>
+        </div>
+        <div class="mt-3 mt-md-0">
+          <a href="combo-offers.html" class="btn btn-accent">
+            View All Combo Deals <i class="fa-solid fa-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Combo Box 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="combo-card">
+            <div class="combo-badge-top">
+              <span class="badge-custom badge-bestseller"><i class="fa-solid fa-briefcase"></i> Office Favorite</span>
+            </div>
+            <div class="combo-thumb">
+              <img src="assets/images/combos/combo-3.jpg" alt="The Deli Executive Lunch Box" loading="lazy">
+            </div>
+            <div class="combo-body">
+              <h3 class="combo-title"><a href="combo-offers.html">The Deli Executive Box</a></h3>
+              <p class="text-secondary small mb-2">Complete balanced artisan meal for corporate lunches and meetings.</p>
+              <div class="combo-includes">
+                <h6>Includes in Box:</h6>
+                <ul>
+                  <li><i class="fa-solid fa-check"></i> Any Artisan Sandwich of Choice</li>
+                  <li><i class="fa-solid fa-check"></i> Parmesan Truffle Fries or Farm Salad</li>
+                  <li><i class="fa-solid fa-check"></i> Single-Origin Nitro Cold Brew</li>
+                  <li><i class="fa-solid fa-check"></i> Sea Salt Chocolate Chunk Cookie</li>
+                </ul>
+              </div>
+              <div class="combo-footer">
+                <div class="combo-price-wrap">
+                  <span class="food-price">$19.90 <span class="food-price-original">$26.00</span></span>
+                  <span class="combo-save-label">Save $6.10</span>
+                </div>
+                <a href="combo-offers.html" class="btn btn-accent btn-sm">Order Box</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Combo Box 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="combo-card">
+            <div class="combo-badge-top">
+              <span class="badge-custom badge-new"><i class="fa-solid fa-users"></i> Duo Picnic</span>
+            </div>
+            <div class="combo-thumb">
+              <img src="assets/images/combos/combo-4.jpg" alt="Artisan Park Picnic Platter" loading="lazy">
+            </div>
+            <div class="combo-body">
+              <h3 class="combo-title"><a href="combo-offers.html">Artisan Park Picnic Deal</a></h3>
+              <p class="text-secondary small mb-2">Packed in an eco-friendly kraft hamper for outdoor dining.</p>
+              <div class="combo-includes">
+                <h6>Includes in Box:</h6>
+                <ul>
+                  <li><i class="fa-solid fa-check"></i> 2 Full Artisan Sandwiches</li>
+                  <li><i class="fa-solid fa-check"></i> Large Sweet Potato Fries w/ Truffle Dip</li>
+                  <li><i class="fa-solid fa-check"></i> 2 Sparkling Passionfruit Lemonades</li>
+                  <li><i class="fa-solid fa-check"></i> Warm Cinnamon Sugar Churros</li>
+                </ul>
+              </div>
+              <div class="combo-footer">
+                <div class="combo-price-wrap">
+                  <span class="food-price">$34.50 <span class="food-price-original">$44.00</span></span>
+                  <span class="combo-save-label">Save $9.50</span>
+                </div>
+                <a href="combo-offers.html" class="btn btn-accent btn-sm">Order Deal</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Combo Box 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="combo-card">
+            <div class="combo-badge-top">
+              <span class="badge-custom badge-spicy"><i class="fa-solid fa-graduation-cap"></i> Student Deal</span>
+            </div>
+            <div class="combo-thumb">
+              <img src="assets/images/combos/combo-5.jpg" alt="Campus Quick Crunch Box" loading="lazy">
+            </div>
+            <div class="combo-body">
+              <h3 class="combo-title"><a href="combo-offers.html">Campus Quick Crunch Box</a></h3>
+              <p class="text-secondary small mb-2">Show student ID or order between 2:00 PM - 5:00 PM.</p>
+              <div class="combo-includes">
+                <h6>Includes in Box:</h6>
+                <ul>
+                  <li><i class="fa-solid fa-check"></i> Buttermilk Fried Chicken Sandwich</li>
+                  <li><i class="fa-solid fa-check"></i> Golden Skin-On Seasoned Fries</li>
+                  <li><i class="fa-solid fa-check"></i> Refillable Beverage or Iced Tea</li>
+                </ul>
+              </div>
+              <div class="combo-footer">
+                <div class="combo-price-wrap">
+                  <span class="food-price">$12.90 <span class="food-price-original">$17.50</span></span>
+                  <span class="combo-save-label">Save 26%</span>
+                </div>
+                <a href="combo-offers.html" class="btn btn-accent btn-sm">Order Box</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RESTAURANT GALLERY ==================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-tagline section-tagline-yellow"><i class="fa-solid fa-camera"></i> Behind The Scenes</span>
+        <h2 class="section-title">The Rhythm of Our Kitchen &amp; Bakery</h2>
+        <p class="section-subtitle">A glimpse into daily life at BUNORA: early morning oven bakes, hand-assembling artisan sandwich layers, and warm gatherings.</p>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-4">
+          <img src="assets/images/home-2/bakery-sourdough.jpg" alt="Oven baked sourdough" class="rounded-4 w-100 shadow-sm" style="height: 280px; object-fit: cover;" loading="lazy">
+        </div>
+        <div class="col-md-4">
+          <img src="assets/images/home-2/chef-sandwich.jpg" alt="Chef assembling sandwiches" class="rounded-4 w-100 shadow-sm" style="height: 280px; object-fit: cover;" loading="lazy">
+        </div>
+        <div class="col-md-4">
+          <img src="assets/images/home-2/deli-counter.jpg" alt="Bright deli counter" class="rounded-4 w-100 shadow-sm" style="height: 280px; object-fit: cover;" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEWSLETTER SECTION ==================== -->
+  <section class="section-padding-sm">
+    <div class="container">
+      <div class="newsletter-banner" style="background: radial-gradient(circle at 75% 50%, #3B2A18 0%, #1A1510 70%);">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <span class="badge-custom badge-new mb-3" style="background: var(--brand-highlight); color: #171717;"><i class="fa-solid fa-bread-slice"></i> Fresh Bread Alerts</span>
+            <h2 class="fw-bold mb-2">Never Miss a Fresh Batch of Sourdough</h2>
+            <p class="mb-lg-0">Subscribe to our Baker's Dispatch. Receive daily bake schedules, weekend sandwich specials, and secret chef tasting invites.</p>
+          </div>
+          <div class="col-lg-5">
+            <form id="newsletterForm" class="newsletter-form-inline needs-validation" novalidate>
+              <input type="email" class="form-control" placeholder="Enter your email address..." required>
+              <button type="submit" class="btn btn-highlight"><i class="fa-solid fa-paper-plane"></i> Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Col 1: Brand -->
+        <div class="col-lg-4 col-md-6 footer-brand">
+          <a href="index-2.html">
+            <img src="assets/images/logo-light.svg" alt="BUNORA Logo" style="height: 44px;">
+          </a>
+          <p>
+            BUNORA Deli crafts European-inspired artisan sandwiches and 48-hour fermented sourdough loaves with locally harvested ingredients and honest passion.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-widget-title">Quick Links</h5>
+          <ul class="footer-links-list">
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home 1 (Burgers)</a></li>
+            <li><a href="index-2.html"><i class="fa-solid fa-angle-right"></i> Home 2 (Deli &amp; Sandwiches)</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> Brand Heritage</a></li>
+            <li><a href="menu.html"><i class="fa-solid fa-angle-right"></i> Full Menu</a></li>
+            <li><a href="combo-offers.html"><i class="fa-solid fa-angle-right"></i> Lunch Boxes</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Catering &amp; Events</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Inner Pages -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-widget-title">Explore</h5>
+          <ul class="footer-links-list">
+            <li><a href="product-details.html"><i class="fa-solid fa-angle-right"></i> Product Detail View</a></li>
+            <li><a href="service-details.html"><i class="fa-solid fa-angle-right"></i> Service Detail View</a></li>
+            <li><a href="blog.html"><i class="fa-solid fa-angle-right"></i> Bakery Blog</a></li>
+            <li><a href="pricing.html"><i class="fa-solid fa-angle-right"></i> Catering Packages</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact &amp; Hours</a></li>
+            <li><a href="coming-soon.html"><i class="fa-solid fa-angle-right"></i> Coming Soon Page</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Hours -->
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-widget-title">Deli &amp; Bakery Location</h5>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <h6>BUNORA Deli &amp; Bakery</h6>
+              <p>742 Evergreen Terrace, Downtown Food District, NY 10001</p>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <h6>Deli Hours</h6>
+              <p>Mon – Fri: 8:00 AM – 9:00 PM<br>Sat – Sun: 8:30 AM – 10:00 PM</p>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <h6>Call &amp; Catering Line</h6>
+              <p>+1 (555) 839-2041 / deli@bunorarestaurant.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+        <p class="mb-0">&copy; <span class="current-year"></span> BUNORA – Gourmet Burgers &amp; Fresh Sandwiches. All Rights Reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="404.html" class="text-secondary small">Privacy Policy</a>
+          <a href="404.html" class="text-secondary small">Terms of Service</a>
+          <a href="maintenance.html" class="text-secondary small">Maintenance Notice</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING CONTROLS ==================== -->
+  <div class="floating-widget-wrap">
+    <button class="floating-btn theme-toggle-btn" title="Toggle Light/Dark Theme" aria-label="Toggle Light/Dark Theme">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+    <button class="floating-btn rtl-toggle-btn" title="Toggle LTR/RTL Layout" aria-label="Toggle LTR/RTL Layout">
+      <span style="font-weight:900; font-size:0.75rem;">RTL</span>
+    </button>
+    <button id="backToTopBtn" class="floating-btn" title="Scroll to Top" aria-label="Scroll to Top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- Bootstrap 5.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core Scripts -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/filters.js"></script>
+  <script src="assets/js/validation.js"></script>
+</body>
+</html>

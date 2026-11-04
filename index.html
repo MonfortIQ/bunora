@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUNORA – Gourmet Burgers &amp; Fresh Sandwiches | Modern Restaurant</title>
+  <meta name="description" content="Welcome to BUNORA. Taste the finest gourmet smashed burgers, artisan sandwiches, crispy truffle fries, and handcrafted milkshakes. Fresh daily, flame-grilled perfection.">
+  <meta name="keywords" content="gourmet burgers, artisan sandwiches, restaurant template, smash burgers, craft food, BUNORA">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Immediate Theme & RTL Init Script -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('bunora_theme') || 'light';
+      var savedDir = localStorage.getItem('bunora_direction') || 'ltr';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ==================== TOP ANNOUNCEMENT BAR ==================== -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-content">
+        <div class="topbar-info">
+          <span class="topbar-info-item"><i class="fa-solid fa-location-dot"></i> 742 Evergreen Terrace, Downtown Food District</span>
+          <span class="topbar-info-item"><i class="fa-regular fa-clock"></i> Mon - Sun: 11:00 AM - 11:30 PM</span>
+          <span class="topbar-info-item"><i class="fa-solid fa-phone"></i> +1 (555) 839-2041</span>
+        </div>
+        <div class="topbar-actions">
+          <button class="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button class="rtl-toggle-btn" title="Toggle Direction" aria-label="Toggle Direction">
+            <span style="font-weight:800; font-size:0.8rem;">RTL</span>
+          </button>
+          <a href="contact.html" class="topbar-pill-btn"><i class="fa-solid fa-motorcycle"></i> Express Delivery</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN STICKY NAVIGATION ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <!-- Brand Logo -->
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/images/logo-dark.svg" alt="BUNORA Logo" class="logo-dark">
+          <img src="assets/images/logo-light.svg" alt="BUNORA Logo" class="logo-light">
+        </a>
+
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvas" aria-controls="mobileOffcanvas" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+
+        <!-- Desktop Nav Items -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <!-- Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home <i class="fa-solid fa-chevron-down nav-chevron"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item active" href="index.html">Home 1 – Modern Burger <span class="badge-custom badge-bestseller ms-2">Bold</span></a></li>
+                <li><a class="dropdown-item" href="index-2.html">Home 2 – Artisan Deli <span class="badge-custom badge-new ms-2">Fresh</span></a></li>
+              </ul>
+            </li>
+
+            <!-- About Us -->
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+
+            <!-- Menu Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Menu <i class="fa-solid fa-chevron-down nav-chevron"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="menu.html"><i class="fa-solid fa-utensils me-2 text-accent"></i> All Menu Items</a></li>
+                <li><a class="dropdown-item" href="menu.html#burgers"><i class="fa-solid fa-burger me-2 text-accent"></i> Signature Burgers</a></li>
+                <li><a class="dropdown-item" href="menu.html#sandwiches"><i class="fa-solid fa-bread-slice me-2 text-accent"></i> Gourmet Sandwiches</a></li>
+                <li><a class="dropdown-item" href="menu.html#sides"><i class="fa-solid fa-bowl-food me-2 text-accent"></i> Sides &amp; Snacks</a></li>
+                <li><a class="dropdown-item" href="menu.html#drinks"><i class="fa-solid fa-mug-hot me-2 text-accent"></i> Shakes &amp; Drinks</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="product-details.html"><i class="fa-solid fa-eye me-2 text-highlight"></i> Product Details View</a></li>
+              </ul>
+            </li>
+
+            <!-- Services Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Services <i class="fa-solid fa-chevron-down nav-chevron"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                <li><a class="dropdown-item" href="service-details.html">Service Details View</a></li>
+                <li><a class="dropdown-item" href="combo-offers.html">Exclusive Combo Offers</a></li>
+                <li><a class="dropdown-item" href="pricing.html">Catering Packages</a></li>
+              </ul>
+            </li>
+
+            <!-- Blog Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Blog <i class="fa-solid fa-chevron-down nav-chevron"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="blog.html">Blog Grid Layout</a></li>
+                <li><a class="dropdown-item" href="blog-list.html">Blog List &amp; Sidebar</a></li>
+                <li><a class="dropdown-item" href="blog-details.html">Blog Article Details</a></li>
+              </ul>
+            </li>
+
+            <!-- Contact -->
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+
+          <!-- Nav Right CTA -->
+          <div class="navbar-actions">
+            <a href="menu.html" class="btn btn-accent btn-sm">
+              <i class="fa-solid fa-bag-shopping"></i> Order Online
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE OFFCANVAS MENU ==================== -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileOffcanvas" aria-labelledby="mobileOffcanvasLabel">
+    <div class="offcanvas-header">
+      <a href="index.html">
+        <img src="assets/images/logo-dark.svg" alt="BUNORA Logo" class="logo-dark" style="height: 38px;">
+        <img src="assets/images/logo-light.svg" alt="BUNORA Logo" class="logo-light" style="height: 38px;">
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="d-flex gap-2 mb-4">
+        <button class="theme-toggle-btn flex-fill" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i> Theme
+        </button>
+        <button class="rtl-toggle-btn flex-fill" title="Toggle RTL">
+          <span style="font-weight:800;">RTL</span> Switch
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <a class="mobile-nav-link" href="index.html">Home 1 – Modern Burger</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="mobile-nav-link" href="index-2.html">Home 2 – Artisan Deli</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="mobile-nav-link" href="about.html">About Brand</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="mobile-nav-link" href="menu.html">Menu &amp; Food</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="mobile-nav-link" href="product-details.html">Product Details</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="mobile-nav-link" href="combo-offers.html">Combo Offers</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="mobile-nav-link" href="services.html">Services &amp; Catering</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="mobile-nav-link" href="blog.html">Food Stories &amp; Blog</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="mobile-nav-link" href="pricing.html">Catering Pricing</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="mobile-nav-link" href="contact.html">Contact &amp; Location</a>
+        </li>
+      </ul>
+      <div class="mt-4 pt-3 border-top">
+        <a href="menu.html" class="btn btn-accent w-100 mb-3">
+          <i class="fa-solid fa-fire"></i> Order Now
+        </a>
+        <p class="text-muted small text-center mb-0"><i class="fa-solid fa-phone me-1"></i> +1 (555) 839-2041</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HOMEPAGE 1 HERO SECTION ==================== -->
+  <section class="hero-burger-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Hero Text -->
+        <div class="col-lg-6">
+          <div class="hero-badge-wrap">
+            <span class="badge-custom badge-bestseller"><i class="fa-solid fa-fire"></i> Award-Winning</span>
+            <span style="font-size: 0.85rem; font-weight: 700; color: #FFF7E9;">Voted #1 Gourmet Burger Joint 2026</span>
+          </div>
+          <h1 class="hero-burger-title">
+            Big Flavours. <br>
+            <span>Better Burgers.</span>
+          </h1>
+          <p class="hero-burger-lead">
+            Experience our 100% prime grass-fed Wagyu smash patties, seared over roaring flames, topped with 24-month aged cheddar, house-smoked bacon, and warm buttered brioche.
+          </p>
+          <div class="d-flex flex-wrap gap-3 align-items-center">
+            <a href="menu.html" class="btn btn-accent btn-lg">
+              <i class="fa-solid fa-utensils"></i> Explore Full Menu
+            </a>
+            <a href="combo-offers.html" class="btn btn-outline-white btn-lg">
+              <i class="fa-solid fa-tags"></i> View Combo Deals
+            </a>
+          </div>
+
+          <!-- Hero Metrics -->
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <h4>100%</h4>
+              <p>Fresh Angus &amp; Wagyu</p>
+            </div>
+            <div class="metric-item">
+              <h4>4.9 ★</h4>
+              <p>18,000+ Customer Reviews</p>
+            </div>
+            <div class="metric-item">
+              <h4>20 Mins</h4>
+              <p>Average Hot Delivery</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Presentation -->
+        <div class="col-lg-6">
+          <div class="hero-burger-visual">
+            <!-- Floating Artisan Seal -->
+            <img src="assets/images/badge-artisan.svg" alt="100% Artisanal Seal" class="hero-floating-seal" width="130" height="130">
+            
+            <!-- Main Hero Burger Image -->
+            <div class="hero-burger-img-wrap">
+              <img src="assets/images/home-1/hero-burger.jpg" alt="BUNORA Master Flame Burger" width="600" height="450">
+            </div>
+
+            <!-- Floating Special Highlight Card -->
+            <div class="hero-floating-card">
+              <div class="fl-icon">
+                <i class="fa-solid fa-burger"></i>
+              </div>
+              <div class="fl-text">
+                <h5>Wagyu Truffle Royale</h5>
+                <p>Limited Daily Batch • $16.90</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WHY CHOOSE BUNORA (FEATURES) ==================== -->
+  <section class="section-padding bg-cream-soft">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-tagline"><i class="fa-solid fa-medal"></i> The BUNORA Difference</span>
+        <h2 class="section-title">Why Our Burgers Taste Unmatched</h2>
+        <p class="section-subtitle">We don't cut corners. From farm-direct heritage meats to buns baked in-house every three hours, taste culinary dedication in every single bite.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Feature 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-box">
+            <div class="feature-icon-wrap">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <h4 class="feature-title">Farm-Fresh Ingredients</h4>
+            <p class="feature-desc">Locally sourced organic produce, crisp romaine, and vine-ripened heirloom tomatoes picked daily from partner farms.</p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-box">
+            <div class="feature-icon-wrap">
+              <i class="fa-solid fa-fire-burner"></i>
+            </div>
+            <h4 class="feature-title">Custom Smashing Method</h4>
+            <p class="feature-desc">Our proprietary 450°F cast iron sear locks in intense juices while forging a delightfully crispy, lace-thin crust.</p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-box">
+            <div class="feature-icon-wrap">
+              <i class="fa-solid fa-bread-slice"></i>
+            </div>
+            <h4 class="feature-title">Baked Fresh Daily</h4>
+            <p class="feature-desc">Our artisanal Japanese milk brioche and 48-hour fermented sourdough buns are baked on-site throughout the day.</p>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-box">
+            <div class="feature-icon-wrap">
+              <i class="fa-solid fa-pepper-hot"></i>
+            </div>
+            <h4 class="feature-title">Signature House Sauces</h4>
+            <p class="feature-desc">Crafted from scratch: charred jalapeno ranch, smoked garlic truffle aioli, and bourbon honey barbecue glaze.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SIGNATURE BURGER SHOWCASE ==================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end section-title-wrap">
+        <div>
+          <span class="section-tagline"><i class="fa-solid fa-fire-flame-curved"></i> Fan Favorites</span>
+          <h2 class="section-title mb-0">Signature Smashed Burgers</h2>
+        </div>
+        <div class="mt-3 mt-md-0">
+          <a href="menu.html" class="btn btn-outline-charcoal">
+            View All 24+ Items <i class="fa-solid fa-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Burger 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/burgers/burger-1.jpg" alt="The BUNORA Wagyu Royale" loading="lazy">
+              <div class="food-card-badge">
+                <span class="badge-custom badge-bestseller"><i class="fa-solid fa-star"></i> Bestseller</span>
+              </div>
+              <div class="food-card-diet">
+                <span class="diet-icon text-accent" title="Chef Special"><i class="fa-solid fa-crown"></i></span>
+              </div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating">
+                <i class="fa-solid fa-star"></i> 4.95 <span>(840 reviews)</span>
+              </div>
+              <h3 class="food-card-title"><a href="product-details.html">The BUNORA Wagyu Royale</a></h3>
+              <p class="food-card-desc">Double Wagyu smash patties, 24-month Wisconsin cheddar, caramelized shallots, crisp iceberg, house secret glaze on toasted brioche.</p>
+              <div class="food-card-footer">
+                <div class="food-price">
+                  $14.90 <span class="food-price-original">$17.50</span>
+                </div>
+                <a href="product-details.html" class="food-card-btn">
+                  <i class="fa-solid fa-eye"></i> Details
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Burger 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/burgers/burger-2.jpg" alt="Smoky BBQ Bacon Stacker" loading="lazy">
+              <div class="food-card-badge">
+                <span class="badge-custom badge-new"><i class="fa-solid fa-bolt"></i> Popular</span>
+              </div>
+              <div class="food-card-diet">
+                <span class="diet-icon text-highlight" title="Smoked Recipe"><i class="fa-solid fa-fire"></i></span>
+              </div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating">
+                <i class="fa-solid fa-star"></i> 4.88 <span>(620 reviews)</span>
+              </div>
+              <h3 class="food-card-title"><a href="product-details.html">Smoky BBQ Bacon Stacker</a></h3>
+              <p class="food-card-desc">Applewood-smoked thick bacon, double angus patty, beer-battered onion ring, smoked gouda, chipotle barbecue relish.</p>
+              <div class="food-card-footer">
+                <div class="food-price">
+                  $15.50
+                </div>
+                <a href="product-details.html" class="food-card-btn">
+                  <i class="fa-solid fa-eye"></i> Details
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Burger 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/burgers/burger-3.jpg" alt="Spicy Diablo Jalapeno Melt" loading="lazy">
+              <div class="food-card-badge">
+                <span class="badge-custom badge-spicy"><i class="fa-solid fa-pepper-hot"></i> Fiery</span>
+              </div>
+              <div class="food-card-diet">
+                <span class="diet-icon text-danger" title="Hot Spice Level 3"><i class="fa-solid fa-pepper-hot"></i></span>
+              </div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating">
+                <i class="fa-solid fa-star"></i> 4.90 <span>(495 reviews)</span>
+              </div>
+              <h3 class="food-card-title"><a href="product-details.html">Spicy Diablo Jalapeno Melt</a></h3>
+              <p class="food-card-desc">Pepper jack cheese, fire-charred jalapenos, pickled habanero crunch, smoked sriracha aioli, and angus beef patty.</p>
+              <div class="food-card-footer">
+                <div class="food-price">
+                  $13.90
+                </div>
+                <a href="product-details.html" class="food-card-btn">
+                  <i class="fa-solid fa-eye"></i> Details
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Burger 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/burgers/burger-4.jpg" alt="Truffle Swiss Mushroom Melt" loading="lazy">
+              <div class="food-card-badge">
+                <span class="badge-custom badge-bestseller"><i class="fa-solid fa-award"></i> Gourmet</span>
+              </div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating">
+                <i class="fa-solid fa-star"></i> 4.92 <span>(710 reviews)</span>
+              </div>
+              <h3 class="food-card-title"><a href="product-details.html">Truffle Swiss Mushroom Melt</a></h3>
+              <p class="food-card-desc">Garlic sauteed cremini and shiitake mushrooms, melted Emmental Swiss, black winter truffle aioli, baby arugula.</p>
+              <div class="food-card-footer">
+                <div class="food-price">
+                  $16.20
+                </div>
+                <a href="product-details.html" class="food-card-btn">
+                  <i class="fa-solid fa-eye"></i> Details
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Burger 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/burgers/burger-5.jpg" alt="Crispy Buttermilk Chicken Crunch" loading="lazy">
+              <div class="food-card-badge">
+                <span class="badge-custom badge-new">Crispy</span>
+              </div>
+              <div class="food-card-diet">
+                <span class="diet-icon text-success" title="Halal Certified"><i class="fa-solid fa-check"></i></span>
+              </div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating">
+                <i class="fa-solid fa-star"></i> 4.87 <span>(530 reviews)</span>
+              </div>
+              <h3 class="food-card-title"><a href="product-details.html">Crispy Buttermilk Chicken</a></h3>
+              <p class="food-card-desc">24-hour buttermilk brined tender chicken breast, triple-crusted, tangy honey mustard slaw, dill pickles, golden bun.</p>
+              <div class="food-card-footer">
+                <div class="food-price">
+                  $13.50
+                </div>
+                <a href="product-details.html" class="food-card-btn">
+                  <i class="fa-solid fa-eye"></i> Details
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Burger 6 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/burgers/burger-6.jpg" alt="The Green Goddess Plant Burger" loading="lazy">
+              <div class="food-card-badge">
+                <span class="badge-custom badge-vegan"><i class="fa-solid fa-leaf"></i> 100% Vegan</span>
+              </div>
+              <div class="food-card-diet">
+                <span class="diet-icon text-success" title="Plant Based"><i class="fa-solid fa-seedling"></i></span>
+              </div>
+            </div>
+            <div class="food-card-content">
+              <div class="food-card-rating">
+                <i class="fa-solid fa-star"></i> 4.80 <span>(310 reviews)</span>
+              </div>
+              <h3 class="food-card-title"><a href="product-details.html">Green Goddess Plant Burger</a></h3>
+              <p class="food-card-desc">Chargrilled pea-protein &amp; beetroot patty, smashed avocado, vegan smoked provolone, pickled red onions, micro-basil.</p>
+              <div class="food-card-footer">
+                <div class="food-price">
+                  $14.20
+                </div>
+                <a href="product-details.html" class="food-card-btn">
+                  <i class="fa-solid fa-eye"></i> Details
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CHEF'S SPECIAL SHOWCASE ==================== -->
+  <section class="section-padding bg-cream-soft">
+    <div class="container">
+      <div class="chef-special-box">
+        <div class="row g-0 align-items-center">
+          <div class="col-lg-6">
+            <div class="chef-special-content">
+              <span class="badge-custom badge-bestseller mb-3"><i class="fa-solid fa-crown"></i> Chef's Seasonal Masterpiece</span>
+              <h2 style="color: #FFFFFF; font-weight: 900;" class="mb-3">The Smoked Brisket &amp; Bone Marrow Royale</h2>
+              <p class="lead mb-4">
+                Curated by Head Chef Marcus Vance. Two seared prime Wagyu patties layered with 14-hour smoked hickory beef brisket, roasted garlic bone marrow butter, aged cave cheddar, and crispy shallot crisps on a toasted potato roll.
+              </p>
+              <div class="d-flex align-items-baseline gap-3 mb-4">
+                <span style="font-size: 2.5rem; font-family: var(--font-heading); font-weight: 900; color: var(--brand-highlight);">$18.90</span>
+                <span class="badge-custom badge-new">Only 50 Served Each Evening</span>
+              </div>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="product-details.html" class="btn btn-accent btn-lg">
+                  <i class="fa-solid fa-fire"></i> Reserve Your Burger
+                </a>
+                <a href="about.html" class="btn btn-outline-white btn-lg">
+                  Meet the Chef <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <img src="assets/images/home-1/special-burger.jpg" alt="Chef Special Royale Burger" class="chef-special-img" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MENU CATEGORIES PREVIEW ==================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-tagline"><i class="fa-solid fa-layer-group"></i> Crave-Worthy Selection</span>
+        <h2 class="section-title">Explore Our Signature Categories</h2>
+        <p class="section-subtitle">Whether you crave a stacked double smash burger, a toasted deli sourdough sandwich, or loaded truffle fries, we have your craving covered.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Category 1: Burgers -->
+        <div class="col-6 col-lg-3">
+          <a href="menu.html#burgers" class="category-item">
+            <img src="assets/images/burgers/burger-7.jpg" alt="Gourmet Burgers Category" loading="lazy">
+            <div class="category-overlay">
+              <h4>Gourmet Burgers</h4>
+              <span>12 Varieties Available</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Category 2: Sandwiches -->
+        <div class="col-6 col-lg-3">
+          <a href="menu.html#sandwiches" class="category-item">
+            <img src="assets/images/sandwiches/sandwich-1.jpg" alt="Artisan Sandwiches Category" loading="lazy">
+            <div class="category-overlay">
+              <h4>Artisan Sandwiches</h4>
+              <span>8 Fresh Creations</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Category 3: Sides -->
+        <div class="col-6 col-lg-3">
+          <a href="menu.html#sides" class="category-item">
+            <img src="assets/images/sides/side-1.jpg" alt="Crispy Sides & Fries Category" loading="lazy">
+            <div class="category-overlay">
+              <h4>Sides &amp; Fries</h4>
+              <span>6 Crunch Specials</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Category 4: Drinks & Shakes -->
+        <div class="col-6 col-lg-3">
+          <a href="menu.html#drinks" class="category-item">
+            <img src="assets/images/drinks/drink-1.jpg" alt="Milkshakes & Drinks Category" loading="lazy">
+            <div class="category-overlay">
+              <h4>Craft Shakes</h4>
+              <span>8 Thick Flavours</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COMBO OFFERS PREVIEW ==================== -->
+  <section class="section-padding bg-cream-soft">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end section-title-wrap">
+        <div>
+          <span class="section-tagline"><i class="fa-solid fa-tags"></i> Value Bundles</span>
+          <h2 class="section-title mb-0">Exclusive Combo Deals</h2>
+        </div>
+        <div class="mt-3 mt-md-0">
+          <a href="combo-offers.html" class="btn btn-accent">
+            Explore All Deals <i class="fa-solid fa-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Combo 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="combo-card">
+            <div class="combo-badge-top">
+              <span class="badge-custom badge-discount"><i class="fa-solid fa-percent"></i> Save $7.50</span>
+            </div>
+            <div class="combo-thumb">
+              <img src="assets/images/combos/combo-1.jpg" alt="The BUNORA Mega Feast" loading="lazy">
+            </div>
+            <div class="combo-body">
+              <h3 class="combo-title"><a href="combo-offers.html">The BUNORA Mega Feast</a></h3>
+              <p class="text-secondary small mb-2">Designed for the ultimate appetite. A full culinary tour in one pack.</p>
+              <div class="combo-includes">
+                <h6>Package Contains:</h6>
+                <ul>
+                  <li><i class="fa-solid fa-check"></i> Wagyu Royale Burger</li>
+                  <li><i class="fa-solid fa-check"></i> Parmesan Truffle Herb Fries</li>
+                  <li><i class="fa-solid fa-check"></i> Salted Caramel Pretzel Shake</li>
+                  <li><i class="fa-solid fa-check"></i> 4 Honey Sriracha Wings</li>
+                </ul>
+              </div>
+              <div class="combo-footer">
+                <div class="combo-price-wrap">
+                  <span class="food-price">$24.90 <span class="food-price-original">$32.40</span></span>
+                  <span class="combo-save-label">Limited Time Deal</span>
+                </div>
+                <a href="combo-offers.html" class="btn btn-accent btn-sm">Order Deal</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Combo 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="combo-card">
+            <div class="combo-badge-top">
+              <span class="badge-custom badge-new"><i class="fa-solid fa-heart"></i> Duo Special</span>
+            </div>
+            <div class="combo-thumb">
+              <img src="assets/images/combos/combo-2.jpg" alt="Double Smashed Date Deal" loading="lazy">
+            </div>
+            <div class="combo-body">
+              <h3 class="combo-title"><a href="combo-offers.html">Double Smashed Date Deal</a></h3>
+              <p class="text-secondary small mb-2">Perfect pair combo for burger lovers and casual dinner dates.</p>
+              <div class="combo-includes">
+                <h6>Package Contains:</h6>
+                <ul>
+                  <li><i class="fa-solid fa-check"></i> 2 Signature Burgers of Choice</li>
+                  <li><i class="fa-solid fa-check"></i> Large Loaded Fiesta Queso Nachos</li>
+                  <li><i class="fa-solid fa-check"></i> 2 Craft Shakes or Cold Brews</li>
+                </ul>
+              </div>
+              <div class="combo-footer">
+                <div class="combo-price-wrap">
+                  <span class="food-price">$31.50 <span class="food-price-original">$41.00</span></span>
+                  <span class="combo-save-label">Save 23%</span>
+                </div>
+                <a href="combo-offers.html" class="btn btn-accent btn-sm">Order Deal</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Combo 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="combo-card">
+            <div class="combo-badge-top">
+              <span class="badge-custom badge-bestseller"><i class="fa-solid fa-clock"></i> Express</span>
+            </div>
+            <div class="combo-thumb">
+              <img src="assets/images/combos/combo-3.jpg" alt="Artisan Deli Express Lunch" loading="lazy">
+            </div>
+            <div class="combo-body">
+              <h3 class="combo-title"><a href="combo-offers.html">Artisan Deli Express Lunch</a></h3>
+              <p class="text-secondary small mb-2">Available Mon - Fri, 11:30 AM to 3:30 PM for quick pickup or desk lunch.</p>
+              <div class="combo-includes">
+                <h6>Package Contains:</h6>
+                <ul>
+                  <li><i class="fa-solid fa-check"></i> Choice of Gourmet Sandwich</li>
+                  <li><i class="fa-solid fa-check"></i> Golden Seasoned Fries</li>
+                  <li><i class="fa-solid fa-check"></i> Single-Origin Nitro Cold Brew</li>
+                </ul>
+              </div>
+              <div class="combo-footer">
+                <div class="combo-price-wrap">
+                  <span class="food-price">$16.80 <span class="food-price-original">$22.00</span></span>
+                  <span class="combo-save-label">Save $5.20</span>
+                </div>
+                <a href="combo-offers.html" class="btn btn-accent btn-sm">Order Deal</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RESTAURANT EXPERIENCE & STORY ==================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <img src="assets/images/home-1/restaurant-interior.jpg" alt="BUNORA Modern Urban Dining Atmosphere" class="rounded-4 shadow-lg w-100" style="max-height: 480px; object-fit: cover;" loading="lazy">
+            <div class="p-3 bg-charcoal text-white rounded-3 shadow position-absolute bottom-0 end-0 m-4 d-none d-sm-block border border-secondary" style="max-width: 250px;">
+              <h5 class="text-highlight mb-1 fw-bold"><i class="fa-solid fa-champagne-glasses"></i> Urban Atmosphere</h5>
+              <p class="small text-light mb-0">Craft taproom, open flames, and cozy mid-century industrial booths.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <span class="section-tagline"><i class="fa-solid fa-store"></i> Urban Hospitality</span>
+          <h2 class="section-title">More Than a Meal — It's a Flavor Ritual</h2>
+          <p class="lead text-secondary">
+            Step into BUNORA and feel the energy of an open flame kitchen, the aroma of seared Angus beef, and the warmth of genuine neighborhood hospitality.
+          </p>
+          <p class="text-secondary">
+            Started in 2018 by culinary veterans who believed fast-casual could hold the same standards as Michelin-starred bistros. Every sauce is emulsified from scratch, every pickle is cured in small crocks, and every customer is greeted like family.
+          </p>
+          <div class="row g-3 my-3">
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fa-solid fa-circle-check text-green fs-5"></i>
+                <span class="fw-bold">No Frozen Patties</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fa-solid fa-circle-check text-green fs-5"></i>
+                <span class="fw-bold">100% Non-GMO Cooking Oil</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fa-solid fa-circle-check text-green fs-5"></i>
+                <span class="fw-bold">Eco-Friendly Packaging</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fa-solid fa-circle-check text-green fs-5"></i>
+                <span class="fw-bold">Pet-Friendly Patio</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-2">
+            <a href="about.html" class="btn btn-charcoal">Read Our Full Story <i class="fa-solid fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CUSTOMER TESTIMONIALS ==================== -->
+  <section class="section-padding bg-cream-soft">
+    <div class="container">
+      <div class="text-center section-title-wrap">
+        <span class="section-tagline"><i class="fa-solid fa-comments"></i> Real Reviews</span>
+        <h2 class="section-title">Loved by Foodies &amp; Critics Alike</h2>
+        <p class="section-subtitle">Read what our community has to say about our crisp smash crusts, pillowy brioche, and friendly team.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Testimonial 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-quote">
+              "Hands down the best smashed patty in the entire state. The lace crust on the Wagyu Royale is pure mastery. Add the truffle fries and you are in burger paradise!"
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Samantha Wright" class="author-avatar" loading="lazy">
+              <div class="author-info">
+                <h5>Samantha Wright</h5>
+                <span>Verified Google Reviewer • Food Blogger</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-quote">
+              "We ordered the Corporate Lunch Catering for 60 engineers at our tech office. Delivered piping hot, labelled cleanly, and everyone was raving about the pastrami sandwiches!"
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="David Sterling" class="author-avatar" loading="lazy">
+              <div class="author-info">
+                <h5>David Sterling</h5>
+                <span>Head of People, Apex Technologies</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-quote">
+              "The Salted Caramel Pretzel Shake along with the Smoky BBQ Bacon Stacker is our Friday night family ritual. Outstanding customer service and blazing-fast delivery."
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Chloe Nguyen" class="author-avatar" loading="lazy">
+              <div class="author-info">
+                <h5>Chloe Nguyen</h5>
+                <span>Loyal VIP Member (Downtown)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LATEST BLOG ARTICLES ==================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end section-title-wrap">
+        <div>
+          <span class="section-tagline"><i class="fa-solid fa-newspaper"></i> Food Stories &amp; Culture</span>
+          <h2 class="section-title mb-0">From Our Kitchen Journal</h2>
+        </div>
+        <div class="mt-3 mt-md-0">
+          <a href="blog.html" class="btn btn-outline-charcoal">
+            Browse All Articles <i class="fa-solid fa-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Article 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="blog-card">
+            <div class="blog-thumb">
+              <img src="assets/images/blog/blog-1.jpg" alt="The Science of the Smashed Patty" loading="lazy">
+              <span class="blog-category-tag">Burger Science</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span class="blog-meta-item"><i class="fa-regular fa-calendar"></i> Oct 28, 2026</span>
+                <span class="blog-meta-item"><i class="fa-regular fa-clock"></i> 5 min read</span>
+              </div>
+              <h3 class="blog-title"><a href="blog-details.html">The Culinary Physics Behind the 450°F Smashed Patty</a></h3>
+              <p class="blog-excerpt">Discover why the Maillard reaction is the secret key to unlocking rich savory umami and creating that irresistible crispy burger crust.</p>
+              <div class="blog-footer">
+                <div class="blog-author">
+                  <img src="assets/images/about/about-chef.jpg" alt="Chef Marcus Vance" class="blog-author-avatar">
+                  <span class="blog-author-name">Chef Marcus Vance</span>
+                </div>
+                <a href="blog-details.html" class="text-accent fw-bold small">Read More <i class="fa-solid fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="blog-card">
+            <div class="blog-thumb">
+              <img src="assets/images/blog/blog-2.jpg" alt="Artisanal Sourdough Fermentation" loading="lazy">
+              <span class="blog-category-tag">Bakery Craft</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span class="blog-meta-item"><i class="fa-regular fa-calendar"></i> Oct 18, 2026</span>
+                <span class="blog-meta-item"><i class="fa-regular fa-clock"></i> 6 min read</span>
+              </div>
+              <h3 class="blog-title"><a href="blog-details.html">Why 48-Hour Cold Fermentation Makes Sourdough Unstoppable</a></h3>
+              <p class="blog-excerpt">How long wild-yeast resting develops the open crumb structure, blistered crust, and digestible qualities of our artisan sandwich loaves.</p>
+              <div class="blog-footer">
+                <div class="blog-author">
+                  <img src="assets/images/about/about-sous-chef.jpg" alt="Elena Rossi" class="blog-author-avatar">
+                  <span class="blog-author-name">Elena Rossi</span>
+                </div>
+                <a href="blog-details.html" class="text-accent fw-bold small">Read More <i class="fa-solid fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="blog-card">
+            <div class="blog-thumb">
+              <img src="assets/images/blog/blog-3.jpg" alt="Craft Burger Sauces Ranked" loading="lazy">
+              <span class="blog-category-tag">Sauce Lab</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span class="blog-meta-item"><i class="fa-regular fa-calendar"></i> Oct 05, 2026</span>
+                <span class="blog-meta-item"><i class="fa-regular fa-clock"></i> 4 min read</span>
+              </div>
+              <h3 class="blog-title"><a href="blog-details.html">10 Craft Burger Sauces Ranked by Heat &amp; Boldness</a></h3>
+              <p class="blog-excerpt">From sweet honey bourbon reduction to fermented scorpion pepper mayo, here is our chef team's breakdown of the ultimate burger condiments.</p>
+              <div class="blog-footer">
+                <div class="blog-author">
+                  <img src="assets/images/about/about-chef.jpg" alt="Chef Marcus Vance" class="blog-author-avatar">
+                  <span class="blog-author-name">Chef Marcus Vance</span>
+                </div>
+                <a href="blog-details.html" class="text-accent fw-bold small">Read More <i class="fa-solid fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEWSLETTER SECTION ==================== -->
+  <section class="section-padding-sm">
+    <div class="container">
+      <div class="newsletter-banner">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <span class="badge-custom badge-new mb-3"><i class="fa-solid fa-gift"></i> VIP Club Offer</span>
+            <h2 class="fw-bold mb-2">Get 20% Off Your First Burger Order</h2>
+            <p class="mb-lg-0">Subscribe to the BUNORA Secret Menu Club. Receive weekly secret recipe drops, exclusive event invitations, and birthday treats.</p>
+          </div>
+          <div class="col-lg-5">
+            <form id="newsletterForm" class="newsletter-form-inline needs-validation" novalidate>
+              <input type="email" class="form-control" placeholder="Enter your email address..." required>
+              <button type="submit" class="btn btn-accent"><i class="fa-solid fa-paper-plane"></i> Join Club</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Col 1: Brand -->
+        <div class="col-lg-4 col-md-6 footer-brand">
+          <a href="index.html">
+            <img src="assets/images/logo-light.svg" alt="BUNORA Logo" style="height: 44px;">
+          </a>
+          <p>
+            BUNORA crafts unapologetically bold gourmet smashed burgers and crusty artisan deli sandwiches with farm-fresh local ingredients and culinary reverence.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-widget-title">Quick Links</h5>
+          <ul class="footer-links-list">
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home 1 (Burgers)</a></li>
+            <li><a href="index-2.html"><i class="fa-solid fa-angle-right"></i> Home 2 (Deli &amp; Sandwiches)</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> Our Brand Story</a></li>
+            <li><a href="menu.html"><i class="fa-solid fa-angle-right"></i> Complete Menu</a></li>
+            <li><a href="combo-offers.html"><i class="fa-solid fa-angle-right"></i> Value Combos</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Catering &amp; Events</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Inner Pages -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-widget-title">Explore</h5>
+          <ul class="footer-links-list">
+            <li><a href="product-details.html"><i class="fa-solid fa-angle-right"></i> Product Detail View</a></li>
+            <li><a href="service-details.html"><i class="fa-solid fa-angle-right"></i> Service Detail View</a></li>
+            <li><a href="blog.html"><i class="fa-solid fa-angle-right"></i> Blog &amp; Journal</a></li>
+            <li><a href="pricing.html"><i class="fa-solid fa-angle-right"></i> Pricing Packages</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact &amp; Hours</a></li>
+            <li><a href="coming-soon.html"><i class="fa-solid fa-angle-right"></i> Coming Soon Page</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Hours -->
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-widget-title">Visit &amp; Contact</h5>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <h6>Downtown Flagship Restaurant</h6>
+              <p>742 Evergreen Terrace, Downtown Food District, NY 10001</p>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <h6>Opening Hours</h6>
+              <p>Mon – Thu: 11:00 AM – 11:00 PM<br>Fri – Sun: 11:00 AM – 12:30 AM</p>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <h6>Call &amp; Delivery Line</h6>
+              <p>+1 (555) 839-2041 / order@bunorarestaurant.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+        <p class="mb-0">&copy; <span class="current-year"></span> BUNORA – Gourmet Burgers &amp; Fresh Sandwiches. All Rights Reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="404.html" class="text-secondary small">Privacy Policy</a>
+          <a href="404.html" class="text-secondary small">Terms of Service</a>
+          <a href="maintenance.html" class="text-secondary small">Maintenance Notice</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING CONTROLS ==================== -->
+  <div class="floating-widget-wrap">
+    <button class="floating-btn theme-toggle-btn" title="Toggle Light/Dark Theme" aria-label="Toggle Light/Dark Theme">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+    <button class="floating-btn rtl-toggle-btn" title="Toggle LTR/RTL Layout" aria-label="Toggle LTR/RTL Layout">
+      <span style="font-weight:900; font-size:0.75rem;">RTL</span>
+    </button>
+    <button id="backToTopBtn" class="floating-btn" title="Scroll to Top" aria-label="Scroll to Top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- Bootstrap 5.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core Template Scripts -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/filters.js"></script>
+  <script src="assets/js/validation.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <rect width="64" height="64" rx="16" fill="#171717"/>
+  <g transform="translate(10, 10)">
+    <!-- Top Bun -->
+    <path d="M4 22C4 12.059 12.059 4 22 4C31.941 4 40 12.059 40 22C40 23.1 39.1 24 38 24H6C4.9 24 4 23.1 4 22Z" fill="#E74732"/>
+    <!-- Sesame -->
+    <ellipse cx="16" cy="12" rx="1.5" ry="2.2" transform="rotate(-25 16 12)" fill="#F6B83F"/>
+    <ellipse cx="23" cy="9" rx="1.5" ry="2.2" fill="#F6B83F"/>
+    <ellipse cx="29" cy="13" rx="1.5" ry="2.2" transform="rotate(25 29 13)" fill="#F6B83F"/>
+    <!-- Cheese -->
+    <path d="M3 27H41L37 32H33L30 35L27 32H18L15 35L12 32H7L3 27Z" fill="#F6B83F"/>
+    <!-- Patty -->
+    <rect x="5" y="33" width="34" height="5" rx="2.5" fill="#FFF7E9"/>
+    <!-- Bottom Bun -->
+    <path d="M6 39H38C39.1 39 40 39.9 40 41C40 44.314 37.314 47 34 47H10C6.686 47 4 44.314 4 41C4 39.9 4.9 39 6 39Z" fill="#E74732"/>
+  </g>
+</svg>
