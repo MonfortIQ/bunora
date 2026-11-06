@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Policy | BUNORA</title>
+  <meta name="description" content="Find out how BUNORA uses cookies and browser storage on this website.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/heroes.css">
+  <link rel="stylesheet" href="assets/css/legal.css">
+  <script>
+    (function () {
+      document.documentElement.setAttribute('data-theme', localStorage.getItem('bunora_theme') || 'light');
+      document.documentElement.setAttribute('dir', localStorage.getItem('bunora_direction') || 'ltr');
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a class="navbar-brand" href="index.html" aria-label="BUNORA home">
+          <img src="assets/images/logo-dark.svg" alt="BUNORA" class="logo-dark">
+          <img src="assets/images/logo-light.svg" alt="BUNORA" class="logo-light">
+        </a>
+        <div class="navbar-actions d-flex align-items-center gap-2 ms-auto">
+          <button type="button" class="theme-toggle-btn" aria-label="Switch theme" title="Switch theme"><i class="fa-solid fa-moon"></i></button>
+          <button type="button" class="rtl-toggle-btn" aria-label="Switch layout direction" title="Switch layout direction"><span>RTL</span></button>
+          <a class="btn btn-accent btn-sm" href="index.html"><i class="fa-solid fa-house"></i> Back to Home</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="inner-hero">
+      <div class="container">
+        <span class="section-tagline"><i class="fa-solid fa-cookie-bite"></i> Site Preferences</span>
+        <h1 class="inner-hero-title">Cookie Policy</h1>
+        <ul class="breadcrumb-custom">
+          <li><a href="index.html"><i class="fa-solid fa-house me-1"></i> Home</a></li>
+          <li><i class="fa-solid fa-chevron-right"></i></li>
+          <li class="active">Cookie Policy</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container legal-page">
+        <div class="legal-intro text-center mb-5">
+          <p class="lead text-secondary">This page describes the small amount of browser storage used to make the BUNORA website work and remember your preferences.</p>
+          <p class="legal-updated">Last updated: November 6, 2026</p>
+        </div>
+        <article class="legal-document">
+          <section>
+            <h2>What cookies and local storage do</h2>
+            <p>Cookies are small files a website can save in your browser. Local storage is a similar browser feature that stores information for a site on your device. They can support core site functions, remember choices, or help a site understand how it is used.</p>
+          </section>
+          <section>
+            <h2>What this website uses</h2>
+            <p>BUNORA's theme and RTL controls save your selected appearance and text direction in browser local storage using the keys <code>bunora_theme</code> and <code>bunora_direction</code>. These values are used to restore your preferences on later visits. The site may also rely on strictly necessary storage from its hosting or security services to deliver and protect pages.</p>
+          </section>
+          <section>
+            <h2>Analytics and advertising</h2>
+            <p>This website does not intentionally set analytics or advertising cookies. If that changes, this policy will be updated and any consent choices required by law will be provided.</p>
+          </section>
+          <section>
+            <h2>Managing your preferences</h2>
+            <p>You can change your theme and layout direction using the controls on the site. You can also clear or block cookies and local storage through your browser settings. Blocking storage may prevent the website from remembering your preferences; essential site features may also be affected.</p>
+          </section>
+          <section>
+            <h2>Policy updates and contact</h2>
+            <p>We may revise this policy when website features or legal requirements change. The latest version and update date will be shown here. For questions, contact <a href="mailto:hello@bunorarestaurant.com">hello@bunorarestaurant.com</a>.</p>
+          </section>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer py-4">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+      <p class="mb-0 small">&copy; <span class="current-year"></span> BUNORA. All rights reserved.</p>
+      <nav class="d-flex flex-wrap gap-3" aria-label="Legal">
+        <a href="privacy-policy.html" class="text-secondary small">Privacy Policy</a>
+        <a href="terms-and-conditions.html" class="text-secondary small">Terms &amp; Conditions</a>
+        <a href="cookie-policy.html" class="text-secondary small" aria-current="page">Cookie Policy</a>
+      </nav>
+    </div>
+  </footer>
+  <div class="floating-widget-wrap">
+    <button id="backToTopBtn" class="floating-btn" title="Scroll to Top" aria-label="Scroll to Top"><i class="fa-solid fa-arrow-up"></i></button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/footer.js"></script>
+</body>
+</html>

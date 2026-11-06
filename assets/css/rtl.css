@@ -32,11 +32,6 @@
   transform: scaleX(-1);
 }
 
-/* Topbar */
-[dir="rtl"] .topbar-info {
-  flex-direction: row-reverse;
-}
-
 /* Navbar */
 [dir="rtl"] .navbar .dropdown-menu {
   right: 0 !important;

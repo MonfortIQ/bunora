@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="assets/css/dark-mode.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/heroes.css">
 
   <script>
     (function() {
@@ -26,24 +27,6 @@
 </head>
 <body>
 
-  <!-- Topbar -->
-  <div class="topbar">
-    <div class="container">
-      <div class="topbar-content">
-        <div class="topbar-info">
-          <span class="topbar-info-item"><i class="fa-solid fa-location-dot"></i> 742 Evergreen Terrace, Downtown Food District</span>
-          <span class="topbar-info-item"><i class="fa-solid fa-bell-concierge"></i> Catering Hotline: +1 (555) 839-2041</span>
-        </div>
-        <div class="topbar-actions">
-          <button class="theme-toggle-btn" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
-          <button class="rtl-toggle-btn" title="Toggle RTL"><span style="font-weight:800; font-size:0.8rem;">RTL</span></button>
-          <a href="pricing.html" class="topbar-pill-btn"><i class="fa-solid fa-tags"></i> Catering Pricing</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Navigation -->
   <header class="site-header">
     <div class="container">
       <nav class="navbar navbar-expand-lg">
@@ -64,29 +47,9 @@
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Menu <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="menu.html">All Menu Items</a></li>
-                <li><a class="dropdown-item" href="product-details.html">Product Details View</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link active dropdown-toggle" href="#" data-bs-toggle="dropdown">Services <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item active" href="services.html">All Services</a></li>
-                <li><a class="dropdown-item" href="service-details.html">Service Details View</a></li>
-                <li><a class="dropdown-item" href="combo-offers.html">Combo Offers</a></li>
-                <li><a class="dropdown-item" href="pricing.html">Catering Pricing</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blog <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="blog.html">Blog Grid</a></li>
-                <li><a class="dropdown-item" href="blog-details.html">Blog Article Details</a></li>
-              </ul>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
           </ul>
           <div class="navbar-actions">
@@ -148,14 +111,14 @@
               <div class="service-icon-badge"><i class="fa-solid fa-utensils"></i></div>
             </div>
             <div class="service-content">
-              <h3 class="service-title"><a href="service-details.html">Urban Dine-In Experience</a></h3>
+              <h3 class="service-title"><a href="service-details.html?service=dinein">Urban Dine-In Experience</a></h3>
               <p class="service-desc">Immerse yourself in our lively open-flame dining room. Enjoy craft tap beers, sizzling smashed burgers fresh off the grill, and genuine hospitality.</p>
               <ul class="service-features-list">
                 <li><i class="fa-solid fa-check"></i> Open-kitchen counter seating &amp; booths</li>
                 <li><i class="fa-solid fa-check"></i> Heated outdoor patio available</li>
                 <li><i class="fa-solid fa-check"></i> Table reservations available online</li>
               </ul>
-              <a href="service-details.html" class="btn btn-outline-charcoal btn-sm mt-auto">View Service Details <i class="fa-solid fa-angle-right ms-1"></i></a>
+              <a href="service-details.html?service=dinein" class="btn btn-outline-charcoal btn-sm mt-auto">View Service Details <i class="fa-solid fa-angle-right ms-1"></i></a>
             </div>
           </div>
         </div>
@@ -164,18 +127,18 @@
         <div class="col-md-6 col-lg-4">
           <div class="service-card">
             <div class="service-thumb">
-              <img src="assets/images/services/service-takeaway.jpg" alt="Express Takeaway & Curbside" loading="lazy">
+              <img src="assets/images/burgers/burger-3.jpg" alt="BUNORA burgers prepared for takeaway" loading="lazy">
               <div class="service-icon-badge" style="background: var(--brand-highlight); color: #171717;"><i class="fa-solid fa-bag-shopping"></i></div>
             </div>
             <div class="service-content">
-              <h3 class="service-title"><a href="service-details.html">Express Takeaway &amp; Pickup</a></h3>
+              <h3 class="service-title"><a href="service-details.html?service=takeaway">Express Takeaway &amp; Pickup</a></h3>
               <p class="service-desc">Order ahead on your mobile device. Your food is packed in insulated thermal kraft boxes so your smash crust stays impeccably crispy on the drive home.</p>
               <ul class="service-features-list">
                 <li><i class="fa-solid fa-check"></i> Ready in under 15 minutes guaranteed</li>
                 <li><i class="fa-solid fa-check"></i> Dedicated express pickup counter</li>
                 <li><i class="fa-solid fa-check"></i> Curbside delivery to your car</li>
               </ul>
-              <a href="service-details.html" class="btn btn-outline-charcoal btn-sm mt-auto">View Service Details <i class="fa-solid fa-angle-right ms-1"></i></a>
+              <a href="service-details.html?service=takeaway" class="btn btn-outline-charcoal btn-sm mt-auto">View Service Details <i class="fa-solid fa-angle-right ms-1"></i></a>
             </div>
           </div>
         </div>
@@ -188,14 +151,14 @@
               <div class="service-icon-badge"><i class="fa-solid fa-motorcycle"></i></div>
             </div>
             <div class="service-content">
-              <h3 class="service-title"><a href="service-details.html">Lightning Fast Hot Delivery</a></h3>
+              <h3 class="service-title"><a href="service-details.html?service=delivery">Lightning Fast Hot Delivery</a></h3>
               <p class="service-desc">Our dedicated bike and eco-scooter delivery fleet reaches your doorstep within an average of 22 minutes. Real-time GPS tracking from grill to door.</p>
               <ul class="service-features-list">
                 <li><i class="fa-solid fa-check"></i> Specialized steam-vented fry cartons</li>
                 <li><i class="fa-solid fa-check"></i> 100% contactless drop-off options</li>
                 <li><i class="fa-solid fa-check"></i> Free delivery on orders over $35</li>
               </ul>
-              <a href="service-details.html" class="btn btn-outline-charcoal btn-sm mt-auto">View Service Details <i class="fa-solid fa-angle-right ms-1"></i></a>
+              <a href="service-details.html?service=delivery" class="btn btn-outline-charcoal btn-sm mt-auto">View Service Details <i class="fa-solid fa-angle-right ms-1"></i></a>
             </div>
           </div>
         </div>
@@ -208,14 +171,14 @@
               <div class="service-icon-badge" style="background: var(--brand-accent);"><i class="fa-solid fa-champagne-glasses"></i></div>
             </div>
             <div class="service-content">
-              <h3 class="service-title"><a href="service-details.html">Party &amp; Birthday Catering</a></h3>
+              <h3 class="service-title"><a href="service-details.html?service=catering">Party &amp; Birthday Catering</a></h3>
               <p class="service-desc">Turn any birthday, graduation, or game day into an unforgettable feast with custom gourmet slider bars, loaded nacho platters, and wing towers.</p>
               <ul class="service-features-list">
                 <li><i class="fa-solid fa-check"></i> Interactive mini slider setups</li>
                 <li><i class="fa-solid fa-check"></i> Chafing warmers &amp; serving gear provided</li>
                 <li><i class="fa-solid fa-check"></i> Dietary customization for all guests</li>
               </ul>
-              <a href="service-details.html" class="btn btn-outline-charcoal btn-sm mt-auto">View Service Details <i class="fa-solid fa-angle-right ms-1"></i></a>
+              <a href="service-details.html?service=catering" class="btn btn-outline-charcoal btn-sm mt-auto">View Service Details <i class="fa-solid fa-angle-right ms-1"></i></a>
             </div>
           </div>
         </div>
@@ -228,14 +191,14 @@
               <div class="service-icon-badge" style="background: #1E40AF;"><i class="fa-solid fa-briefcase"></i></div>
             </div>
             <div class="service-content">
-              <h3 class="service-title"><a href="service-details.html">Corporate Food Orders</a></h3>
+              <h3 class="service-title"><a href="service-details.html?service=corporate">Corporate Food Orders</a></h3>
               <p class="service-desc">Power executive meetings, client presentations, and office team lunches with individually labelled gourmet sandwich boxes and cold brew packs.</p>
               <ul class="service-features-list">
                 <li><i class="fa-solid fa-check"></i> Individually labelled named boxes</li>
                 <li><i class="fa-solid fa-check"></i> Monthly corporate invoicing accounts</li>
                 <li><i class="fa-solid fa-check"></i> On-time boardroom delivery guarantee</li>
               </ul>
-              <a href="service-details.html" class="btn btn-outline-charcoal btn-sm mt-auto">View Service Details <i class="fa-solid fa-angle-right ms-1"></i></a>
+              <a href="service-details.html?service=corporate" class="btn btn-outline-charcoal btn-sm mt-auto">View Service Details <i class="fa-solid fa-angle-right ms-1"></i></a>
             </div>
           </div>
         </div>
@@ -248,14 +211,14 @@
               <div class="service-icon-badge" style="background: var(--brand-highlight); color: #171717;"><i class="fa-solid fa-star"></i></div>
             </div>
             <div class="service-content">
-              <h3 class="service-title"><a href="service-details.html">Private Dining &amp; Buyouts</a></h3>
+              <h3 class="service-title"><a href="service-details.html?service=events">Private Dining &amp; Buyouts</a></h3>
               <p class="service-desc">Book our private mezzanine or full restaurant buyout for private celebrations, rehearsal dinners, brand launches, and chef tasting events.</p>
               <ul class="service-features-list">
                 <li><i class="fa-solid fa-check"></i> Capacity for up to 120 seated guests</li>
                 <li><i class="fa-solid fa-check"></i> Dedicated private bar &amp; grill staff</li>
                 <li><i class="fa-solid fa-check"></i> Custom curated wine &amp; burger pairings</li>
               </ul>
-              <a href="service-details.html" class="btn btn-outline-charcoal btn-sm mt-auto">View Service Details <i class="fa-solid fa-angle-right ms-1"></i></a>
+              <a href="service-details.html?service=events" class="btn btn-outline-charcoal btn-sm mt-auto">View Service Details <i class="fa-solid fa-angle-right ms-1"></i></a>
             </div>
           </div>
         </div>
@@ -319,8 +282,9 @@
       <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
         <p class="mb-0">&copy; <span class="current-year"></span> BUNORA. All Rights Reserved.</p>
         <div class="d-flex gap-3">
-          <a href="404.html" class="text-secondary small">Privacy Policy</a>
-          <a href="404.html" class="text-secondary small">Terms</a>
+          <a href="privacy-policy.html" class="text-secondary small">Privacy Policy</a>
+          <a href="terms-and-conditions.html" class="text-secondary small">Terms &amp; Conditions</a>
+          <a href="cookie-policy.html" class="text-secondary small">Cookie Policy</a>
         </div>
       </div>
     </div>
@@ -337,5 +301,7 @@
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/rtl.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/heroes.js"></script>
+  <script src="assets/js/footer.js"></script>
 </body>
 </html>

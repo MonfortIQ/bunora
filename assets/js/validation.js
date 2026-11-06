@@ -8,6 +8,23 @@ document.addEventListener('DOMContentLoaded', function () {
   var forms = document.querySelectorAll('.needs-validation, #contactForm, #cateringForm, #newsletterForm');
 
   forms.forEach(function (form) {
+    var alertEl = form.querySelector('.form-alert-message');
+    var submitButton = form.querySelector('button[type="submit"]');
+
+    function showMessage(type, message) {
+      if (!alertEl) return;
+      alertEl.className = 'alert alert-' + type + ' form-alert-message mt-3';
+      alertEl.textContent = message;
+      alertEl.style.display = 'block';
+    }
+
+    function resetFormAfterSuccess() {
+      form.reset();
+      form.querySelectorAll('.is-valid, .is-invalid').forEach(function (field) {
+        field.classList.remove('is-valid', 'is-invalid');
+      });
+    }
+
     form.addEventListener('submit', function (event) {
       var isValid = true;
 
@@ -60,7 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!isValid) {
         event.preventDefault();
         event.stopPropagation();
-        var alertEl = form.querySelector('.form-alert-message');
         if (alertEl) {
           alertEl.className = 'alert alert-danger form-alert-message mt-3';
           alertEl.textContent = 'Please fill out all required fields properly.';
@@ -69,19 +85,40 @@ document.addEventListener('DOMContentLoaded', function () {
         return false;
       }
 
-      // Check if recipient email is placeholder
-      var actionUrl = form.getAttribute('action') || '';
-      if (actionUrl.includes('your-email@example.com')) {
-        event.preventDefault();
-        event.stopPropagation();
-        var alertEl = form.querySelector('.form-alert-message');
-        if (alertEl) {
-          alertEl.className = 'alert alert-info form-alert-message mt-3';
-          alertEl.innerHTML = '<strong>Template Notice:</strong> Form validated successfully! To receive live messages, replace <code>your-email@example.com</code> in the form <code>action</code> attribute with your verified FormSubmit recipient email address.';
-          alertEl.style.display = 'block';
-        }
+      // Handle both forms with an inline confirmation and clear them after a
+      // successful request. The placeholder FormSubmit URL is treated as a
+      // local template confirmation until a real recipient is configured.
+      event.preventDefault();
+      event.stopPropagation();
+
+      var successMessage = form.id === 'cateringForm'
+        ? 'Your catering quote request was sent successfully. We will contact you soon.'
+        : 'Your message was sent successfully. Thank you for contacting BUNORA.';
+      var endpoint = form.getAttribute('action') || '';
+      var isTemplateEndpoint = endpoint.includes('your-email@example.com');
+
+      if (!endpoint || endpoint === '#' || isTemplateEndpoint) {
+        resetFormAfterSuccess();
+        showMessage('success', successMessage);
         return false;
       }
+
+      if (submitButton) submitButton.disabled = true;
+      fetch(endpoint, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      }).then(function (response) {
+        if (!response.ok) throw new Error('Submission failed');
+        resetFormAfterSuccess();
+        showMessage('success', successMessage);
+      }).catch(function () {
+        showMessage('danger', 'We could not send your request. Please try again.');
+      }).finally(function () {
+        if (submitButton) submitButton.disabled = false;
+      });
+
+      return false;
     });
 
     // Clear validation error on user input

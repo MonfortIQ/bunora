@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="assets/css/dark-mode.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/heroes.css">
 
   <!-- Immediate Theme & RTL Init Script -->
   <script>
@@ -34,28 +35,6 @@
 </head>
 <body>
 
-  <!-- ==================== TOP ANNOUNCEMENT BAR ==================== -->
-  <div class="topbar" style="background-color: #27221A; border-bottom: 1px solid rgba(246, 184, 63, 0.15);">
-    <div class="container">
-      <div class="topbar-content">
-        <div class="topbar-info">
-          <span class="topbar-info-item"><i class="fa-solid fa-wheat-awn"></i> In-House Sourdough Baked Fresh at 7:00 AM &amp; 1:00 PM Daily</span>
-          <span class="topbar-info-item"><i class="fa-solid fa-clock"></i> Deli Hours: 8:00 AM - 9:00 PM</span>
-        </div>
-        <div class="topbar-actions">
-          <button class="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
-            <i class="fa-solid fa-moon"></i>
-          </button>
-          <button class="rtl-toggle-btn" title="Toggle Direction" aria-label="Toggle Direction">
-            <span style="font-weight:800; font-size:0.8rem;">RTL</span>
-          </button>
-          <a href="menu.html#sandwiches" class="topbar-pill-btn" style="background: rgba(246, 184, 63, 0.2); border-color: var(--brand-highlight); color: var(--brand-highlight);"><i class="fa-solid fa-bread-slice"></i> Deli Pickup</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==================== MAIN STICKY NAVIGATION ==================== -->
   <header class="site-header">
     <div class="container">
       <nav class="navbar navbar-expand-lg">
@@ -89,46 +68,11 @@
               <a class="nav-link" href="about.html">About Us</a>
             </li>
 
-            <!-- Menu Dropdown -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Menu <i class="fa-solid fa-chevron-down nav-chevron"></i>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="menu.html"><i class="fa-solid fa-utensils me-2 text-accent"></i> All Menu Items</a></li>
-                <li><a class="dropdown-item" href="menu.html#sandwiches"><i class="fa-solid fa-bread-slice me-2 text-highlight"></i> Gourmet Sandwiches</a></li>
-                <li><a class="dropdown-item" href="menu.html#burgers"><i class="fa-solid fa-burger me-2 text-accent"></i> Signature Burgers</a></li>
-                <li><a class="dropdown-item" href="menu.html#sides"><i class="fa-solid fa-bowl-food me-2 text-accent"></i> Sides &amp; Crispy Fries</a></li>
-                <li><a class="dropdown-item" href="menu.html#drinks"><i class="fa-solid fa-mug-hot me-2 text-highlight"></i> Nitro Brews &amp; Shakes</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="product-details.html"><i class="fa-solid fa-eye me-2 text-highlight"></i> Product Details View</a></li>
-              </ul>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
 
-            <!-- Services Dropdown -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Services <i class="fa-solid fa-chevron-down nav-chevron"></i>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="services.html">All Services</a></li>
-                <li><a class="dropdown-item" href="service-details.html">Service Details View</a></li>
-                <li><a class="dropdown-item" href="combo-offers.html">Deli Combo Boxes</a></li>
-                <li><a class="dropdown-item" href="pricing.html">Corporate Platters</a></li>
-              </ul>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
 
-            <!-- Blog Dropdown -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Blog <i class="fa-solid fa-chevron-down nav-chevron"></i>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="blog.html">Food Stories Grid</a></li>
-                <li><a class="dropdown-item" href="blog-list.html">Deli Journal &amp; Sidebar</a></li>
-                <li><a class="dropdown-item" href="blog-details.html">Article Details</a></li>
-              </ul>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
 
             <!-- Contact -->
             <li class="nav-item">
@@ -453,7 +397,7 @@
   </section>
 
   <!-- ==================== OUR STORY: BAKERY & DELI ROOTS ==================== -->
-  <section class="section-padding bg-cream-soft">
+  <section id="our-story" class="section-padding bg-cream-soft">
     <div class="container">
       <div class="row align-items-center g-5">
         <div class="col-lg-6 order-lg-2">
@@ -474,15 +418,15 @@
           <p class="text-secondary">
             We mill a portion of our flour in-house to capture the nutty vitality of fresh grain. When you order a sandwich, our chefs slice the pastrami and prosciutto right off the slab in front of you. No pre-cut deli meat, no artificial dough conditioners — just honest culinary passion.
           </p>
-          <div class="row g-3 my-4">
+          <div class="row g-3 my-4 home-2-story-stats">
             <div class="col-sm-6">
-              <div class="p-3 bg-surface rounded-3 border">
+              <div class="p-3 bg-surface rounded-3 border h-100 home-2-story-stat">
                 <h3 class="text-accent fw-bold mb-1">48 Hours</h3>
                 <p class="small text-secondary mb-0">Slow cold fermentation for optimal digestibility and complex flavor.</p>
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="p-3 bg-surface rounded-3 border">
+              <div class="p-3 bg-surface rounded-3 border h-100 home-2-story-stat">
                 <h3 class="text-highlight fw-bold mb-1">100% Sliced Fresh</h3>
                 <p class="small text-secondary mb-0">Every deli cut shaved right upon order for maximum juiciness.</p>
               </div>
@@ -763,9 +707,9 @@
       <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
         <p class="mb-0">&copy; <span class="current-year"></span> BUNORA – Gourmet Burgers &amp; Fresh Sandwiches. All Rights Reserved.</p>
         <div class="d-flex gap-3">
-          <a href="404.html" class="text-secondary small">Privacy Policy</a>
-          <a href="404.html" class="text-secondary small">Terms of Service</a>
-          <a href="maintenance.html" class="text-secondary small">Maintenance Notice</a>
+          <a href="privacy-policy.html" class="text-secondary small">Privacy Policy</a>
+          <a href="terms-and-conditions.html" class="text-secondary small">Terms &amp; Conditions</a>
+          <a href="cookie-policy.html" class="text-secondary small">Cookie Policy</a>
         </div>
       </div>
     </div>
@@ -791,6 +735,8 @@
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/rtl.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/heroes.js"></script>
+  <script src="assets/js/footer.js"></script>
   <script src="assets/js/filters.js"></script>
   <script src="assets/js/validation.js"></script>
 </body>

@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="assets/css/dark-mode.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/heroes.css">
 
   <!-- Immediate Theme & RTL Init Script -->
   <script>
@@ -33,28 +34,6 @@
   </script>
 </head>
 <body>
-
-  <!-- ==================== TOP ANNOUNCEMENT BAR ==================== -->
-  <div class="topbar">
-    <div class="container">
-      <div class="topbar-content">
-        <div class="topbar-info">
-          <span class="topbar-info-item"><i class="fa-solid fa-location-dot"></i> 742 Evergreen Terrace, Downtown Food District</span>
-          <span class="topbar-info-item"><i class="fa-regular fa-clock"></i> Mon - Sun: 11:00 AM - 11:30 PM</span>
-          <span class="topbar-info-item"><i class="fa-solid fa-phone"></i> +1 (555) 839-2041</span>
-        </div>
-        <div class="topbar-actions">
-          <button class="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
-            <i class="fa-solid fa-moon"></i>
-          </button>
-          <button class="rtl-toggle-btn" title="Toggle Direction" aria-label="Toggle Direction">
-            <span style="font-weight:800; font-size:0.8rem;">RTL</span>
-          </button>
-          <a href="contact.html" class="topbar-pill-btn"><i class="fa-solid fa-motorcycle"></i> Express Delivery</a>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- ==================== MAIN STICKY NAVIGATION ==================== -->
   <header class="site-header">
@@ -90,46 +69,11 @@
               <a class="nav-link" href="about.html">About Us</a>
             </li>
 
-            <!-- Menu Dropdown -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Menu <i class="fa-solid fa-chevron-down nav-chevron"></i>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="menu.html"><i class="fa-solid fa-utensils me-2 text-accent"></i> All Menu Items</a></li>
-                <li><a class="dropdown-item" href="menu.html#burgers"><i class="fa-solid fa-burger me-2 text-accent"></i> Signature Burgers</a></li>
-                <li><a class="dropdown-item" href="menu.html#sandwiches"><i class="fa-solid fa-bread-slice me-2 text-accent"></i> Gourmet Sandwiches</a></li>
-                <li><a class="dropdown-item" href="menu.html#sides"><i class="fa-solid fa-bowl-food me-2 text-accent"></i> Sides &amp; Snacks</a></li>
-                <li><a class="dropdown-item" href="menu.html#drinks"><i class="fa-solid fa-mug-hot me-2 text-accent"></i> Shakes &amp; Drinks</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="product-details.html"><i class="fa-solid fa-eye me-2 text-highlight"></i> Product Details View</a></li>
-              </ul>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
 
-            <!-- Services Dropdown -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Services <i class="fa-solid fa-chevron-down nav-chevron"></i>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="services.html">All Services</a></li>
-                <li><a class="dropdown-item" href="service-details.html">Service Details View</a></li>
-                <li><a class="dropdown-item" href="combo-offers.html">Exclusive Combo Offers</a></li>
-                <li><a class="dropdown-item" href="pricing.html">Catering Packages</a></li>
-              </ul>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
 
-            <!-- Blog Dropdown -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Blog <i class="fa-solid fa-chevron-down nav-chevron"></i>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="blog.html">Blog Grid Layout</a></li>
-                <li><a class="dropdown-item" href="blog-list.html">Blog List &amp; Sidebar</a></li>
-                <li><a class="dropdown-item" href="blog-details.html">Blog Article Details</a></li>
-              </ul>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
 
             <!-- Contact -->
             <li class="nav-item">
@@ -542,11 +486,11 @@
               <p class="lead mb-4">
                 Curated by Head Chef Marcus Vance. Two seared prime Wagyu patties layered with 14-hour smoked hickory beef brisket, roasted garlic bone marrow butter, aged cave cheddar, and crispy shallot crisps on a toasted potato roll.
               </p>
-              <div class="d-flex align-items-baseline gap-3 mb-4">
+              <div class="chef-special-price-row d-flex align-items-baseline gap-3 mb-4">
                 <span style="font-size: 2.5rem; font-family: var(--font-heading); font-weight: 900; color: var(--brand-highlight);">$18.90</span>
                 <span class="badge-custom badge-new">Only 50 Served Each Evening</span>
               </div>
-              <div class="d-flex flex-wrap gap-3">
+              <div class="chef-special-actions d-flex flex-wrap gap-3">
                 <a href="product-details.html" class="btn btn-accent btn-lg">
                   <i class="fa-solid fa-fire"></i> Reserve Your Burger
                 </a>
@@ -799,7 +743,7 @@
         <p class="section-subtitle">Read what our community has to say about our crisp smash crusts, pillowy brioche, and friendly team.</p>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-4 reviews-grid">
         <!-- Testimonial 1 -->
         <div class="col-md-6 col-lg-4">
           <div class="testimonial-card">
@@ -1064,9 +1008,9 @@
       <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
         <p class="mb-0">&copy; <span class="current-year"></span> BUNORA – Gourmet Burgers &amp; Fresh Sandwiches. All Rights Reserved.</p>
         <div class="d-flex gap-3">
-          <a href="404.html" class="text-secondary small">Privacy Policy</a>
-          <a href="404.html" class="text-secondary small">Terms of Service</a>
-          <a href="maintenance.html" class="text-secondary small">Maintenance Notice</a>
+          <a href="privacy-policy.html" class="text-secondary small">Privacy Policy</a>
+          <a href="terms-and-conditions.html" class="text-secondary small">Terms &amp; Conditions</a>
+          <a href="cookie-policy.html" class="text-secondary small">Cookie Policy</a>
         </div>
       </div>
     </div>
@@ -1092,6 +1036,8 @@
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/rtl.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/heroes.js"></script>
+  <script src="assets/js/footer.js"></script>
   <script src="assets/js/filters.js"></script>
   <script src="assets/js/validation.js"></script>
 </body>
