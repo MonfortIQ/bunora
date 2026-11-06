@@ -407,9 +407,14 @@ ul, ol {
   padding: 0.6rem 0.9rem !important;
   display: flex;
   align-items: center;
+  white-space: nowrap;
   gap: 0.35rem;
   position: relative;
   transition: color var(--transition-fast);
+}
+
+.navbar-nav {
+  flex-wrap: nowrap;
 }
 
 .nav-link:hover,
@@ -1401,11 +1406,17 @@ ul, ol {
   padding: 1.25rem 1.5rem;
   box-shadow: var(--shadow-sm);
   margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .menu-filter-nav {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
   gap: 0.5rem;
   list-style: none;
   padding: 0;
@@ -1425,6 +1436,8 @@ ul, ol {
   transition: all var(--transition-fast);
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-height: 44px;
   gap: 0.4rem;
 }
 
@@ -1443,7 +1456,8 @@ ul, ol {
 
 .menu-search-box {
   position: relative;
-  min-width: 260px;
+  width: min(100%, 360px);
+  min-width: 0;
 }
 
 .menu-search-input {
@@ -1454,6 +1468,7 @@ ul, ol {
   background: var(--bg-body);
   color: var(--text-primary);
   font-size: 0.9rem;
+  min-height: 44px;
   outline: none;
   transition: all var(--transition-fast);
 }
@@ -1941,6 +1956,15 @@ ul, ol {
 
 .blog-card:hover .blog-thumb img {
   transform: scale(1.08);
+}
+
+.blog-card[data-blog-post] {
+  cursor: pointer;
+}
+
+.blog-card[data-blog-post]:focus-visible {
+  outline: 3px solid var(--brand-accent);
+  outline-offset: 4px;
 }
 
 .blog-category-tag {

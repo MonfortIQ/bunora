@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ['combo-offers.html', 'Combo Offers'],
         ['services.html', 'Services & Catering'],
         ['blog.html', 'Food Stories & Blog'],
-        ['pricing.html', 'Catering Pricing'],
+        ['pricing.html', 'Pricing'],
         ['404.html', '404 Page'],
         ['coming-soon.html', 'Coming Soon'],
         ['maintenance.html', 'Maintenance'],
@@ -107,27 +107,65 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Add the shared Pages dropdown to every desktop navbar.
+  // Keep Pricing as a direct top-level link, separate from the utility Pages dropdown.
   var desktopNav = document.querySelector('.site-header .navbar-nav');
+  if (desktopNav && !desktopNav.querySelector('.pricing-nav-item')) {
+    var pricingItem = document.createElement('li');
+    pricingItem.className = 'nav-item pricing-nav-item';
+    pricingItem.innerHTML = '<a class="nav-link" href="pricing.html">Pricing</a>';
+
+    var contactNavLink = desktopNav.querySelector('a[href="contact.html"]');
+    var contactNavItem = contactNavLink && contactNavLink.closest('.nav-item');
+    if (contactNavItem) {
+      desktopNav.insertBefore(pricingItem, contactNavItem);
+    } else {
+      desktopNav.appendChild(pricingItem);
+    }
+  }
+
+  // Add the shared Pages dropdown to every desktop navbar.
   if (desktopNav && !desktopNav.querySelector('.pages-nav-item')) {
     var pagesItem = document.createElement('li');
     pagesItem.className = 'nav-item dropdown pages-nav-item';
     pagesItem.innerHTML = '<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages <i class="fa-solid fa-chevron-down nav-chevron"></i></a>' +
       '<ul class="dropdown-menu">' +
-      '<li><a class="dropdown-item" href="pricing.html">Pricing &amp; Catering</a></li>' +
       '<li><a class="dropdown-item" href="404.html">404 Page</a></li>' +
       '<li><a class="dropdown-item" href="coming-soon.html">Coming Soon</a></li>' +
       '<li><a class="dropdown-item" href="maintenance.html">Maintenance</a></li>' +
       '</ul>';
 
-    var contactNavLink = desktopNav.querySelector('a[href="contact.html"]');
-    var contactNavItem = contactNavLink && contactNavLink.closest('.nav-item');
-    if (contactNavItem) {
-      desktopNav.insertBefore(pagesItem, contactNavItem);
+    var pagesContactLink = desktopNav.querySelector('a[href="contact.html"]');
+    var pagesContactItem = pagesContactLink && pagesContactLink.closest('.nav-item');
+    var pricingNavItem = desktopNav.querySelector('.pricing-nav-item');
+    if (pricingNavItem) {
+      desktopNav.insertBefore(pagesItem, pricingNavItem.nextSibling);
+    } else if (pagesContactItem) {
+      desktopNav.insertBefore(pagesItem, pagesContactItem);
     } else {
       desktopNav.appendChild(pagesItem);
     }
   }
+
+  // Give every blog card its own detail URL and make the whole card clickable.
+  document.querySelectorAll('.blog-card[data-blog-post]').forEach(function (card) {
+    var postKey = card.getAttribute('data-blog-post');
+    var detailUrl = 'blog-details.html?post=' + encodeURIComponent(postKey);
+    card.querySelectorAll('a[href="blog-details.html"]').forEach(function (link) {
+      link.setAttribute('href', detailUrl);
+    });
+    card.addEventListener('click', function (event) {
+      if (event.target.closest('a, button')) return;
+      window.location.href = detailUrl;
+    });
+    card.setAttribute('role', 'link');
+    card.setAttribute('tabindex', '0');
+    card.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        window.location.href = detailUrl;
+      }
+    });
+  });
 
   // Show service-specific detail content for the card that opened this page.
   var serviceDetailImage = document.getElementById('serviceDetailImage');
