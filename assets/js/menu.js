@@ -9,16 +9,54 @@ document.addEventListener('DOMContentLoaded', function () {
   var thumbs = document.querySelectorAll('.product-thumb-item');
 
   if (mainProductImg && thumbs.length > 0) {
-    thumbs.forEach(function (thumb) {
+    var currentSlide = 0;
+    var carouselTimer;
+
+    function showProductSlide(index) {
+      currentSlide = (index + thumbs.length) % thumbs.length;
+      var activeThumb = thumbs[currentSlide];
+      var newSrc = activeThumb.getAttribute('data-img');
+      if (!newSrc) return;
+
+      thumbs.forEach(function (thumb) { thumb.classList.remove('active'); });
+      activeThumb.classList.add('active');
+      mainProductImg.style.opacity = '0.25';
+      window.setTimeout(function () {
+        mainProductImg.src = newSrc;
+        mainProductImg.style.opacity = '1';
+      }, 120);
+
+    }
+
+    function startProductCarousel() {
+      window.clearInterval(carouselTimer);
+      carouselTimer = window.setInterval(function () {
+        showProductSlide(currentSlide + 1);
+      }, 3500);
+    }
+
+    function pauseProductCarousel() {
+      window.clearInterval(carouselTimer);
+    }
+
+    thumbs.forEach(function (thumb, index) {
       thumb.addEventListener('click', function () {
-        thumbs.forEach(function (t) { t.classList.remove('active'); });
-        this.classList.add('active');
-        var newSrc = this.getAttribute('data-img');
-        if (newSrc) {
-          mainProductImg.src = newSrc;
-        }
+        showProductSlide(index);
+        startProductCarousel();
       });
     });
+
+    var gallery = mainProductImg.closest('.product-detail-gallery');
+    if (gallery) {
+      gallery.addEventListener('mouseenter', pauseProductCarousel);
+      gallery.addEventListener('mouseleave', startProductCarousel);
+      gallery.addEventListener('focusin', pauseProductCarousel);
+      gallery.addEventListener('focusout', startProductCarousel);
+      gallery.addEventListener('touchstart', pauseProductCarousel, { passive: true });
+      gallery.addEventListener('touchend', startProductCarousel, { passive: true });
+    }
+
+    startProductCarousel();
   }
 
   // --- Quantity & Addon Price Calculation ---

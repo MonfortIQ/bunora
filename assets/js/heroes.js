@@ -128,13 +128,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
   if (page === 'product-details.html') {
-    document.querySelector('.inner-hero')?.classList.add('bunora-detail-breadcrumb');
+    document.querySelector('.inner-hero')?.remove();
     document.querySelector('.product-detail-gallery')?.closest('.section-padding')?.classList.add('bunora-product-hero');
     var productName = document.querySelector('.product-detail-gallery')?.parentElement?.parentElement?.querySelector('h1');
     if (productName) productName.insertAdjacentHTML('beforebegin', '<span class="bunora-page-hero-eyebrow">BUNORA Signature · Chef’s Special</span>');
   }
   if (page === 'service-details.html') {
-    document.querySelector('.inner-hero')?.classList.add('bunora-detail-breadcrumb');
+    document.querySelector('.inner-hero')?.remove();
     document.getElementById('serviceDetailImage')?.closest('.section-padding')?.classList.add('bunora-service-hero');
   }
   if (page === 'blog-details.html') document.querySelector('.article-body')?.setAttribute('id','articleBody');

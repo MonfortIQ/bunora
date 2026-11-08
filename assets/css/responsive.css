@@ -57,6 +57,29 @@
   }
 }
 
+/* The complete desktop navigation no longer fits inside a 960px tablet
+   container after Pricing, Pages, RTL, theme, and the CTA are present. Use the
+   same clean offcanvas menu at tablet widths instead of clipping the right
+   side of the header. */
+@media (min-width: 992px) and (max-width: 1099.98px) {
+  .site-header .navbar {
+    flex-wrap: nowrap;
+  }
+
+  .site-header .navbar-brand {
+    margin-inline-end: auto;
+  }
+
+  .site-header .navbar-toggler {
+    display: block;
+    flex: 0 0 auto;
+  }
+
+  .site-header .navbar-expand-lg .navbar-collapse {
+    display: none !important;
+  }
+}
+
 /* --------------------------------------------------------------------------
    04. Tablets (Max Width: 991.98px)
    -------------------------------------------------------------------------- */
@@ -108,6 +131,105 @@
    05. Small Tablets & Mobile Devices (Max Width: 767.98px)
    -------------------------------------------------------------------------- */
 @media (max-width: 767.98px) {
+  :root {
+    --site-header-offset: 76px;
+  }
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    flex-wrap: nowrap;
+  }
+
+  .navbar-brand {
+    min-width: 0;
+    margin-right: 0.5rem;
+  }
+
+  .navbar-brand img {
+    height: 48px;
+    max-width: 100%;
+  }
+
+  .navbar-toggler {
+    flex: 0 0 auto;
+  }
+
+  .hero-burger-section .container,
+  .hero-burger-section .row,
+  .hero-burger-visual,
+  .hero-burger-img-wrap {
+    max-width: 100%;
+  }
+
+  .hero-burger-img-wrap img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .hero-floating-card {
+    left: 0;
+    right: 0;
+    max-width: 100%;
+  }
+
+  .utility-page-wrapper {
+    min-height: auto;
+    padding: 2.75rem 0;
+    overflow: hidden;
+  }
+
+  .utility-page-wrapper > .container {
+    width: 100%;
+    max-width: 100%;
+    padding-inline: 1rem;
+  }
+
+  .utility-maintenance .row,
+  .utility-maintenance .row > div {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+
+  .utility-maintenance h1 {
+    font-size: clamp(2rem, 9vw, 2.6rem);
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+  }
+
+  .utility-maintenance .lead {
+    font-size: 1rem;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+
+  .utility-maintenance .d-flex.justify-content-center.gap-3 {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem !important;
+  }
+
+  .utility-maintenance .d-flex.justify-content-center.gap-3 .btn {
+    width: 100%;
+    white-space: normal;
+  }
+
+  .utility-maintenance .bunora-utility-visual {
+    width: min(100%, 320px);
+    height: 220px;
+    margin-inline: auto;
+  }
+
   .section-padding {
     padding: 3.5rem 0;
   }
@@ -128,15 +250,92 @@
     margin-right: auto;
   }
 
+  .hero-burger-visual {
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-burger-img-wrap {
+    width: min(100%, 360px);
+    margin-inline: auto;
+  }
+
   .hero-metrics {
     justify-content: center;
     gap: 1.5rem;
   }
 
   .hero-floating-card {
-    position: static;
-    margin-top: 1.5rem;
+    position: relative;
+    inset: auto;
+    width: min(100%, 360px);
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .combo-body {
+    padding: 1.25rem;
+  }
+
+  .combo-includes {
+    padding: 0.75rem;
+  }
+
+  .combo-includes li {
+    align-items: flex-start;
+  }
+
+  .combo-footer {
+    gap: 0.75rem;
+    align-items: flex-end;
+  }
+
+  .combo-price-wrap {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  .combo-price-wrap .food-price {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    font-size: 1.2rem;
+    line-height: 1.1;
+  }
+
+  .combo-price-wrap .food-price-original {
+    font-size: 0.78rem;
+  }
+
+  .combo-save-label {
+    white-space: nowrap;
+    font-size: 0.68rem;
+  }
+
+  .combo-footer .btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding-inline: 0.9rem;
+  }
+
+  .menu-filter-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
+    gap: 0.6rem;
+  }
+
+  .menu-filter-nav li,
+  .menu-filter-btn {
+    width: 100%;
+  }
+
+  .menu-filter-btn {
+    min-height: 44px;
+    padding: 0.45rem 0.35rem;
+    font-size: 0.72rem;
+    line-height: 1.15;
+    white-space: normal;
   }
 
   .hero-sandwich-inset {
@@ -144,6 +343,40 @@
   }
 
   .hero-sandwich-pills {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 0.55rem;
+  }
+
+  .hero-sandwich-pill {
+    width: 100%;
+    min-width: 0;
+    min-height: 46px;
+    justify-content: center;
+    padding: 0.45rem 0.3rem;
+    font-size: 0.7rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .hero-sandwich-actions {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem !important;
+    width: 100%;
+  }
+
+  .hero-sandwich-actions .btn {
+    width: 100%;
+    height: 56px;
+    min-height: 56px;
+    padding: 0.7rem 0.35rem;
+    font-size: 0.78rem;
+    line-height: 1.15;
+    white-space: normal;
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
   }
 
@@ -207,6 +440,13 @@
     line-height: 1.65;
   }
 
+  .chef-special-img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+  }
+
   .chef-special-price-row {
     align-items: center !important;
     justify-content: space-between;
@@ -238,6 +478,73 @@
     width: 100%;
     justify-content: center;
   }
+
+  .product-related-heading {
+    display: block !important;
+    margin-bottom: 2rem;
+  }
+
+  .product-related-heading > div {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .product-related-heading .section-title {
+    max-width: 100%;
+    font-size: clamp(2rem, 10vw, 2.7rem);
+    line-height: 1.1;
+    overflow-wrap: normal;
+  }
+
+  .product-related-heading > a {
+    display: flex;
+    width: 100%;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+
+  .product-upgrade-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    text-align: start !important;
+  }
+
+  .product-upgrade-action .food-price {
+    min-width: 0;
+    margin-bottom: 0 !important;
+    font-size: 1.2rem !important;
+    white-space: nowrap;
+  }
+
+  .product-upgrade-action .food-price-original {
+    font-size: 0.75rem !important;
+  }
+
+  .product-upgrade-action .btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 0.65rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .product-order-row {
+    flex-wrap: nowrap !important;
+    gap: 0.6rem !important;
+  }
+
+  .product-order-row .qty-control {
+    flex: 0 0 auto;
+  }
+
+  .product-order-row #addToOrderBtn {
+    min-width: 0;
+    flex: 1 1 auto;
+    padding: 0.75rem 0.4rem;
+    font-size: 0.76rem;
+    white-space: nowrap;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -250,12 +557,14 @@
   }
 
   .menu-filter-nav {
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: stretch;
   }
 
   .menu-filter-btn {
-    padding: 0.45rem 1rem;
-    font-size: 0.82rem;
+    padding: 0.45rem 0.35rem;
+    font-size: 0.72rem;
   }
 
   .btn-lg {

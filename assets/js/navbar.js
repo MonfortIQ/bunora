@@ -60,14 +60,15 @@
         <ul class="mobile-nav-list">
           <li class="mobile-nav-item"><a class="mobile-nav-link" href="index.html">Home 1 – Modern Burger</a></li>
           <li class="mobile-nav-item"><a class="mobile-nav-link" href="index-2.html">Home 2 – Artisan Deli</a></li>
-          <li class="mobile-nav-item"><a class="mobile-nav-link" href="about.html">About Brand</a></li>
-          <li class="mobile-nav-item"><a class="mobile-nav-link" href="menu.html">Menu &amp; Food</a></li>
-          <li class="mobile-nav-item"><a class="mobile-nav-link" href="product-details.html">Product Details</a></li>
-          <li class="mobile-nav-item"><a class="mobile-nav-link" href="combo-offers.html">Combo Offers</a></li>
-          <li class="mobile-nav-item"><a class="mobile-nav-link" href="services.html">Services &amp; Catering</a></li>
-          <li class="mobile-nav-item"><a class="mobile-nav-link" href="blog.html">Food Stories &amp; Blog</a></li>
-          <li class="mobile-nav-item"><a class="mobile-nav-link" href="pricing.html">Catering Pricing</a></li>
-          <li class="mobile-nav-item"><a class="mobile-nav-link" href="contact.html">Contact &amp; Location</a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="about.html">About Us</a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="menu.html">Menu</a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="services.html">Services</a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="blog.html">Blog</a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="pricing.html">Pricing</a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="404.html">404 Page</a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="coming-soon.html">Coming Soon</a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="maintenance.html">Maintenance</a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="contact.html">Contact Us</a></li>
         </ul>
       </div>
     </div>`;

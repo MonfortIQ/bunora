@@ -13,8 +13,15 @@ document.addEventListener('DOMContentLoaded', function () {
   var headerToggler = headerNavbar && headerNavbar.querySelector('.navbar-toggler');
   var headerActions = headerNavbar && headerNavbar.querySelector('.navbar-actions');
   var floatingControls = document.querySelectorAll('.floating-widget-wrap .theme-toggle-btn, .floating-widget-wrap .rtl-toggle-btn');
+  var existingHeaderControls = headerNavbar && headerNavbar.querySelector('.theme-toggle-btn, .rtl-toggle-btn');
 
-  if (headerNavbar && headerToggler && floatingControls.length) {
+  if (existingHeaderControls) {
+    // Utility pages already render their controls in the generated header.
+    // Remove only the floating duplicates.
+    floatingControls.forEach(function (button) {
+      button.remove();
+    });
+  } else if (headerNavbar && headerToggler && floatingControls.length) {
     var headerControls = document.createElement('div');
     headerControls.className = 'header-display-controls d-flex align-items-center gap-2 me-2';
 
@@ -87,23 +94,45 @@ document.addEventListener('DOMContentLoaded', function () {
       var mobileLinks = [
         ['index.html', 'Home 1 – Modern Burger'],
         ['index-2.html', 'Home 2 – Artisan Deli'],
-        ['about.html', 'About Brand'],
-        ['menu.html', 'Menu & Food'],
-        ['product-details.html', 'Product Details'],
-        ['combo-offers.html', 'Combo Offers'],
-        ['services.html', 'Services & Catering'],
-        ['blog.html', 'Food Stories & Blog'],
+        ['about.html', 'About Us'],
+        ['menu.html', 'Menu'],
+        ['services.html', 'Services'],
+        ['blog.html', 'Blog'],
         ['pricing.html', 'Pricing'],
         ['404.html', '404 Page'],
         ['coming-soon.html', 'Coming Soon'],
         ['maintenance.html', 'Maintenance'],
-        ['contact.html', 'Contact & Location']
+        ['contact.html', 'Contact Us']
       ];
 
-      mobileList.innerHTML = mobileLinks.map(function (link) {
+      mobileList.innerHTML = mobileLinks.map(function (link, index) {
         var active = link[0] === currentPage ? ' active' : '';
+
+        if (index === 0) {
+          var homeOpen = currentPage === 'index.html' || currentPage === 'index-2.html';
+          return '<li class="mobile-nav-item mobile-nav-dropdown"><button type="button" class="mobile-nav-link mobile-nav-dropdown-toggle' + (homeOpen ? ' active' : '') + '" aria-expanded="' + homeOpen + '"><span>Home</span><i class="fa-solid fa-chevron-down"></i></button><ul class="mobile-submenu"' + (homeOpen ? '' : ' hidden') + '><li><a class="mobile-submenu-link' + (currentPage === 'index.html' ? ' active' : '') + '" href="index.html">Home 1 â€“ Modern Burger</a></li><li><a class="mobile-submenu-link' + (currentPage === 'index-2.html' ? ' active' : '') + '" href="index-2.html">Home 2 â€“ Artisan Deli</a></li></ul></li>';
+        }
+        if (index === 1 || index === 8 || index === 9) return '';
+        if (index === 7) {
+          var pagesOpen = currentPage === '404.html' || currentPage === 'coming-soon.html' || currentPage === 'maintenance.html';
+          return '<li class="mobile-nav-item mobile-nav-dropdown"><button type="button" class="mobile-nav-link mobile-nav-dropdown-toggle' + (pagesOpen ? ' active' : '') + '" aria-expanded="' + pagesOpen + '"><span>Pages</span><i class="fa-solid fa-chevron-down"></i></button><ul class="mobile-submenu"' + (pagesOpen ? '' : ' hidden') + '><li><a class="mobile-submenu-link' + (currentPage === '404.html' ? ' active' : '') + '" href="404.html">404 Page</a></li><li><a class="mobile-submenu-link' + (currentPage === 'coming-soon.html' ? ' active' : '') + '" href="coming-soon.html">Coming Soon</a></li><li><a class="mobile-submenu-link' + (currentPage === 'maintenance.html' ? ' active' : '') + '" href="maintenance.html">Maintenance</a></li></ul></li>';
+        }
         return '<li class="mobile-nav-item"><a class="mobile-nav-link' + active + '" href="' + link[0] + '">' + link[1] + '</a></li>';
       }).join('');
+      // Keep the two home labels readable even if older page text contains a broken dash encoding.
+      mobileList.innerHTML = mobileList.innerHTML
+        .replace(/Home 1[^<]*Modern Burger/g, 'Home 1 - Modern Burger')
+        .replace(/Home 2[^<]*Artisan Deli/g, 'Home 2 - Artisan Deli');
+
+      mobileList.querySelectorAll('.mobile-nav-dropdown-toggle').forEach(function (toggle) {
+        toggle.addEventListener('click', function () {
+          var submenu = toggle.nextElementSibling;
+          var isOpen = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', String(!isOpen));
+          toggle.classList.toggle('active', !isOpen);
+          if (submenu) submenu.hidden = isOpen;
+        });
+      });
     }
   });
 

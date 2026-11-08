@@ -20,3 +20,226 @@
 @media(max-width:767.98px){.bunora-page-hero{padding:2.25rem 0 3rem}.bunora-page-hero .container{width:100%;max-width:100%;padding-inline:1rem}.bunora-page-hero-grid,.hero-contact .bunora-page-hero-grid,.hero-journal .bunora-page-hero-grid,.hero-list .bunora-page-hero-grid{width:100%;grid-template-columns:minmax(0,1fr);gap:1.75rem}.bunora-page-hero-copy,.bunora-page-hero-image{width:100%;min-width:0;max-width:100%}.bunora-page-hero-copy h1{max-width:100%;font-size:clamp(2rem,9vw,2.6rem);overflow-wrap:anywhere}.bunora-page-hero-copy p{max-width:100%;overflow-wrap:anywhere}.bunora-page-hero-image,.hero-menu .bunora-page-hero-image,.hero-contact .bunora-page-hero-image,.hero-journal .bunora-page-hero-image{min-height:280px;aspect-ratio:1.2/1}.hero-combos .bunora-page-hero-image{transform:none}.bunora-product-hero .col-lg-6:last-child{padding:1.1rem}}
 @media(prefers-reduced-motion:reduce){.bunora-page-hero-copy,.bunora-page-hero-image{animation:none}}
 .utility-404{background:radial-gradient(ellipse at 50% 30%,rgba(231,71,50,.11),transparent 45%),#FFF7E9}.utility-404 .bunora-utility-visual{width:min(100%,400px);height:190px;border-radius:4rem 1rem 4rem 1rem}.utility-coming-soon{background:radial-gradient(ellipse at 50% 0,rgba(246,184,63,.2),transparent 45%),#201C19}.utility-coming-soon h1{color:#FFF7E9}.utility-coming-soon .lead{color:#DED8D2!important}.utility-coming-soon .bunora-utility-visual{border-color:#44382B}.utility-maintenance{background:linear-gradient(145deg,#EFE8DC,#FFF9F0)}.utility-maintenance .bunora-utility-visual{border-radius:50% 1.5rem 1.5rem 1.5rem}
+
+/* Light-theme hero surfaces.  Several legacy hero compositions were authored
+   with fixed dark colours, so they need explicit light-theme tokens instead of
+   inheriting the page theme only through the body. */
+:root:not([data-theme="dark"]) .hero-burger-section {
+  color: var(--text-primary);
+  background: linear-gradient(125deg, #FFF7E9 0%, #FFFDF8 62%, #F8E8D2 100%);
+}
+
+:root:not([data-theme="dark"]) .hero-burger-section::before {
+  background: radial-gradient(circle, rgba(231, 71, 50, 0.12) 0%, transparent 70%);
+}
+
+:root:not([data-theme="dark"]) .hero-burger-section .hero-badge-wrap {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.82);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-xs);
+}
+
+:root:not([data-theme="dark"]) .hero-burger-title {
+  color: var(--text-primary);
+}
+
+:root:not([data-theme="dark"]) .hero-burger-lead {
+  color: var(--text-secondary);
+}
+
+:root:not([data-theme="dark"]) .hero-burger-section .hero-metrics {
+  border-top-color: var(--border-color);
+}
+
+:root:not([data-theme="dark"]) .hero-burger-section .metric-item p {
+  color: var(--text-muted);
+}
+
+:root:not([data-theme="dark"]) .hero-burger-img-wrap {
+  border-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 30px 80px rgba(52, 34, 16, 0.2);
+}
+
+:root:not([data-theme="dark"]) .hero-floating-card {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.94);
+  border-color: var(--border-color);
+}
+
+:root:not([data-theme="dark"]) .hero-floating-card .fl-text h5 {
+  color: var(--text-primary);
+}
+
+:root:not([data-theme="dark"]) .hero-sandwich-section {
+  color: var(--text-primary);
+}
+
+:root:not([data-theme="dark"]) .inner-hero,
+:root:not([data-theme="dark"]) .bunora-page-hero.hero-menu,
+:root:not([data-theme="dark"]) .bunora-page-hero.hero-pricing,
+:root:not([data-theme="dark"]) .bunora-page-hero.hero-combos,
+:root:not([data-theme="dark"]) .bunora-page-hero.hero-article {
+  color: var(--text-primary);
+  background: linear-gradient(125deg, #FFF7E9 0%, #FFFDF8 62%, #F8E8D2 100%);
+  border-bottom-color: var(--border-color);
+  --hero-ink: var(--text-primary);
+  --hero-muted: var(--text-secondary);
+}
+
+:root:not([data-theme="dark"]) .inner-hero-title,
+:root:not([data-theme="dark"]) .bunora-page-hero-copy h1 {
+  color: var(--text-primary);
+}
+
+:root:not([data-theme="dark"]) .bunora-page-hero-copy p {
+  color: var(--text-secondary);
+}
+
+:root:not([data-theme="dark"]) .bunora-page-hero-eyebrow {
+  color: #B33A28;
+}
+
+:root:not([data-theme="dark"]) .bunora-page-hero .bunora-hero-breadcrumb,
+:root:not([data-theme="dark"]) .bunora-page-hero .bunora-hero-breadcrumb a,
+:root:not([data-theme="dark"]) .bunora-page-hero .bunora-hero-proof {
+  color: var(--text-secondary);
+}
+
+:root:not([data-theme="dark"]) .bunora-page-hero .bunora-hero-breadcrumb i {
+  color: var(--text-muted);
+}
+
+:root:not([data-theme="dark"]) .utility-404,
+:root:not([data-theme="dark"]) .utility-coming-soon,
+:root:not([data-theme="dark"]) .utility-maintenance {
+  color: var(--text-primary);
+}
+
+:root:not([data-theme="dark"]) .utility-coming-soon {
+  background: radial-gradient(ellipse at 50% 0, rgba(246, 184, 63, 0.2), transparent 45%), #FFF7E9;
+}
+
+:root:not([data-theme="dark"]) .utility-coming-soon h1,
+:root:not([data-theme="dark"]) .utility-coming-soon .lead {
+  color: var(--text-primary) !important;
+}
+
+:root:not([data-theme="dark"]) .utility-coming-soon .bunora-utility-visual {
+  border-color: var(--border-color);
+}
+
+/* Home 1 chef-special showcase: make the light surface real and keep the
+   image aligned with the content column at desktop/tablet widths. */
+:root:not([data-theme="dark"]) .chef-special-box {
+  color: var(--text-primary);
+  background: linear-gradient(125deg, #FFF7E9 0%, #FFFDF8 62%, #F8E8D2 100%);
+  border-color: var(--border-color);
+}
+
+:root:not([data-theme="dark"]) .chef-special-box h2 {
+  color: var(--text-primary) !important;
+}
+
+:root:not([data-theme="dark"]) .chef-special-content p {
+  color: var(--text-secondary);
+}
+
+:root:not([data-theme="dark"]) .chef-special-box .btn-outline-white {
+  border-color: var(--text-primary);
+  color: var(--text-primary) !important;
+}
+
+:root:not([data-theme="dark"]) .chef-special-box .btn-outline-white:hover {
+  border-color: var(--text-primary);
+  background-color: var(--text-primary);
+  color: #FFFFFF !important;
+}
+
+.chef-special-box > .row {
+  align-items: stretch !important;
+}
+
+.chef-special-box > .row > [class*="col-"] {
+  display: flex;
+  flex-direction: column;
+}
+
+.chef-special-box .chef-special-img {
+  display: block;
+  flex: 1 1 auto;
+  height: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .chef-special-box .chef-special-img {
+    flex: 0 0 auto;
+    height: 240px;
+    min-height: 240px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .chef-special-box > .row > [class*="col-"] {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .chef-special-box .chef-special-img {
+    flex: 0 0 auto;
+    height: min(420px, 48vw);
+    min-height: 320px;
+  }
+
+  .chef-special-actions {
+    align-items: center !important;
+  }
+}
+
+/* Keep the tablet footer in a balanced two-column flow. The previous
+   row-span on the brand block pushed the contact column into a third row. */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .bunora-footer-brand {
+    grid-row: auto;
+  }
+}
+
+/* Use solid black footer copy in light mode for clear contrast. */
+:root:not([data-theme="dark"]) .bunora-site-footer,
+:root:not([data-theme="dark"]) .bunora-footer-tagline,
+:root:not([data-theme="dark"]) .bunora-footer-tagline span,
+:root:not([data-theme="dark"]) .bunora-footer-description,
+:root:not([data-theme="dark"]) .bunora-footer-links a,
+:root:not([data-theme="dark"]) .bunora-legal-links a,
+:root:not([data-theme="dark"]) .bunora-footer-mark,
+:root:not([data-theme="dark"]) .bunora-sample-note,
+:root:not([data-theme="dark"]) .bunora-contact-row,
+:root:not([data-theme="dark"]) .bunora-footer-bottom {
+  color: #171717;
+}
+
+:root:not([data-theme="dark"]) .bunora-social-links a {
+  color: #171717;
+}
+
+/* Keep the profile social buttons on one centered baseline in the About cards. */
+.team-social-links {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem !important;
+  min-height: 44px;
+  margin-top: auto;
+}
+
+.team-social-links .btn-icon {
+  display: inline-flex;
+  flex: 0 0 44px;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  line-height: 1;
+}
