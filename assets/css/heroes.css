@@ -133,8 +133,8 @@
    image aligned with the content column at desktop/tablet widths. */
 :root:not([data-theme="dark"]) .chef-special-box {
   color: var(--text-primary);
-  background: linear-gradient(125deg, #FFF7E9 0%, #FFFDF8 62%, #F8E8D2 100%);
-  border-color: var(--border-color);
+  background: linear-gradient(125deg, #FFF7E9 0%, #FFFDF8 62%, #F8E8D2 100%) !important;
+  border-color: var(--border-color) !important;
 }
 
 :root:not([data-theme="dark"]) .chef-special-box h2 {
@@ -142,17 +142,17 @@
 }
 
 :root:not([data-theme="dark"]) .chef-special-content p {
-  color: var(--text-secondary);
+  color: var(--text-secondary) !important;
 }
 
 :root:not([data-theme="dark"]) .chef-special-box .btn-outline-white {
-  border-color: var(--text-primary);
+  border-color: var(--text-primary) !important;
   color: var(--text-primary) !important;
 }
 
 :root:not([data-theme="dark"]) .chef-special-box .btn-outline-white:hover {
-  border-color: var(--text-primary);
-  background-color: var(--text-primary);
+  border-color: var(--text-primary) !important;
+  background-color: var(--text-primary) !important;
   color: #FFFFFF !important;
 }
 
@@ -242,4 +242,266 @@
   height: 44px;
   padding: 0;
   line-height: 1;
+}
+
+/* Home 2 ingredient cards: equal columns, consistent image sizing, and no
+   narrow horizontal text column at tablet/mobile widths. */
+.ingredient-grid > [class*="col-"] {
+  display: flex;
+}
+
+.ingredient-grid .ingredient-card {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+}
+
+.ingredient-grid .ingredient-info {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.ingredient-grid .ingredient-img {
+  display: block;
+  flex: 0 0 75px;
+  aspect-ratio: 1;
+}
+
+@media (max-width: 1199.98px) {
+  .ingredient-grid .ingredient-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .ingredient-grid .ingredient-img {
+    flex-basis: auto;
+    width: 72px;
+    height: 72px;
+  }
+
+  .ingredient-grid .ingredient-info {
+    width: 100%;
+  }
+
+  .ingredient-grid .ingredient-info h5 {
+    font-size: 0.98rem;
+    line-height: 1.2;
+  }
+
+  .ingredient-grid .ingredient-info p {
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+}
+
+/* Keep the Home 2 collection CTA as one clean line. */
+.collection-explore-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-width: 202px;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.collection-title-row {
+  column-gap: 1.25rem;
+  row-gap: 1rem;
+}
+
+.collection-title-row > div:first-child {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.collection-title-row > div:last-child {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 767.98px) {
+  .collection-explore-btn {
+    min-width: 0;
+    max-width: 100%;
+    padding-inline: 0.85rem;
+    font-size: 0.78rem;
+  }
+}
+
+/* Pricing packages use a balanced 2x2 grid on tablet widths. */
+.pricing-grid > [class*="col-"] {
+  display: flex;
+}
+
+.pricing-grid .pricing-card {
+  width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .pricing-grid > [class*="col-"] {
+    flex: 0 0 50%;
+    width: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Blog filters and search share one aligned toolbar on tablet/desktop. */
+@media (min-width: 768px) {
+  .blog-controls {
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    gap: 0.8rem !important;
+  }
+
+  .blog-controls .menu-filter-nav {
+    display: flex;
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 0.35rem;
+  }
+
+  .blog-controls .menu-filter-nav li {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .blog-controls .menu-filter-btn {
+    width: 100%;
+    min-width: 0;
+    padding-inline: 0.65rem;
+    white-space: nowrap;
+    font-size: 0.76rem;
+  }
+
+  .blog-controls .menu-search-box {
+    flex: 0 0 220px;
+    width: 220px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .blog-controls .menu-filter-btn {
+    padding-inline: 0.9rem;
+    font-size: 0.82rem;
+  }
+
+  .blog-controls .menu-search-box {
+    flex-basis: 260px;
+    width: 260px;
+  }
+}
+
+/* Pricing notice contrast in both themes. */
+.pricing-marketplace-note {
+  color: #171717 !important;
+  background: #FFFFFF !important;
+  border-color: #D8CEC0 !important;
+}
+
+.pricing-marketplace-note .text-accent {
+  color: var(--brand-accent) !important;
+}
+
+[data-theme="dark"] .pricing-marketplace-note {
+  color: #F4F4F5 !important;
+  background: #27272A !important;
+  border-color: #4A4A52 !important;
+}
+
+[data-theme="dark"] .pricing-marketplace-note.text-muted,
+[data-theme="dark"] .pricing-marketplace-note .text-muted {
+  color: #E4E4E7 !important;
+}
+
+/* Pricing comparison table dark-theme surfaces and readable borders. */
+[data-theme="dark"] .pricing-comparison {
+  background: #1F1F23 !important;
+  border-color: #3F3F46 !important;
+}
+
+[data-theme="dark"] .pricing-comparison .table {
+  --bs-table-bg: #1F1F23;
+  --bs-table-color: #F4F4F5;
+  --bs-table-border-color: #3F3F46;
+  --bs-table-hover-bg: #27272A;
+  --bs-table-hover-color: #FFFFFF;
+  color: #F4F4F5;
+}
+
+[data-theme="dark"] .pricing-comparison .table > :not(caption) > * > * {
+  color: #F4F4F5;
+  background-color: #1F1F23;
+  border-color: #3F3F46;
+}
+
+[data-theme="dark"] .pricing-comparison thead.table-light > tr > th {
+  color: #FFFFFF !important;
+  background-color: #27272A !important;
+  border-color: #4A4A52 !important;
+}
+
+[data-theme="dark"] .pricing-comparison .table-hover > tbody > tr:hover > * {
+  color: #FFFFFF;
+  background-color: #27272A;
+}
+
+/* Bootstrap's accordion chevron is a dark SVG by default; invert it for the
+   dark pricing surface so collapsed and expanded arrows remain visible. */
+[data-theme="dark"] .accordion-custom .accordion-button::after {
+  filter: invert(1) brightness(1.5);
+}
+
+/* Keep Home 1 combo-card footers aligned across the tablet row. */
+.combo-grid > [class*="col-"] {
+  display: flex;
+}
+
+.combo-grid .combo-card {
+  width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .combo-grid .combo-body {
+    padding: 1.2rem;
+  }
+
+  .combo-grid .combo-footer {
+    align-items: center;
+    gap: 0.45rem;
+    flex-wrap: nowrap;
+  }
+
+  .combo-grid .combo-price-wrap {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  .combo-grid .combo-price-wrap .food-price {
+    font-size: 1.05rem;
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+
+  .combo-grid .combo-price-wrap .food-price-original {
+    font-size: 0.64rem;
+  }
+
+  .combo-grid .combo-save-label {
+    font-size: 0.6rem;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .combo-grid .combo-footer .btn {
+    flex: 0 0 auto;
+    padding-inline: 0.7rem;
+    font-size: 0.72rem;
+    white-space: nowrap;
+  }
 }

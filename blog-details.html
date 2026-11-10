@@ -240,7 +240,7 @@
               <h4 class="fw-bold mb-2">Leave a Thought or Question</h4>
               <p class="text-secondary small mb-4">Your email address will not be published. Required fields are marked *</p>
 
-              <form class="needs-validation" novalidate>
+              <form id="commentSubmitForm" class="needs-validation" novalidate>
                 <div class="row g-3">
                   <div class="col-md-6">
                     <label class="form-label">Full Name *</label>
@@ -258,6 +258,7 @@
                     <button type="submit" class="btn btn-accent"><i class="fa-solid fa-paper-plane"></i> Post Comment</button>
                   </div>
                 </div>
+                <div class="alert form-alert-message mt-3" role="status" aria-live="polite" style="display:none;"></div>
               </form>
             </div>
 

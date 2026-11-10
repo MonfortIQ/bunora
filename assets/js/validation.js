@@ -93,6 +93,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
       var successMessage = form.id === 'cateringForm'
         ? 'Your catering quote request was sent successfully. We will contact you soon.'
+        : form.id === 'commentSubmitForm'
+          ? 'Your comment was posted successfully. Thank you for sharing your thoughts.'
         : 'Your message was sent successfully. Thank you for contacting BUNORA.';
       var endpoint = form.getAttribute('action') || '';
       var isTemplateEndpoint = endpoint.includes('your-email@example.com');

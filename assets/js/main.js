@@ -8,6 +8,21 @@ document.addEventListener('DOMContentLoaded', function () {
   var siteHeader = document.querySelector('.site-header');
   var backToTopBtn = document.getElementById('backToTopBtn');
 
+  // Some inner pages only include the light-theme logo in the sidebar. Add the
+  // dark-theme variant wherever it is missing so the brand remains visible in
+  // both themes on every page.
+  document.querySelectorAll('.offcanvas .offcanvas-header > a').forEach(function (logoLink) {
+    if (!logoLink.querySelector('.logo-light')) {
+      var lightLogo = document.createElement('img');
+      lightLogo.src = 'assets/images/logo-light.svg';
+      lightLogo.alt = '';
+      lightLogo.setAttribute('aria-hidden', 'true');
+      lightLogo.className = 'logo-light';
+      lightLogo.style.height = '38px';
+      logoLink.appendChild(lightLogo);
+    }
+  });
+
   // Keep theme and direction controls in the page header instead of the side widget.
   var headerNavbar = siteHeader && siteHeader.querySelector('.navbar');
   var headerToggler = headerNavbar && headerNavbar.querySelector('.navbar-toggler');
