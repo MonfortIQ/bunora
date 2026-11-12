@@ -393,6 +393,17 @@
   overflow-wrap: anywhere;
 }
 
+/* Avoid a lone third review on the 768–991px tablet layout. */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .reviews-grid > .review-third-card {
+    display: none;
+  }
+
+  .blog-third-card {
+    display: none;
+  }
+}
+
 @media (min-width: 992px) and (max-width: 1199.98px) {
   /* Four desktop cards become a balanced 2 x 2 layout on tablet widths. */
   .features-grid > [class*="col-lg-3"] {
@@ -700,6 +711,14 @@
 
 .combo-grid .combo-card {
   width: 100%;
+}
+
+/* Avoid a lone third combo card on the 768–991px tablet layout. The card
+   remains available at desktop and mobile sizes. */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .combo-grid > .combo-third-card {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1199.98px) {

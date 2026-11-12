@@ -124,7 +124,9 @@ document.addEventListener('DOMContentLoaded', function () {
         var active = link[0] === currentPage ? ' active' : '';
 
         if (index === 0) {
-          var homeOpen = currentPage === 'index.html' || currentPage === 'index-2.html';
+          // Keep the Home submenu closed when the sidebar opens. The user can
+          // expand it manually, even when they are already on a Home page.
+          var homeOpen = false;
           return '<li class="mobile-nav-item mobile-nav-dropdown"><button type="button" class="mobile-nav-link mobile-nav-dropdown-toggle' + (homeOpen ? ' active' : '') + '" aria-expanded="' + homeOpen + '"><span>Home</span><i class="fa-solid fa-chevron-down"></i></button><ul class="mobile-submenu"' + (homeOpen ? '' : ' hidden') + '><li><a class="mobile-submenu-link' + (currentPage === 'index.html' ? ' active' : '') + '" href="index.html">Home 1 â€“ Modern Burger</a></li><li><a class="mobile-submenu-link' + (currentPage === 'index-2.html' ? ' active' : '') + '" href="index-2.html">Home 2 â€“ Artisan Deli</a></li></ul></li>';
         }
         if (index === 1 || index === 8 || index === 9) return '';
