@@ -40,6 +40,12 @@
   box-shadow: var(--shadow-xs);
 }
 
+/* The voting copy has an inline light colour for the dark hero. Override that
+   inline value in light mode so it remains readable on the cream badge. */
+:root:not([data-theme="dark"]) .hero-burger-section .hero-badge-wrap > span:last-child {
+  color: var(--text-primary) !important;
+}
+
 :root:not([data-theme="dark"]) .hero-burger-title {
   color: var(--text-primary);
 }
@@ -165,6 +171,10 @@
   flex-direction: column;
 }
 
+.chef-special-content {
+  min-width: 0;
+}
+
 .chef-special-box .chef-special-img {
   display: block;
   flex: 1 1 auto;
@@ -244,8 +254,181 @@
   line-height: 1;
 }
 
-/* Home 2 ingredient cards: equal columns, consistent image sizing, and no
-   narrow horizontal text column at tablet/mobile widths. */
+/* Home 1 feature/story/review cards: keep columns equal, text contained, and
+   content aligned when the page is viewed at tablet or mobile widths. */
+.features-grid > [class*="col-"] {
+  display: flex;
+  min-width: 0;
+}
+
+.features-grid .feature-box {
+  width: 100%;
+  min-width: 0;
+}
+
+.home-story-grid > [class*="col-"] {
+  min-width: 0;
+}
+
+.home-story-grid .story-checklist > [class*="col-"] {
+  min-width: 0;
+}
+
+.about-mission-grid > [class*="col-"] {
+  display: flex;
+  min-width: 0;
+}
+
+.about-mission-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+}
+
+.about-mission-card > p {
+  flex: 0 0 auto;
+}
+
+.about-mission-card > .service-features-list {
+  margin-top: auto;
+}
+
+/* Keep both Home 1 and Home 2 chef-special CTA buttons on one row. */
+.chef-special-actions {
+  display: flex;
+  width: 100%;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+}
+
+.chef-special-actions .btn {
+  flex: 1 1 0;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+/* Keep service thumbnail images contained while allowing the circular service
+   badge to sit cleanly across the image/content boundary. */
+.service-grid > [class*="col-"] {
+  display: flex;
+  min-width: 0;
+}
+
+.service-grid .service-card {
+  width: 100%;
+  min-width: 0;
+}
+
+.service-thumb {
+  overflow: visible;
+  isolation: isolate;
+  z-index: 2;
+  flex: 0 0 auto;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.service-thumb img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-icon-badge {
+  z-index: 2;
+  right: 1rem;
+  bottom: -1.25rem;
+}
+
+.service-content {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+}
+
+/* Keep the placeholder and every native select option readable when the
+   dropdown menu is opened. */
+.form-select option,
+.form-select option:checked {
+  color: var(--text-primary) !important;
+  background-color: var(--bg-surface) !important;
+  opacity: 1;
+}
+
+.form-select option:disabled,
+.form-select option[value=""] {
+  color: var(--text-secondary) !important;
+  opacity: 1;
+}
+
+[data-theme="dark"] .form-select option,
+[data-theme="dark"] .form-select option:checked {
+  color: #F4F4F5 !important;
+  background-color: #18181B !important;
+}
+
+[data-theme="dark"] .form-select option:disabled,
+[data-theme="dark"] .form-select option[value=""] {
+  color: #D4D4D8 !important;
+}
+
+.reviews-grid > [class*="col-"] {
+  min-width: 0;
+}
+
+.reviews-grid .testimonial-card,
+.reviews-grid .testimonial-author,
+.reviews-grid .author-info {
+  min-width: 0;
+}
+
+.reviews-grid .author-info span {
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Four desktop cards become a balanced 2 x 2 layout on tablet widths. */
+  .features-grid > [class*="col-lg-3"] {
+    flex: 0 0 50%;
+    width: 50%;
+    max-width: 50%;
+  }
+
+  .features-grid .feature-box {
+    padding: 1.75rem 1.35rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .chef-special-actions .btn {
+    flex: 1 1 0;
+    width: auto !important;
+    min-width: 0;
+    padding-inline: 0.65rem;
+    font-size: 0.78rem;
+  }
+
+  .features-grid .feature-box {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .home-story-grid .story-checklist > [class*="col-"] {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .reviews-grid .testimonial-card {
+    padding: 1.5rem;
+  }
+}
+
 .ingredient-grid > [class*="col-"] {
   display: flex;
 }
@@ -332,12 +515,62 @@
 }
 
 /* Pricing packages use a balanced 2x2 grid on tablet widths. */
+.pricing-grid {
+  align-items: stretch;
+}
+
 .pricing-grid > [class*="col-"] {
   display: flex;
+  align-items: stretch;
 }
 
 .pricing-grid .pricing-card {
   width: 100%;
+  height: 100%;
+  min-width: 0;
+  transform: none;
+}
+
+.pricing-grid .pricing-card.popular {
+  transform: none;
+}
+
+.pricing-grid .pricing-plan-name {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 3.5rem;
+}
+
+.pricing-grid .pricing-plan-desc {
+  min-height: 4.5rem;
+}
+
+.pricing-grid .pricing-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 3.75rem;
+  white-space: nowrap;
+}
+
+.pricing-grid .pricing-price small {
+  white-space: nowrap;
+}
+
+.pricing-grid .pricing-card > .text-muted.small {
+  display: block;
+  min-height: 1.65rem;
+}
+
+.pricing-grid .pricing-features-list {
+  flex: 1 1 auto;
+}
+
+.pricing-grid .pricing-card > .btn {
+  flex: 0 0 auto;
+  margin-top: auto;
 }
 
 @media (min-width: 768px) and (max-width: 1199.98px) {
@@ -351,9 +584,12 @@
 /* Blog filters and search share one aligned toolbar on tablet/desktop. */
 @media (min-width: 768px) {
   .blog-controls {
+    flex-direction: row !important;
     flex-wrap: nowrap !important;
     justify-content: flex-start !important;
+    align-items: center !important;
     gap: 0.8rem !important;
+    min-height: 0;
   }
 
   .blog-controls .menu-filter-nav {

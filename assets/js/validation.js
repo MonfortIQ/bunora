@@ -11,6 +11,90 @@ document.addEventListener('DOMContentLoaded', function () {
     var alertEl = form.querySelector('.form-alert-message');
     var submitButton = form.querySelector('button[type="submit"]');
 
+    function getFeedback(field) {
+      var wrapper = field.parentElement;
+      var feedback = wrapper && wrapper.querySelector('.invalid-feedback');
+      if (!feedback) {
+        feedback = document.createElement('div');
+        feedback.className = 'invalid-feedback';
+        field.insertAdjacentElement('afterend', feedback);
+      }
+      return feedback;
+    }
+
+    function setFieldState(field, valid, message) {
+      var feedback = getFeedback(field);
+      field.classList.toggle('is-invalid', !valid);
+      field.classList.toggle('is-valid', valid);
+      if (!valid) feedback.textContent = message;
+      return valid;
+    }
+
+    function validateField(field) {
+      if (!field || field.disabled || field.type === 'hidden' || field.name === '_honey') return true;
+
+      var value = (field.value || '').trim();
+      var fieldName = (field.name || '').toLowerCase();
+      var label = (field.closest('.col-12, .col-md-6, .col-6, .mb-3') || field.parentElement || form)
+        .querySelector('label');
+      var labelText = label ? label.textContent.replace('*', '').trim() : 'This field';
+
+      if (field.required && !value) {
+        return setFieldState(field, false, labelText + ' is required.');
+      }
+
+      // Optional fields remain neutral when empty.
+      if (!value) {
+        field.classList.remove('is-invalid', 'is-valid');
+        return true;
+      }
+
+      if (field.type === 'email') {
+        var emailRegex = /^[A-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?(?:\.[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?)+$/i;
+        if (!emailRegex.test(value)) {
+          return setFieldState(field, false, 'Please enter a valid email address.');
+        }
+      }
+
+      if (field.type === 'tel' || fieldName === 'phone') {
+        var digits = value.replace(/\D/g, '');
+        if (!/^\+?[0-9\s().-]+$/.test(value) || digits.length < 7 || digits.length > 15) {
+          return setFieldState(field, false, 'Use a valid phone number with 7–15 digits.');
+        }
+      }
+
+      if (fieldName === 'name' || /(^|_)(full_name|contact_name|author_name|customer_name)(_|$)/.test(fieldName)) {
+        if (!/^[A-Za-zÀ-ÖØ-öø-ÿ][A-Za-zÀ-ÖØ-öø-ÿ .,'&-]{1,}$/.test(value)) {
+          return setFieldState(field, false, 'Use at least 2 letters; numbers are not allowed in this name field.');
+        }
+      }
+
+      if (field.tagName === 'TEXTAREA' || /(^|_)(message|comment)(_|$)/.test(fieldName)) {
+        if (value.length < 10 || !/[A-Za-z]/.test(value)) {
+          return setFieldState(field, false, 'Please enter at least 10 meaningful characters.');
+        }
+      }
+
+      if (field.type === 'number') {
+        var numberValue = Number(value);
+        var min = field.getAttribute('min');
+        var max = field.getAttribute('max');
+        if (!Number.isInteger(numberValue) || (min !== null && numberValue < Number(min)) || (max !== null && numberValue > Number(max))) {
+          return setFieldState(field, false, 'Enter a valid guest count' + (min ? ' of at least ' + min + '.' : '.'));
+        }
+      }
+
+      if (field.type === 'date') {
+        var today = new Date();
+        var todayValue = today.getFullYear() + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0');
+        if (value < todayValue) {
+          return setFieldState(field, false, 'Please choose today or a future date.');
+        }
+      }
+
+      return setFieldState(field, true, '');
+    }
+
     function showMessage(type, message) {
       if (!alertEl) return;
       alertEl.className = 'alert alert-' + type + ' form-alert-message mt-3';
@@ -37,41 +121,9 @@ document.addEventListener('DOMContentLoaded', function () {
         return false;
       }
 
-      // 2. Validate Required Inputs
-      var requiredInputs = form.querySelectorAll('[required]');
-      requiredInputs.forEach(function (input) {
-        var errorFeedback = input.parentElement.querySelector('.invalid-feedback');
-        
-        if (!input.value.trim()) {
-          isValid = false;
-          input.classList.add('is-invalid');
-          input.classList.remove('is-valid');
-          if (errorFeedback) errorFeedback.textContent = 'This field is required.';
-        } else {
-          // Email validation
-          if (input.type === 'email') {
-            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(input.value.trim())) {
-              isValid = false;
-              input.classList.add('is-invalid');
-              input.classList.remove('is-valid');
-              if (errorFeedback) errorFeedback.textContent = 'Please enter a valid email address.';
-              return;
-            }
-          }
-
-          // Phone validation
-          if (input.type === 'tel' && input.value.trim().length < 7) {
-            isValid = false;
-            input.classList.add('is-invalid');
-            input.classList.remove('is-valid');
-            if (errorFeedback) errorFeedback.textContent = 'Please enter a valid phone number.';
-            return;
-          }
-
-          input.classList.remove('is-invalid');
-          input.classList.add('is-valid');
-        }
+      // 2. Validate every user-editable field, not only empty required fields.
+      form.querySelectorAll('input, textarea, select').forEach(function (input) {
+        if (!validateField(input)) isValid = false;
       });
 
       if (!isValid) {
@@ -95,6 +147,8 @@ document.addEventListener('DOMContentLoaded', function () {
         ? 'Your catering quote request was sent successfully. We will contact you soon.'
         : form.id === 'commentSubmitForm'
           ? 'Your comment was posted successfully. Thank you for sharing your thoughts.'
+        : form.id === 'newsletterForm'
+          ? 'You subscribed successfully. Welcome to the BUNORA newsletter.'
         : 'Your message was sent successfully. Thank you for contacting BUNORA.';
       var endpoint = form.getAttribute('action') || '';
       var isTemplateEndpoint = endpoint.includes('your-email@example.com');
@@ -123,12 +177,19 @@ document.addEventListener('DOMContentLoaded', function () {
       return false;
     });
 
-    // Clear validation error on user input
+    // Validate each field as the user leaves it, then re-check invalid fields
+    // while they edit them.
     form.querySelectorAll('input, textarea, select').forEach(function (field) {
+      field.addEventListener('blur', function () {
+        validateField(field);
+      });
       field.addEventListener('input', function () {
         if (field.classList.contains('is-invalid')) {
-          field.classList.remove('is-invalid');
+          validateField(field);
         }
+      });
+      field.addEventListener('change', function () {
+        if (field.classList.contains('is-invalid')) validateField(field);
       });
     });
   });

@@ -188,8 +188,8 @@
               <span class="fw-bold small text-muted">Share Article:</span>
               <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X" class="btn btn-sm btn-icon btn-charcoal"><i class="fa-brands fa-x-twitter"></i></a>
               <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="btn btn-sm btn-icon btn-charcoal"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="btn btn-sm btn-icon btn-charcoal"><i class="fa-brands fa-linkedin-in"></i></a>
-              <a href="#" class="btn btn-sm btn-icon btn-charcoal"><i class="fa-solid fa-link"></i></a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="btn btn-sm btn-icon btn-charcoal"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="btn btn-sm btn-icon btn-charcoal"><i class="fa-brands fa-twitter"></i></a>
             </div>
           </div>
 
@@ -244,15 +244,18 @@
                 <div class="row g-3">
                   <div class="col-md-6">
                     <label class="form-label">Full Name *</label>
-                    <input type="text" class="form-control" placeholder="John Doe" required>
+                    <input type="text" name="name" class="form-control" placeholder="John Doe" required>
+                    <div class="invalid-feedback">Please enter at least 2 letters for your name.</div>
                   </div>
                   <div class="col-md-6">
                     <label class="form-label">Email Address *</label>
-                    <input type="email" class="form-control" placeholder="john@example.com" required>
+                    <input type="email" name="email" class="form-control" placeholder="john@example.com" required>
+                    <div class="invalid-feedback">Please provide a valid email address.</div>
                   </div>
                   <div class="col-12">
                     <label class="form-label">Your Comment *</label>
-                    <textarea class="form-control" rows="4" placeholder="Share your culinary thoughts or questions..." required></textarea>
+                    <textarea name="comment" class="form-control" rows="4" placeholder="Share your culinary thoughts or questions..." required></textarea>
+                    <div class="invalid-feedback">Please enter at least 10 meaningful characters.</div>
                   </div>
                   <div class="col-12">
                     <button type="submit" class="btn btn-accent"><i class="fa-solid fa-paper-plane"></i> Post Comment</button>
@@ -363,6 +366,7 @@
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/rtl.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/validation.js"></script>
   <script src="assets/js/heroes.js"></script>
   <script src="assets/js/footer.js"></script>
 </body>

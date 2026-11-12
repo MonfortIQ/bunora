@@ -261,6 +261,20 @@
   border-color: var(--brand-highlight);
 }
 
+/* Chrome applies a pale autofill background that breaks contrast inside the
+   dark contact and catering forms. Keep autofilled values on the dark surface. */
+[data-theme="dark"] input.form-control:-webkit-autofill,
+[data-theme="dark"] input.form-control:-webkit-autofill:hover,
+[data-theme="dark"] input.form-control:-webkit-autofill:focus,
+[data-theme="dark"] textarea.form-control:-webkit-autofill,
+[data-theme="dark"] textarea.form-control:-webkit-autofill:hover,
+[data-theme="dark"] textarea.form-control:-webkit-autofill:focus {
+  -webkit-text-fill-color: #F4F4F5 !important;
+  -webkit-box-shadow: 0 0 0 1000px #18181B inset !important;
+  box-shadow: 0 0 0 1000px #18181B inset !important;
+  caret-color: #F4F4F5;
+}
+
 [data-theme="dark"] .form-control::placeholder,
 [data-theme="dark"] textarea.form-control::placeholder,
 [data-theme="dark"] .menu-search-input::placeholder {

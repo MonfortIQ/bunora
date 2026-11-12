@@ -383,7 +383,9 @@ ul, ol {
   position: fixed !important;
   top: 0;
   width: 100%;
-  z-index: 1020;
+  /* Stay above Bootstrap sticky content such as blog sidebars, while still
+     remaining below the mobile offcanvas layer. */
+  z-index: 1040;
   isolation: isolate;
   background-color: rgba(255, 251, 245, 0.95);
   backdrop-filter: blur(14px);

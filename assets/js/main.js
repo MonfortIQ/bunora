@@ -558,11 +558,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // --- 03. Active Navigation State ---
   var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  var activePathAliases = {
+    'service-details.html': 'services.html',
+    'combo-offers.html': 'services.html',
+    'product-details.html': 'menu.html',
+    'blog-details.html': 'blog.html',
+    'blog-list.html': 'blog.html'
+  };
+  var activePath = activePathAliases[currentPath] || currentPath;
+
+  // Older pages contain a hardcoded active class. Remove it from the desktop
+  // navbar so it cannot remain highlighted alongside the current page link.
+  document.querySelectorAll('.site-header .nav-link, .site-header .dropdown-item').forEach(function (link) {
+    link.classList.remove('active');
+  });
+
   var navLinks = document.querySelectorAll('.nav-link, .dropdown-item, .mobile-nav-link');
 
   navLinks.forEach(function (link) {
     var href = link.getAttribute('href');
-    if (href === currentPath) {
+    if (href === activePath) {
       link.classList.add('active');
       // If inside dropdown, also highlight parent dropdown toggle
       var parentDropdown = link.closest('.dropdown');

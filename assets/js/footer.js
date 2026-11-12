@@ -66,10 +66,10 @@ document.addEventListener('DOMContentLoaded', function () {
             <p class="bunora-footer-description">Crafting unforgettable flavours with freshly sourced ingredients, handcrafted recipes, and a passion for exceptional food.</p>
             <div class="bunora-footer-mark" aria-hidden="true"><i class="fa-solid fa-burger"></i><span>Made fresh, every day</span></div>
             <nav class="bunora-social-links" aria-label="BUNORA social media">
-              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
               <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-              <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
             </nav>
           </section>
 
